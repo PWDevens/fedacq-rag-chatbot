@@ -1,0 +1,92 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# -----------------------------
+# RAG / LlamaIndex / Chroma
+# -----------------------------
+# Local vector store
+chroma_fardfars/
+chroma/
+data/chroma/
+*/chroma/
+
+# Regulatory repos (FAR/DFARS)
+regs/
+regs/far/
+regs/dfars/
+
+# DITA + processed text
+data/dita/
+data/processed/
+
+# LlamaIndex caches
+storage/
+index_store/
+vector_store/
+*.jsonl
+*.json
+
+# HuggingFace model cache
+huggingface/
+models/
+hf_cache/
+.cache/
+~/.cache/huggingface/
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+logs/
+
+# -----------------------------
+# OS / Editor files
+# -----------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# -----------------------------
+# Docker
+# -----------------------------
+docker/local.env
+docker-compose.override.yml
+*.tar
+*.img
+
+# -----------------------------
+# Secrets / Environment
+# -----------------------------
+*.env
+.env.*
+secret_*.txt
+secrets/
+HF_TOKEN
+OPENAI_API_KEY
+GOOGLE_APPLICATION_CREDENTIALS
+
+# -----------------------------
+# Build / Dist
+# -----------------------------
+build/
+dist/
+*.egg-info/
+
