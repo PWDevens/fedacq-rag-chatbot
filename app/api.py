@@ -1,6 +1,8 @@
-from flask import Flask, request, Response
+from flask import Blueprint, request, Response
 import json
 from rag_engine import load_query_engine
+
+api_bp = Blueprint("api", __name__)
 
 # ---------------------------------------------------------
 # Lazy-load query engine
@@ -12,9 +14,6 @@ def get_qe():
         _qe = load_query_engine()
     return _qe
 
-
-app = Flask(__name__)
-
 # ---------------------------------------------------------
 # Embedded HTML/CSS/JS (ChatGPT-style UI)
 # ---------------------------------------------------------
@@ -24,7 +23,6 @@ HTML = """
 <head>
   <meta charset="utf-8" />
   <title>FAR / DFARS RAG Chatbot</title>
-
   <style>
     body {
       margin: 0;
@@ -34,13 +32,11 @@ HTML = """
       display: flex;
       flex-direction: column;
     }
-
     #chat-container {
       flex: 1;
       overflow-y: auto;
       padding: 20px;
     }
-
     .bubble {
       max-width: 80%;
       padding: 12px 16px;
@@ -49,20 +45,17 @@ HTML = """
       white-space: pre-wrap;
       line-height: 1.4;
     }
-
     .user-bubble {
       background: #d1e7ff;
       margin-left: auto;
       border-bottom-right-radius: 4px;
     }
-
     .bot-bubble {
       background: #ffffff;
       margin-right: auto;
       border-bottom-left-radius: 4px;
       border: 1px solid #ddd;
     }
-
     #input-bar {
       display: flex;
       padding: 12px;
@@ -72,7 +65,6 @@ HTML = """
       bottom: 0;
       z-index: 9999;
     }
-
     #question {
       flex: 1;
       padding: 10px;
@@ -83,7 +75,6 @@ HTML = """
       height: 60px;
       background: white;
     }
-
     #send-btn {
       margin-left: 10px;
       padding: 0 20px;
@@ -94,11 +85,9 @@ HTML = """
       border-radius: 6px;
       cursor: pointer;
     }
-
     #send-btn:hover {
       background: #004999;
     }
-
     #citations {
       padding: 10px 20px;
       font-size: 14px;
@@ -106,7 +95,6 @@ HTML = """
       border-top: 1px solid #ddd;
       background: #fafafa;
     }
-
     #typing {
       padding: 0 20px 10px 20px;
       font-size: 13px;
@@ -230,29 +218,21 @@ document.getElementById('question').addEventListener('keydown', function(e) {
 # ---------------------------------------------------------
 # Routes
 # ---------------------------------------------------------
-@app.route("/")
+@api_bp.route("/")
 def home():
     return HTML
 
 
-@app.route("/chat_stream", methods=["POST"])
+@api_bp.route("/chat_stream", methods=["POST"])
 def chat_stream():
     data = request.get_json(silent=True) or {}
     q = (data.get("question") or "").strip()
-    print("Received question: ", q)
-    print("Query engine: ", qe)
+    print("Received question:", q)
+
     if not q:
         def err_gen():
-            yield "data: Please enter a question.\\n\\n"
-        return Response(
-            err_gen(),
-            headers={
-                "Content-Type": "text/event-stream",
-                "Cache-Control": "no-cache",
-                "Connection": "keep-alive",
-                "X-Accel-Buffering": "no",
-            },
-        )
+            yield "data: Please enter a question.\n\n"
+        return Response(err_gen(), mimetype="text/event-stream")
 
     qe = get_qe()
 
@@ -261,18 +241,15 @@ def chat_stream():
         "Answer ONLY using retrieved context. "
         "If unsure, say you are not certain."
     )
-    full_prompt = f"{system_prompt}\\n\\nUser question: {q}"
+    full_prompt = f"{system_prompt}\n\nUser question: {q}"
 
     def generate():
         stream = qe.stream_query(full_prompt)
         print("Starting stream...")
 
-        # stream tokens
         for token in stream.response_gen:
-            yield f"data: {token}\\n\\n"
-            print("Token: ", token)
+            yield f"data: {token}\n\n"
 
-        # final response for citations
         final_response = stream.get_response()
         cites = []
         for i, sn in enumerate(final_response.source_nodes, start=1):
@@ -285,18 +262,6 @@ def chat_stream():
                 "source_path": meta.get("source_path"),
             })
 
-        yield f"data: {json.dumps({'citations': cites})}\\n\\n"
+        yield f"data: {json.dumps({'citations': cites})}\n\n"
 
-    return Response(
-        generate(),
-        headers={
-            "Content-Type": "text/event-stream",
-            "Cache-Control": "no-cache",
-            "Connection": "keep-alive",
-            "X-Accel-Buffering": "no",
-        },
-    )
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=7860)
+    return Response(generate(), mimetype="text/event-stream")
