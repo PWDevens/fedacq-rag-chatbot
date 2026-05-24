@@ -1,11 +1,7 @@
-# rag/indexing/builder.py
-import os
 from pathlib import Path
-from llama_index.core.node_parser import SentenceSplitter
+import chromadb
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext, VectorStoreIndex
-import chromadb
-
 from rag.retrieval.parser_dita import (
     clone_if_needed,
     build_documents_from_repo,
@@ -14,11 +10,12 @@ from rag.retrieval.parser_dita import (
 )
 from rag.retrieval.metadata import normalize_metadata
 from rag.llm.models import init_models
+from llama_index.core.node_parser import SentenceSplitter
 
 def build_index(chroma_path="./data/chroma"):
     init_models()
 
-    base_dir = Path("./regs")
+    base_dir = Path("./data/regs")
     far_path = base_dir / "far"
     dfars_path = base_dir / "dfars"
 
@@ -31,9 +28,10 @@ def build_index(chroma_path="./data/chroma"):
 
     splitter = SentenceSplitter(chunk_size=8192, chunk_overlap=100)
     nodes = splitter.get_nodes_from_documents(documents)
-
     for n in nodes:
         n.metadata = normalize_metadata(n.metadata)
+
+    Path(chroma_path).mkdir(parents=True, exist_ok=True)
 
     client = chromadb.PersistentClient(path=chroma_path)
     coll = client.get_or_create_collection("far_dfars_chroma")
@@ -41,5 +39,4 @@ def build_index(chroma_path="./data/chroma"):
     vs = ChromaVectorStore(chroma_collection=coll)
     storage = StorageContext.from_defaults(vector_store=vs)
 
-    index = VectorStoreIndex(nodes, storage_context=storage, show_progress=True)
-    return index
+    VectorStoreIndex(nodes, storage_context=storage, show_progress=True)
