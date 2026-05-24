@@ -15,7 +15,11 @@ def load_query_engine(chroma_path="./data/chromadb", collection="far_dfars_chrom
     vs = ChromaVectorStore(chroma_collection=coll)
     storage = StorageContext.from_defaults(vector_store=vs)
 
-    index = VectorStoreIndex.from_vector_store(storage)
+    index = VectorStoreIndex.from_vector_store(
+        vector_store=vs,
+        storage_context=storage,
+    )
+
     return index.as_query_engine(
         similarity_top_k=5,
         response_mode="compact",
