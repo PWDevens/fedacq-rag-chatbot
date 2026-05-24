@@ -26,6 +26,9 @@ regs/far/
 regs/dfars/
 data/dita/
 data/processed/
+data/regs/
+data/chromadb/
+data/chroma/
 *.log
 logs/
 log/
