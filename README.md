@@ -17,7 +17,6 @@ LlamaIndex > HuggingFaceLLM (Qwen) > HuggingFaceEmbedding > ChromaVectorStore
 Flask > TBD
 
 ## Repo Root
-### Main
 fedacq-rag-chatbot/
 │
 ├── app/
@@ -64,4 +63,3 @@ fedacq-rag-chatbot/
 ├── pyproject.toml
 ├── README.md
 └── requirements.txt
-
