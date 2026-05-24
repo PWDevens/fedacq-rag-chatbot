@@ -5,7 +5,7 @@ import chromadb
 from .metadata import normalize_metadata
 from rag.llm.models import init_models
 
-def load_query_engine(chroma_path="./chroma_fardfars", collection="far_dfars_chroma"):
+def load_query_engine(chroma_path="./data/chromadb", collection="far_dfars_chroma"):
     """Load an existing Chroma index and return a query engine."""
     init_models()
 
