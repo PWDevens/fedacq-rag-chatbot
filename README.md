@@ -16,5 +16,53 @@ Flask > TBD
 
 ## Repo Root
 <details>
-<summary><strong>📁 Project Structure (click to expand)</strong></summary>
+<summary><strong>Project Structure (click to expand)</strong></summary>
+fedacq-rag-chatbot/
+│
+├── app/
+│   ├── init.py
+│   ├── api.py
+│   ├── config.py
+│   └── wsgi.py
+│
+├── data/
+│
+├── docker/
+│   ├── docker-compose.yml
+│   └── local.env
+│
+├── rag/
+│   ├── indexing/
+│   │   ├── init.py
+│   │   ├── builder.py
+│   │   └── loader.py
+│   │
+│   ├── llm/
+│   │   ├── init.py
+│   │   ├── metadata.py
+│   │   ├── parser_dita.py
+│   │   └── query_engine.py
+│   │
+│   └── retrieval/
+│       ├── init.py
+│       └── models.py
+│
+├── scripts/
+│   └── build_index.py
+│
+├── tests/
+│   ├── test_indexing.py
+│   ├── test_llm.py
+│   ├── test_metadata.py
+│   ├── test_parser.py
+│   └── test_query_engine.py
+│
+├── .dockerignore
+├── .gitignore
+├── Dockerfile
+├── pyproject.toml
+├── README.md
+└── requirements.txt
+
+</details>
 
