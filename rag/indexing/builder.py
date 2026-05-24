@@ -15,7 +15,7 @@ from rag.retrieval.parser_dita import (
 from rag.retrieval.metadata import normalize_metadata
 from rag.llm.models import init_models
 
-def build_index(chroma_path="./chroma_fardfars"):
+def build_index(chroma_path="./data/chroma"):
     init_models()
 
     base_dir = Path("./regs")
