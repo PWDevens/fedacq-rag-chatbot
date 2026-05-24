@@ -15,3 +15,68 @@ API > .dita files > ChromaDB
 LlamaIndex > HuggingFaceLLM (Qwen) > HuggingFaceEmbedding > ChromaVectorStore 
 #### Deployment
 Flask > TBD
+
+## Repo Root
+### Main
+fedacq-rag-chatbot/
+│
+├── app/
+|  |
+|  ├── __init__.py
+|  ├── api.py
+|  ├── config.py
+|  └── wsgi.py
+├── data/
+├── docker/
+|  |
+|  ├── docker-compose.yml
+|  └── local.env
+├── rag/
+|  |
+|  ├── indexing/ 
+|  |  |
+|  |  ├── __init__.py
+|  |  ├── builder.py
+|  |  └── loader.py
+|  ├── llm/
+|  |  |
+|  |  ├── __init__.py
+|  |  ├── metadata.py
+|  |  ├── parser_dita.py
+|  |  └── query_engine.py
+|  └── retrieval/
+|  |  |
+|  |  ├── __init__.py
+|  |  └── models.py
+├── scripts/
+|  |
+|  └── build_index.py
+├── tests/
+|  |
+|  ├── test_indexing.py
+|  ├── test_llm.py
+|  ├── test_metadata.py
+|  ├── test_parser.py
+|  └── test_query_engine.py
+├── .dockerignore
+├── .gitignore
+├── Dockerfile
+├── pyproject.toml
+├── README.md
+└── requirements.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
