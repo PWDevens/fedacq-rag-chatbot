@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fedacq-rag-chatbot"
+version = "0.1.0"
+description = "Federal Acquisition Regulation RAG Chatbot"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flask",
+    "gunicorn",
+    "chromadb",
+    "llama-index==0.12.0",
+    "llama-index-core",
+    "llama-index-vector-stores-chroma",
+    "llama-index-embeddings-huggingface",
+    "llama-index-llms-huggingface",
+    "llama-index-readers-file",
+    "transformers",
+    "accelerate",
+    "sentencepiece",
+    "huggingface-hub",
+    "lxml",
+    "gitpython",
+    "python-dotenv",
+    "requests",
+    "tqdm",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rag", "app", "scripts"]
+
