@@ -1,7 +1,7 @@
 name: Local RAG Build & App Launch
 
 on:
-  workflow_dispatch:   # Manual trigger from GitHub UI
+  workflow_dispatch:
 
 jobs:
   build-and-run:
@@ -10,20 +10,19 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        lfs: true   # IMPORTANT: download LFS files
 
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: "3.11"
 
-    - name: Install project (editable mode)
+    - name: Install project
       run: pip install -e .
 
     - name: Install dependencies
       run: pip install -r requirements.txt
-
-    - name: Build RAG index
-      run: python -m scripts.build_index
 
     - name: Run tests
       run: pytest -q

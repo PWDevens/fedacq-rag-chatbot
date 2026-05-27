@@ -15,21 +15,6 @@ venv/
 # -----------------------------
 # RAG / LlamaIndex / Chroma
 # -----------------------------
-# Local vector store
-chroma_fardfars/
-chroma/
-data/chroma/
-*/chroma/
-
-# Regulatory repos (FAR/DFARS)
-regs/
-regs/far/
-regs/dfars/
-
-# DITA + processed text
-data/dita/
-data/processed/
-
 # LlamaIndex caches
 storage/
 index_store/

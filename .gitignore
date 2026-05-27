@@ -10,8 +10,7 @@ venv/
 .ipynb_checkpoints/
 *.ipynb
 chroma_fardfars/
-chroma/
-*/chroma/
+
 storage/
 index_store/
 vector_store/
@@ -21,14 +20,7 @@ huggingface/
 hf_cache/
 ~/.cache/huggingface/
 .cache/
-regs/
-regs/far/
-regs/dfars/
-data/dita/
 data/processed/
-data/regs/
-data/chromadb/
-data/chroma/
 *.log
 logs/
 log/
