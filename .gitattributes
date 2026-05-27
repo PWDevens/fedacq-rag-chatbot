@@ -1,0 +1,2 @@
+data/chroma/** filter=lfs diff=lfs merge=lfs -text
+data/regs/** filter=lfs diff=lfs merge=lfs -text
