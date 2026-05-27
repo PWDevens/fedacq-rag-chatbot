@@ -1,3 +1,5 @@
+## scripts/build_index.py
+
 from rag.indexing.builder import build_index
 
 if __name__ == "__main__":

@@ -1,3 +1,5 @@
+## rag/indexing/builder.py
+
 from pathlib import Path
 import chromadb
 from llama_index.vector_stores.chroma import ChromaVectorStore
@@ -39,4 +41,5 @@ def build_index(chroma_path="./data/chroma"):
     vs = ChromaVectorStore(chroma_collection=coll)
     storage = StorageContext.from_defaults(vector_store=vs)
 
-    VectorStoreIndex(nodes, storage_context=storage, show_progress=True)
+    index = VectorStoreIndex(nodes, storage_context=storage, show_progress=True)
+    index.storage_context.persist()
