@@ -1,0 +1,42 @@
+name: Local RAG Build & App Launch
+
+on:
+  workflow_dispatch:   # Manual trigger from GitHub UI
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Install project (editable mode)
+      run: pip install -e .
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Build RAG index
+      run: python -m scripts.build_index
+
+    - name: Run tests
+      run: pytest -q
+
+    - name: Build Docker image
+      run: docker build -t fedacq-rag-chatbot .
+
+    - name: Save Docker image as artifact
+      run: docker save fedacq-rag-chatbot | gzip > fedacq-rag-chatbot.tar.gz
+
+    - name: Upload Docker image artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: fedacq-rag-chatbot-image
+        path: fedacq-rag-chatbot.tar.gz
+
