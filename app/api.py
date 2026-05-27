@@ -1,6 +1,8 @@
+## app/api.py
+
 from flask import Blueprint, request, Response
 import json
-from rag_engine import load_query_engine
+from rag.retrieval.query_engine import load_query_engine
 
 api_bp = Blueprint("api", __name__)
 
