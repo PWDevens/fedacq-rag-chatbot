@@ -51,4 +51,6 @@ gitpython
 python-dotenv
 requests
 tqdm
+pytest
+pytest-cov
 
