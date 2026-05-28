@@ -8,10 +8,11 @@ version = "0.1.0"
 description = "Federal Acquisition Regulation RAG Chatbot"
 readme = "README.md"
 requires-python = ">=3.10"
+
 dependencies = [
-    "flask",
-    "gunicorn",
-    "chromadb",
+    "flask==3.1.3",
+    "gunicorn==26.0.0",
+    "chromadb==1.5.8",
     "llama-index==0.12.0",
     "llama-index-core",
     "llama-index-vector-stores-chroma",
@@ -28,11 +29,13 @@ dependencies = [
     "requests",
     "tqdm",
 ]
+
 [project.optional-dependencies]
 dev = [
     "pytest",
     "pytest-cov"
 ]
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["rag", "app", "scripts"]

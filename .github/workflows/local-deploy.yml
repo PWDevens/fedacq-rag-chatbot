@@ -22,14 +22,26 @@ jobs:
       run: pip install -e .
 
     - name: Install dependencies
-      run: pip install -r requirements.txt
-
+      run: pip install -r requirements.lock
+      
     - name: Run tests
       run: pytest -q
 
     - name: Build Docker image
       run: docker build -t fedacq-rag-chatbot .
 
+    - name: Run container
+      run: docker run -d -p 7860:7860 --name ragbot fedacq-rag-chatbot
+
+    - name: Healthcheck container
+      run: |
+        sleep 5
+        curl -f http://localhost:7860/ || (docker logs ragbot && exit 1)
+
+    - name: Stop container
+      if: always()
+      run: docker stop ragbot
+ 
     - name: Save Docker image as artifact
       run: docker save fedacq-rag-chatbot | gzip > fedacq-rag-chatbot.tar.gz
 
