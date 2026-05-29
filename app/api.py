@@ -2,7 +2,6 @@
 
 from flask import Blueprint, request, Response
 import json
-from rag.retrieval.query_engine import load_query_engine
 
 api_bp = Blueprint("api", __name__)
 
@@ -13,6 +12,7 @@ _qe = None
 def get_qe():
     global _qe
     if _qe is None:
+        from rag.retrieval.query_engine import load_query_engine
         _qe = load_query_engine()
     return _qe
 

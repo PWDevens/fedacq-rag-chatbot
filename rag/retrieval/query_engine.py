@@ -4,10 +4,10 @@ from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext, VectorStoreIndex
 import chromadb
 from .metadata import normalize_metadata
-from rag.llm.models import init_models
 
 def load_query_engine(chroma_path=None, collection="far_dfars_chroma"):
     """Load an existing Chroma index and return a query engine."""
+    from rag.llm.models import init_models
     if chroma_path is None:
         chroma_path = BaseConfig.CHROMA_PATH
     
