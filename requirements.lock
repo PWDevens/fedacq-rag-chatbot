@@ -27,7 +27,6 @@ distlib==0.4.0
 distro==1.9.0
 durationpy==0.10
 et_xmlfile==2.0.0
--e git+https://github.com/PWDevens/fedacq-rag-chatbot@9f1ebf4a6e655d1ea37cd0c4e0d0d52cc1ddfd5a#egg=fedacq_rag_chatbot
 feedfinder2==0.0.4
 feedparser==6.0.12
 filelock==3.19.1
