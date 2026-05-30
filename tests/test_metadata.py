@@ -1,3 +1,5 @@
+## tests/test_metadata.py
+
 from rag.retrieval.metadata import normalize_metadata
 
 def test_normalize_metadata():

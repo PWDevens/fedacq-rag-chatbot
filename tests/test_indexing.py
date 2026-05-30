@@ -1,3 +1,5 @@
+## tests/test_indexing.py
+
 from rag.indexing.builder import build_index
 
 def test_build_index_smoke():
