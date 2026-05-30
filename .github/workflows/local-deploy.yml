@@ -1,29 +1,34 @@
-name: Local RAG Build & App Launch
+name: CI
 
 on:
+  push:
+  pull_request:
   workflow_dispatch:
 
 jobs:
-  build-and-run:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        lfs: true   # IMPORTANT: download LFS files
+        lfs: true
+        submodules: false
 
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: "3.11"
 
-    - name: Install project
-      run: pip install -e .
-
     - name: Install dependencies
-      run: pip install -r requirements.lock
-      
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.lock
+
+    - name: Install project (non-editable)
+      run: pip install .
+
     - name: Run tests
       run: pytest -q
 
@@ -40,8 +45,8 @@ jobs:
 
     - name: Stop container
       if: always()
-      run: docker stop ragbot
- 
+      run: docker stop ragbot || true
+
     - name: Save Docker image as artifact
       run: docker save fedacq-rag-chatbot | gzip > fedacq-rag-chatbot.tar.gz
 
@@ -50,4 +55,3 @@ jobs:
       with:
         name: fedacq-rag-chatbot-image
         path: fedacq-rag-chatbot.tar.gz
-

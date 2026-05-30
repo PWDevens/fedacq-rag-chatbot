@@ -37,6 +37,6 @@ dev = [
 ]
 
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["rag", "app", "scripts"]
+where = ["src"]
+include = ["*"]
 
