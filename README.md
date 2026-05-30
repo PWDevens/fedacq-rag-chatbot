@@ -1,7 +1,7 @@
-# fedacq-rag-chatbot
+# fedacq‑rag‑chatbot
 ### Federal Acquisition Regulation Retrieval‑Augmented Generation (RAG) Chatbot
 
-A production‑ready Retrieval‑Augmented Generation (RAG) system that provides fast, accurate, citation‑backed answers to questions about the Federal Acquisition Regulation (FAR) and Defense Federal Acquisition Regulation Supplement (DFARS). Built for federal contractors, acquisition professionals, and businesses navigating the federal market.
+A production‑ready Retrieval‑Augmented Generation (RAG) system that provides fast, accurate, citation‑backed answers to questions about the Federal Acquisition Regulation (FAR) and Defense Federal Acquisition Regulation Supplement (DFARS). Designed for federal contractors, acquisition professionals, and businesses navigating the federal market.
 
 ---
 
@@ -27,12 +27,11 @@ This project automates that research using a modern RAG pipeline.
 
 ## Acceptance Criteria
 
-- Chatbot interface that:
-  - Accepts natural‑language questions  
-  - Retrieves relevant FAR/DFARS sections  
-  - Generates accurate, citation‑backed responses  
-  - Uses up‑to‑date regulatory text  
-- End‑to‑end reproducible pipeline  
+- Natural‑language question interface  
+- Retrieval of relevant FAR/DFARS sections  
+- Accurate, citation‑backed responses  
+- Up‑to‑date regulatory text  
+- Reproducible end‑to‑end pipeline  
 - Deployable locally, via Docker, or via CI/CD  
 
 ---
@@ -45,7 +44,7 @@ This project automates that research using a modern RAG pipeline.
 - Metadata normalized for retrieval  
 
 ### Embeddings + Vector Store
-- HuggingFace Embeddings (BGE‑small or similar)  
+- HuggingFace Embeddings (BGE‑small)  
 - ChromaDB persistent vector store  
 - Chunking via LlamaIndex `SentenceSplitter`  
 
@@ -56,15 +55,15 @@ This project automates that research using a modern RAG pipeline.
 - Query engine configured with top‑k similarity search  
 
 ### Application Layer
-- Flask API  
-- `/chat` and `/chat_stream` endpoints  
-- Token streaming for responsive UI  
+- Flask API (`src.app`)  
+- `/chat_stream` endpoint with token streaming  
+- Lightweight HTML/JS UI  
 
 ### Deployment
 - Local Python environment  
 - Docker container  
 - GitHub Actions CI pipeline  
-- Future: Cloud Run / Azure Web App / ECS  
+- CI job verifies index exists before deployment  
 
 ---
 
@@ -90,40 +89,37 @@ Pipeline:
 ```
 fedacq-rag-chatbot/
 │
-├── app/
-│   ├── __init__.py
-│   ├── api.py
-│   ├── config.py
-│   └── wsgi.py
+├── src/
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── api.py
+│   │   ├── config.py
+│   │   └── wsgi.py
+│   │
+│   ├── rag/
+│   │   ├── __init__.py
+│   │   │
+│   │   ├── indexing/
+│   │   │   ├── __init__.py
+│   │   │   ├── builder.py
+│   │   │   └── loader.py
+│   │   │
+│   │   ├── llm/
+│   │   │   ├── __init__.py
+│   │   │   └── models.py
+│   │   │
+│   │   └── retrieval/
+│   │       ├── __init__.py
+│   │       ├── metadata.py
+│   │       ├── parser_dita.py
+│   │       └── query_engine.py
+│   │
+│   └── scripts/
+│       └── build_index.py
 │
 ├── data/
-│   ├── chroma/          # Persistent ChromaDB index (Git LFS)
-│   └── regs/            # FAR/DFARS cloned repositories (Git LFS)
-│
-├── docker/
-│   ├── docker-compose.yml
-│   └── local.env
-│
-├── rag/
-│   ├── __init__.py
-│   │
-│   ├── indexing/
-│   │   ├── __init__.py
-│   │   ├── builder.py
-│   │   └── loader.py
-│   │
-│   ├── llm/
-│   │   ├── __init__.py
-│   │   ├── metadata.py
-│   │   ├── parser_dita.py
-│   │   └── query_engine.py
-│   │
-│   └── retrieval/
-│       ├── __init__.py
-│       └── models.py
-│
-├── scripts/
-│   └── build_index.py
+│   ├── chroma/      # Persistent ChromaDB index (Git LFS)
+│   └── regs/        # FAR/DFARS cloned repositories (Git LFS)
 │
 ├── tests/
 │   ├── test_indexing.py
@@ -132,13 +128,19 @@ fedacq-rag-chatbot/
 │   ├── test_parser.py
 │   └── test_query_engine.py
 │
+├── docker/
+│   ├── docker-compose.yml
+│   └── local.env
+│
 ├── .dockerignore
 ├── .gitattributes
 ├── .gitignore
 ├── Dockerfile
+├── Makefile
 ├── pyproject.toml
-├── README.md
-└── requirements.txt
+├── pytest.ini
+├── requirements.txt
+└── requirements.lock
 ```
 
 ---
