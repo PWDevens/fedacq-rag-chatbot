@@ -17,5 +17,3 @@ def create_app(config_name="default"):
 
     return app
 
-# For convenience when running locally:
-app = create_app()
