@@ -9,6 +9,7 @@ from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core.schema import TextNode
 from llama_index.core.settings import Settings
 from llama_index.core.embeddings import MockEmbedding
+from pathlib import Path
 
 from rag.retrieval.parser_dita import (
     clone_if_needed,
@@ -39,7 +40,7 @@ def build_index(chroma_path=None, test_mode=False):
         chroma_path = DATA_DIR / "chroma"
 
     (DATA_DIR / "regs").mkdir(parents=True, exist_ok=True)
-    chroma_path.mkdir(parents=True, exist_ok=True)
+    Path(chroma_path).mkdir(parents=True, exist_ok=True)
 
     # -------------------------
     # Test Mode: Skip cloning + parsing
