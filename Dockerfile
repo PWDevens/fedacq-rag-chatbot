@@ -1,23 +1,32 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
 WORKDIR /code
 
-# Install system deps
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+# System deps (curl for healthcheck, git for any repo ops)
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git curl && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy project files first (for editable install)
-COPY . .
+# Install Python deps using lock file (cacheable layer)
+COPY requirements.lock .
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.lock
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.lock
+# Install project (editable not needed in container)
+COPY pyproject.toml README.md ./
+COPY src ./src
+COPY data ./data
+COPY storage ./storage
+COPY scripts ./scripts
 
-# Expose API port
+RUN pip install --no-cache-dir .
+
 EXPOSE 7860
 
-# Healthcheck
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
   CMD curl -f http://localhost:7860/ || exit 1
 
-# Run the app
-CMD ["gunicorn", "--bind", "0.0.0.0:7860", "app.wsgi:app"]
-
+CMD ["gunicorn", "--bind", "0.0.0.0:7860", "src.app.wsgi:app"]

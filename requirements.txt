@@ -1,36 +1,25 @@
-# Flask + Server
-flask==3.1.3
-gunicorn==26.0.0
+# Runtime web server
+flask
+gunicorn
 
-# LlamaIndex (modular)
-llama-index==0.12.0
+# RAG + Vector store
+chromadb
+llama-index
 llama-index-core
 llama-index-vector-stores-chroma
 llama-index-embeddings-huggingface
 llama-index-llms-huggingface
 llama-index-readers-file
 
-# Vector Store
-chromadb==1.5.8
-
-# HuggingFace + Transformers
+# HF stack
 transformers
 accelerate
 sentencepiece
 huggingface-hub
 
-# DITA Parsing
+# Parsing / utilities
 lxml
-
-# Git Repo Cloning
 gitpython
-
-# Utilities
 python-dotenv
 requests
 tqdm
-
-# Testing
-pytest
-pytest-cov
-
