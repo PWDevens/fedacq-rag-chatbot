@@ -8,7 +8,7 @@ from llama_index.core import StorageContext, VectorStoreIndex
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core.schema import TextNode
 from llama_index.core.settings import Settings
-from llama_index.core.embeddings.mock import MockEmbedding
+from llama_index.core.embeddings import MockEmbedding
 
 from rag.retrieval.parser_dita import (
     clone_if_needed,
