@@ -154,7 +154,7 @@ async function send() {
   });
 
   if (!response.ok) {
-    botBubble.textContent += `\n[Error: HTTP ${response.status}]`;
+    botBubble.textContent += "\n[Error: HTTP " + response.status + "]";
     typingDiv.textContent = "";
     return;
   }
@@ -308,4 +308,3 @@ def chat_stream():
         def err_gen():
             yield f"data: Server error: {str(e)}\n\n"
         return Response(err_gen(), mimetype="text/event-stream", status=500)
-
