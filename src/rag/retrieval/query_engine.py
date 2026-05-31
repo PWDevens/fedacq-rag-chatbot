@@ -26,5 +26,5 @@ def load_query_engine(chroma_path=None, collection="far_dfars_chroma"):
 
     return index.as_query_engine(
         similarity_top_k=5,
-        response_mode="compact",
+        streaming=True,  # Enable streaming mode
     )
