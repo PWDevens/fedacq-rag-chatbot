@@ -2,6 +2,7 @@
 
 from flask import Blueprint, request, Response
 import json
+import traceback
 
 api_bp = Blueprint("api", __name__)
 
@@ -152,8 +153,14 @@ async function send() {
     body: JSON.stringify({ question: q })
   });
 
-  if (!response.ok || !response.body) {
-    botBubble.textContent += "\\n[Error: no response body]";
+  if (!response.ok) {
+    botBubble.textContent += `\n[Error: HTTP ${response.status}]`;
+    typingDiv.textContent = "";
+    return;
+  }
+
+  if (!response.body) {
+    botBubble.textContent += "\n[Error: no response body]";
     typingDiv.textContent = "";
     return;
   }
@@ -168,7 +175,7 @@ async function send() {
 
     buffer += decoder.decode(value, { stream: true });
 
-    const parts = buffer.split("\\n\\n");
+    const parts = buffer.split("\n\n");
     buffer = parts.pop();
 
     for (const part of parts) {
@@ -186,7 +193,7 @@ async function send() {
               parsed.citations.map(c => "- " + JSON.stringify(c)).join("<br>");
           }
         } catch (e) {
-          botBubble.textContent += "\\n[Error parsing citations]";
+          botBubble.textContent += "\n[Error parsing citations]";
         }
       } else {
         botBubble.textContent += data;
@@ -227,43 +234,78 @@ def home():
 
 @api_bp.route("/chat_stream", methods=["POST"])
 def chat_stream():
-    data = request.get_json(silent=True) or {}
-    q = (data.get("question") or "").strip()
-    print("Received question:", q)
+    try:
+        data = request.get_json(silent=True) or {}
+        q = (data.get("question") or "").strip()
+        print(f"[chat_stream] Received question: {q}")
 
-    if not q:
+        if not q:
+            def err_gen():
+                yield "data: Please enter a question.\n\n"
+            return Response(err_gen(), mimetype="text/event-stream")
+
+        # Load query engine
+        try:
+            print("[chat_stream] Loading query engine...")
+            qe = get_qe()
+            print("[chat_stream] Query engine loaded successfully")
+        except Exception as e:
+            print(f"[chat_stream] ERROR loading query engine: {e}")
+            traceback.print_exc()
+            def err_gen():
+                yield f"data: Error loading query engine: {str(e)}\n\n"
+            return Response(err_gen(), mimetype="text/event-stream", status=500)
+
+        system_prompt = (
+            "You are a compliance assistant specializing in FAR and DFARS. "
+            "Answer ONLY using retrieved context. "
+            "If unsure, say you are not certain."
+        )
+        full_prompt = f"{system_prompt}\n\nUser question: {q}"
+
+        def generate():
+            try:
+                print("[generate] Starting stream...")
+                stream = qe.stream_query(full_prompt)
+                print("[generate] Stream created successfully")
+
+                # Stream response tokens
+                for token in stream.response_gen:
+                    print(f"[generate] Token: {token}")
+                    yield f"data: {token}\n\n"
+
+                # Get final response for citations
+                print("[generate] Getting final response...")
+                final_response = stream.get_response()
+                print(f"[generate] Final response: {final_response}")
+                print(f"[generate] Source nodes: {final_response.source_nodes}")
+
+                # Extract citations
+                cites = []
+                for i, sn in enumerate(final_response.source_nodes, start=1):
+                    meta = sn.metadata or {}
+                    cites.append({
+                        "index": i,
+                        "regulation": meta.get("regulation"),
+                        "part": meta.get("part"),
+                        "section": meta.get("section"),
+                        "source_path": meta.get("source_path"),
+                    })
+
+                print(f"[generate] Citations: {cites}")
+                yield f"data: {json.dumps({'citations': cites})}\n\n"
+
+            except Exception as e:
+                print(f"[generate] ERROR: {e}")
+                traceback.print_exc()
+                yield f"data: Error during generation: {str(e)}\n\n"
+
+        return Response(generate(), mimetype="text/event-stream")
+
+    except Exception as e:
+        print(f"[chat_stream] OUTER ERROR: {e}")
+        traceback.print_exc()
         def err_gen():
-            yield "data: Please enter a question.\n\n"
-        return Response(err_gen(), mimetype="text/event-stream")
+            yield f"data: Server error: {str(e)}\n\n"
+        return Response(err_gen(), mimetype="text/event-stream", status=500)
 
-    qe = get_qe()
-
-    system_prompt = (
-        "You are a compliance assistant specializing in FAR and DFARS. "
-        "Answer ONLY using retrieved context. "
-        "If unsure, say you are not certain."
-    )
-    full_prompt = f"{system_prompt}\n\nUser question: {q}"
-
-    def generate():
-        stream = qe.stream_query(full_prompt)
-        print("Starting stream...")
-
-        for token in stream.response_gen:
-            yield f"data: {token}\n\n"
-
-        final_response = stream.get_response()
-        cites = []
-        for i, sn in enumerate(final_response.source_nodes, start=1):
-            meta = sn.metadata or {}
-            cites.append({
-                "index": i,
-                "regulation": meta.get("regulation"),
-                "part": meta.get("part"),
-                "section": meta.get("section"),
-                "source_path": meta.get("source_path"),
-            })
-
-        yield f"data: {json.dumps({'citations': cites})}\n\n"
-
-    return Response(generate(), mimetype="text/event-stream")
