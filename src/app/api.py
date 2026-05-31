@@ -20,7 +20,7 @@ def get_qe():
 # ---------------------------------------------------------
 # Embedded HTML/CSS/JS (ChatGPT-style UI)
 # ---------------------------------------------------------
-HTML = """
+HTML = r"""
 <!doctype html>
 <html>
 <head>
@@ -222,7 +222,7 @@ document.getElementById('question').addEventListener('keydown', function(e) {
 
 </body>
 </html>
-"""
+""".strip()
 
 # ---------------------------------------------------------
 # Routes
