@@ -265,24 +265,46 @@ def chat_stream():
 
         def generate():
             try:
-                print("[generate] Starting stream...")
-                stream = qe.stream_query(full_prompt)
-                print("[generate] Stream created successfully")
+                print("[generate] Starting streaming query...")
+                # Use query() with streaming=True in the engine
+                response = qe.query(full_prompt)
+                print("[generate] Streaming response received")
 
-                # Stream response tokens
-                for token in stream.response_gen:
-                    print(f"[generate] Token: {token}")
-                    yield f"data: {token}\n\n"
+                # If response is an async generator, handle it
+                if hasattr(response, '__aiter__'):
+                    # Handle async iterator
+                    import asyncio
+                    async def stream_async():
+                        async for chunk in response:
+                            print(f"[generate] Chunk: {chunk}")
+                            yield f"data: {chunk}\n\n"
+                    # Run async generator
+                    try:
+                        loop = asyncio.new_event_loop()
+                        async for chunk in stream_async():
+                            yield chunk
+                    except:
+                        pass
+                else:
+                    # Handle regular StreamingAgentResponse
+                    if hasattr(response, 'response_gen'):
+                        # Stream tokens from response_gen
+                        for token in response.response_gen:
+                            print(f"[generate] Token: {token}")
+                            yield f"data: {token}\n\n"
 
-                # Get final response for citations
-                print("[generate] Getting final response...")
-                final_response = stream.get_response()
-                print(f"[generate] Final response: {final_response}")
-                print(f"[generate] Source nodes: {final_response.source_nodes}")
+                # Extract citations from response
+                print("[generate] Getting final response for citations...")
+                if hasattr(response, 'source_nodes'):
+                    source_nodes = response.source_nodes
+                else:
+                    source_nodes = []
+
+                print(f"[generate] Source nodes: {source_nodes}")
 
                 # Extract citations
                 cites = []
-                for i, sn in enumerate(final_response.source_nodes, start=1):
+                for i, sn in enumerate(source_nodes, start=1):
                     meta = sn.metadata or {}
                     cites.append({
                         "index": i,
