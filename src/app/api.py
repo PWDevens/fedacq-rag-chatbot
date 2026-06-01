@@ -146,3 +146,7 @@ def chat_stream():
             yield f"data: Server error: {str(e)}\n\n"
 
         return Response(err_gen(), mimetype="text/event-stream", status=500)
+
+@api_bp.route("/health")
+def health():
+    return {"status": "ok"}

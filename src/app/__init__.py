@@ -1,19 +1,20 @@
-## app/__init__.py
-
 from flask import Flask
-from .config import get_config
+from .api import api_bp
 
-def create_app(config_name="default"):
-    """
-    Application factory pattern.
-    Allows different configs for local/dev/prod.
-    """
-    app = Flask(__name__)
-    app.config.from_object(get_config(config_name))
+def create_app():
+    # IMPORTANT: static_folder must point to the same folder used by api_bp
+    app = Flask(
+        __name__,
+        static_folder="static",
+        static_url_path="/static"
+    )
 
-    # Import and register routes
-    from .api import api_bp
-    app.register_blueprint(api_bp)
+    # Mount the API blueprint at root
+    app.register_blueprint(api_bp, url_prefix="/")
+
+    # Add a healthcheck route
+    @app.get("/health")
+    def health():
+        return {"status": "ok"}
 
     return app
-
