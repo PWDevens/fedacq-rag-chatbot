@@ -19,7 +19,7 @@ RUN pip install --upgrade pip && \
 COPY pyproject.toml README.md ./
 COPY src ./src
 COPY data ./data
-COPY scripts ./scripts
+# COPY scripts ./scripts
 
 RUN pip install --no-cache-dir .
 
