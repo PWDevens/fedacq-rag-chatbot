@@ -14,6 +14,7 @@ api_bp = Blueprint(
 # ---------------------------------------------------------
 _qe = None
 
+
 def get_qe():
     global _qe
     if _qe is None:
@@ -23,9 +24,9 @@ def get_qe():
 
 
 # ---------------------------------------------------------
-# Error generator (fixed)
+# Error generator
 # ---------------------------------------------------------
-def err_gen(msg):
+def err_gen(msg: str):
     yield f"data: {msg}\n\n"
 
 
@@ -45,7 +46,10 @@ def chat_stream():
         print(f"[chat_stream] Received question: {q}")
 
         if not q:
-            return Response(err_gen("Please enter a question."), mimetype="text/event-stream")
+            return Response(
+                err_gen("Please enter a question."),
+                mimetype="text/event-stream",
+            )
 
         # Load query engine
         try:
@@ -55,16 +59,22 @@ def chat_stream():
         except Exception as e:
             print(f"[chat_stream] ERROR initializing query engine: {e}")
             traceback.print_exc()
-            return Response(err_gen(f"Error loading query engine: {str(e)}"),
-                            mimetype="text/event-stream",
-                            status=500)
+            return Response(
+                err_gen(f"Error loading query engine: {str(e)}"),
+                mimetype="text/event-stream",
+                status=500,
+            )
 
+        # FAR/DFARS-focused, concise, non-rambling system prompt
         system_prompt = (
-            "You are a compliance assistant specializing in FAR and DFARS. "
-            "Answer ONLY using retrieved context. "
-            "If unsure, say you are not certain."
+            "You are a U.S. federal acquisition compliance assistant specializing in FAR and DFARS.\n"
+            "- Always prefer and rely on FAR when possible; use DFARS only as a supplement.\n"
+            "- Answer concisely and clearly, in no more than 3 short paragraphs.\n"
+            "- Do not add pleasantries, follow-up questions, or chit-chat.\n"
+            "- Do not repeat yourself.\n"
+            "- If the answer is not clearly supported by the retrieved context, say: 'I am not certain.'\n"
         )
-        full_prompt = f"{system_prompt}\n\nUser question: {q}"
+        full_prompt = f"{system_prompt}\nUser question: {q}"
 
         def generate():
             try:
@@ -72,44 +82,34 @@ def chat_stream():
                 response = qe.query(full_prompt)
                 print("[generate] Streaming response received")
 
-                # Async generator
-                if hasattr(response, "__aiter__"):
-                    import asyncio
-
-                    async def stream_async():
-                        async for chunk in response:
-                            print(f"[generate] Chunk: {chunk}")
-                            yield f"data: {chunk}\n\n"
-
-                    loop = asyncio.new_event_loop()
-                    asyncio.set_event_loop(loop)
-                    async_gen = stream_async()
-
-                    async def iterate():
-                        async for item in async_gen:
-                            yield item
-
-                    for chunk in loop.run_until_complete(iterate().__anext__()):
-                        yield chunk
-
-                # Sync generator
-                elif hasattr(response, "response_gen"):
+                # Most LlamaIndex HF integrations return a StreamingAgentResponse
+                if hasattr(response, "response_gen"):
                     for token in response.response_gen:
-                        print(f"[generate] Token: {token}")
-                        yield f"data: {token}\n\n"
+                        if token is None:
+                            continue
+                        text = str(token)
+                        print(f"[generate] Token: {text}")
+                        yield f"data: {text}\n\n"
+                else:
+                    # Fallback: treat response as a plain string
+                    text = str(response)
+                    print(f"[generate] Full response (non-streaming): {text}")
+                    yield f"data: {text}\n\n"
 
                 # Citations
                 source_nodes = getattr(response, "source_nodes", [])
                 cites = []
                 for i, sn in enumerate(source_nodes, start=1):
                     meta = sn.metadata or {}
-                    cites.append({
-                        "index": i,
-                        "regulation": meta.get("regulation"),
-                        "part": meta.get("part"),
-                        "section": meta.get("section"),
-                        "source_path": meta.get("source_path"),
-                    })
+                    cites.append(
+                        {
+                            "index": i,
+                            "regulation": meta.get("regulation"),
+                            "part": meta.get("part"),
+                            "section": meta.get("section"),
+                            "source_path": meta.get("source_path"),
+                        }
+                    )
 
                 yield f"data: {json.dumps({'citations': cites})}\n\n"
 
@@ -123,9 +123,11 @@ def chat_stream():
     except Exception as e:
         print(f"[chat_stream] OUTER ERROR: {e}")
         traceback.print_exc()
-        return Response(err_gen(f"Server error: {str(e)}"),
-                        mimetype="text/event-stream",
-                        status=500)
+        return Response(
+            err_gen(f"Server error: {str(e)}"),
+            mimetype="text/event-stream",
+            status=500,
+        )
 
 
 @api_bp.route("/health")

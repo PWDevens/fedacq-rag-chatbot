@@ -1,20 +1,35 @@
-# rag/llm/models.py
 import os
 from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
 
-QWEN_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
+PHI_MODEL = "microsoft/Phi-4-mini-flash-reasoning"
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
 
+
 def init_models():
-    """Initialize LLM + embedding models and apply to global Settings."""
+    """
+    Initialize Phi-4-mini-flash-reasoning (4-bit) + BGE embeddings
+    and apply to global LlamaIndex Settings.
+    """
+
     llm = HuggingFaceLLM(
-        model_name=QWEN_MODEL,
-        tokenizer_name=QWEN_MODEL,
+        model_name=PHI_MODEL,
+        tokenizer_name=PHI_MODEL,
         device_map="auto",
-        max_new_tokens=512,
-        generate_kwargs={"temperature": 0.1, "do_sample": False},
+        # Tactical cap to avoid rambling; generous but bounded
+        max_new_tokens=256,
+        # Deterministic, compliance-style answers
+        generate_kwargs={
+            "temperature": 0.1,
+            "top_p": 0.9,
+            "do_sample": False,
+        },
+        # 4-bit quantization + remote code for Phi-4
+        model_kwargs={
+            "trust_remote_code": True,
+            "load_in_4bit": True,
+        },
     )
 
     embed_model = HuggingFaceEmbedding(model_name=EMBED_MODEL)
