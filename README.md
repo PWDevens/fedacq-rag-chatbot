@@ -32,46 +32,50 @@ This project automates that research using a modern RAG pipeline.
 - Accurate, citation‑backed responses  
 - Up‑to‑date regulatory text  
 - Reproducible end‑to‑end pipeline  
-- Deployable locally, via Docker, or via CI/CD  
+- Deployable locally or via Docker  
 
 ---
 
 ## Technical Approach
 
 ### Data Source
+
 - FAR and DFARS pulled from official `.dita` XML repositories  
 - Parsed into structured documents  
 - Metadata normalized for retrieval  
 
 ### Embeddings + Vector Store
+
 - HuggingFace Embeddings (BGE‑small)  
 - ChromaDB persistent vector store  
 - Chunking via LlamaIndex `SentenceSplitter`  
 
 ### Retrieval‑Augmented Generation
+
 - LlamaIndex orchestration  
 - HuggingFace LLM (Qwen) for generation  
 - ChromaVectorStore for retrieval  
 - Query engine configured with top‑k similarity search  
 
 ### Application Layer
-- ASGI application (src.app.asgi)
-- /chat_stream endpoint with async token streaming
-- Static HTML/JS/CSS served from src/app/static/
-- Frontend  loads external JS + CSS instead of embedding them in Python
+
+- Flask application (`src.app`)  
+- Served as an ASGI app via Hypercorn  
+- `/chat_stream` endpoint with token streaming (Server‑Sent Events)  
+- Lightweight HTML/JS/CSS UI served from `src/app/static/`  
 
 ### Deployment
+
 - Local Python environment  
-- Docker container  
-- GitHub Actions CI pipeline  
-- CI job verifies index exists before deployment  
+- Docker container (Hypercorn ASGI server)  
+- GitHub Actions CI pipeline (optional)  
 
 ---
 
 ## Architecture Overview
 
-```
-User → ASGI API → Query Engine → LlamaIndex → ChromaDB → FAR/DFARS DITA Source
+```text
+User → Flask (ASGI via Hypercorn) → Query Engine → LlamaIndex → ChromaDB → FAR/DFARS DITA Source
 ```
 
 Pipeline:
@@ -80,7 +84,7 @@ Pipeline:
 2. Parse `.dita` XML  
 3. Chunk + embed  
 4. Store in ChromaDB  
-5. Serve via ASGI API  
+5. Serve via Flask API (ASGI)  
 6. LLM generates answers with citations  
 
 ---
@@ -173,6 +177,11 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
+```Windows (PowerShell)
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
 ### 4. Install project + dependencies
 
 ```bash
@@ -226,19 +235,24 @@ git push
 
 ## Running the Application
 
-### ASGI (Local Development)
+### Flask Development Server (local)
 
 ```bash
-uvicorn src.app.asgi:app --host 0.0.0.0 --port 7860 --reload
+python -m flask --app src.app run --host=0.0.0.0 --port=7860
+```
+
+### Hypercorn (ASGI, local production-like)
+```bash
+hypercorn --bind 0.0.0.0:7860 src.app.asgi:app
 ```
 
 ### Docker
 
 ```bash
 docker build -t fedacq-rag-chatbot .
-docker run -p 7860:7860 fedacq-rag-chatbot
+docker run -d -p 7860:7860 --name ragbot fedacq-rag-chatbot
 ```
-
+The container uses Hypercorn to serve the ASGI‑wrapped Flask app.
 ---
 
 ## Testing

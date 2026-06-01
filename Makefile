@@ -17,7 +17,10 @@ setup:
 # Run App
 # -------------------------
 run:
-    $(PYTHON) -m hypercorn src.app.asgi:asgi_app --bind 0.0.0.0:7860
+    $(PYTHON) -m flask --app src.app run --host=0.0.0.0 --port=7860
+
+hypercorn:
+    hypercorn --bind 0.0.0.0:7860 src.app.asgi:app
 
 # -------------------------
 # Build Index
@@ -38,4 +41,4 @@ docker-build:
     docker build -t fedacq-rag-chatbot .
 
 docker-run:
-    docker run -p 7860:7860 fedacq-rag-chatbot
+    docker run -p 7860:7860 --name ragbot fedacq-rag-chatbot

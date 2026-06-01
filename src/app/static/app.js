@@ -1,37 +1,43 @@
 async function send() {
-  const textarea = document.getElementById('question');
+  const textarea = document.getElementById("question");
   const q = textarea.value;
   if (!q.trim()) return;
 
-  const chat = document.getElementById('chat-container');
-  const citationsDiv = document.getElementById('citations');
-  const typingDiv = document.getElementById('typing');
+  const chat = document.getElementById("chat-container");
+  const citationsDiv = document.getElementById("citations");
+  const typingDiv = document.getElementById("typing");
 
   citationsDiv.innerHTML = "";
   typingDiv.textContent = "Bot is thinking...";
 
-  const userBubble = document.createElement('div');
-  userBubble.className = 'bubble user-bubble';
+  const userBubble = document.createElement("div");
+  userBubble.className = "bubble user-bubble";
   userBubble.textContent = q;
   chat.appendChild(userBubble);
 
-  textarea.value = '';
+  textarea.value = "";
 
-  const botBubble = document.createElement('div');
-  botBubble.className = 'bubble bot-bubble';
+  const botBubble = document.createElement("div");
+  botBubble.className = "bubble bot-bubble";
   botBubble.textContent = "";
   chat.appendChild(botBubble);
 
   chat.scrollTop = chat.scrollHeight;
 
-  const response = await fetch('/chat_stream', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ question: q })
+  const response = await fetch("/chat_stream", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ question: q }),
   });
 
   if (!response.ok) {
     botBubble.textContent += "\n[Error: HTTP " + response.status + "]";
+    typingDiv.textContent = "";
+    return;
+  }
+
+  if (!response.body) {
+    botBubble.textContent += "\n[Error: no response body]";
     typingDiv.textContent = "";
     return;
   }
@@ -53,15 +59,17 @@ async function send() {
       if (!part.startsWith("data:")) continue;
 
       const data = part.replace("data:", "").trim();
-
       if (!data) continue;
 
       if (data.startsWith("{")) {
         try {
           const parsed = JSON.parse(data);
           if (parsed.citations) {
-            citationsDiv.innerHTML = "<b>Citations:</b><br>" +
-              parsed.citations.map(c => "- " + JSON.stringify(c)).join("<br>");
+            citationsDiv.innerHTML =
+              "<b>Citations:</b><br>" +
+              parsed.citations
+                .map((c) => "- " + JSON.stringify(c))
+                .join("<br>");
           }
         } catch (e) {
           botBubble.textContent += "\n[Error parsing citations]";
@@ -78,14 +86,18 @@ async function send() {
   typingDiv.textContent = "";
 }
 
-document.getElementById('chat-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  send();
-});
-
-document.getElementById('question').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' && !e.shiftKey) {
+document
+  .getElementById("chat-form")
+  .addEventListener("submit", function (e) {
     e.preventDefault();
-    this.form.requestSubmit();
-  }
-});
+    send();
+  });
+
+document
+  .getElementById("question")
+  .addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      this.form.requestSubmit();
+    }
+  });

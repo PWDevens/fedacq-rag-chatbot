@@ -15,11 +15,10 @@ COPY requirements.lock .
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.lock
 
-# Install project (editable not needed in container)
+# Install project
 COPY pyproject.toml README.md ./
 COPY src ./src
 COPY data ./data
-# COPY scripts ./scripts
 
 RUN pip install --no-cache-dir .
 
