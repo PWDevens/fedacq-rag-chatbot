@@ -53,7 +53,7 @@ This project automates that research using a modern RAG pipeline.
 ### Retrieval‑Augmented Generation
 
 - LlamaIndex orchestration  
-- HuggingFace LLM (Qwen) for generation  
+- HuggingFace LLM (Microsoft Phi-4-mini) for generation  
 - ChromaVectorStore for retrieval  
 - Query engine configured with top‑k similarity search  
 
@@ -103,7 +103,7 @@ fedacq-rag-chatbot/
 │   │   └── static/
 │   │       ├── index.html
 │   │       ├── app.js
-│   │       └── style.css
+│   │       └── styles.css
 │   │
 │   ├── rag/
 │   │   ├── __init__.py
