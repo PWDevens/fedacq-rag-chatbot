@@ -55,8 +55,9 @@ jobs:
 
     - name: Healthcheck container
       run: |
-        sleep 5
-        curl -f http://localhost:7860/ || (docker logs ragbot && exit 1)
+        sleep 10
+        docker logs ragbot
+        curl -f http://localhost:7860/health || exit 1
 
     - name: Stop container
       if: always()
