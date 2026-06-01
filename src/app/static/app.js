@@ -36,12 +36,6 @@ async function send() {
     return;
   }
 
-  if (!response.body) {
-    botBubble.textContent += "\n[Error: no response body]";
-    typingDiv.textContent = "";
-    return;
-  }
-
   const reader = response.body.getReader();
   const decoder = new TextDecoder();
   let buffer = "";
@@ -59,6 +53,7 @@ async function send() {
       if (!part.startsWith("data:")) continue;
 
       const data = part.replace("data:", "").trim();
+
       if (!data) continue;
 
       if (data.startsWith("{")) {

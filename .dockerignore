@@ -1,6 +1,4 @@
-# -----------------------------
 # Python
-# -----------------------------
 __pycache__/
 *.pyc
 *.pyo
@@ -12,10 +10,7 @@ __pycache__/
 env/
 venv/
 
-# -----------------------------
 # RAG / LlamaIndex / Chroma
-# -----------------------------
-# LlamaIndex caches
 storage/
 index_store/
 vector_store/
@@ -29,15 +24,11 @@ hf_cache/
 .cache/
 ~/.cache/huggingface/
 
-# -----------------------------
 # Logs
-# -----------------------------
 *.log
 logs/
 
-# -----------------------------
 # OS / Editor files
-# -----------------------------
 .DS_Store
 Thumbs.db
 *.swp
@@ -49,17 +40,13 @@ Thumbs.db
 # PyCharm
 .idea/
 
-# -----------------------------
 # Docker
-# -----------------------------
 docker/local.env
 docker-compose.override.yml
 *.tar
 *.img
 
-# -----------------------------
 # Secrets / Environment
-# -----------------------------
 *.env
 .env.*
 secret_*.txt
@@ -68,10 +55,13 @@ HF_TOKEN
 OPENAI_API_KEY
 GOOGLE_APPLICATION_CREDENTIALS
 
-# -----------------------------
 # Build / Dist
-# -----------------------------
 build/
 dist/
 *.egg-info/
 
+# ASGI / FastAPI
+*.db
+*.sqlite
+pytest_cache/
+staticfiles/

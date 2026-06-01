@@ -1,6 +1,6 @@
-# Runtime web server
-flask
-gunicorn
+# Runtime web server (ASGI)
+fastapi
+uvicorn[standard]
 
 # RAG + Vector store
 chromadb

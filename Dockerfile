@@ -19,6 +19,7 @@ RUN pip install --upgrade pip && \
 COPY pyproject.toml README.md ./
 COPY src ./src
 COPY data ./data
+COPY scripts ./scripts
 
 RUN pip install --no-cache-dir .
 
@@ -27,4 +28,4 @@ EXPOSE 7860
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
   CMD curl -f http://localhost:7860/ || exit 1
 
-CMD ["gunicorn", "--bind", "0.0.0.0:7860", "src.app.wsgi:app"]
+CMD ["hypercorn", "src.app.asgi:asgi_app", "--bind", "0.0.0.0:7860"]

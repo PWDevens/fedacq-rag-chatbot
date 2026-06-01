@@ -3,22 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <title>FAR / DFARS RAG Chatbot</title>
-  <link rel="stylesheet" href="/static/chat.css">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
+  <div id="chat-container"></div>
+  <div id="typing"></div>
+  <div id="citations"></div>
 
-<div id="chat-container"></div>
-<div id="typing"></div>
-<div id="citations"></div>
+  <form id="chat-form">
+    <div id="input-bar">
+      <textarea id="question" placeholder="Ask a question..."></textarea>
+      <button id="send-btn" type="submit">Send</button>
+    </div>
+  </form>
 
-<form id="chat-form">
-  <div id="input-bar">
-    <textarea id="question" placeholder="Ask a question..."></textarea>
-    <button id="send-btn" type="submit">Send</button>
-  </div>
-</form>
-
-<script src="/static/chat.js"></script>
+  <script src="/static/app.js"></script>
 </body>
 </html>

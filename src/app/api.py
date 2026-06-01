@@ -1,14 +1,11 @@
+# src/app/api.py
+
 from flask import Blueprint, request, Response, send_from_directory, current_app
 import json
 import traceback
 import os
 
-api_bp = Blueprint(
-    "api",
-    __name__,
-    static_folder="static",
-    static_url_path="/static"
-)
+api_bp = Blueprint("api", __name__, static_folder="static")
 
 # ---------------------------------------------------------
 # Lazy-load query engine
@@ -21,15 +18,14 @@ def get_qe():
         _qe = load_query_engine()
     return _qe
 
-
 # ---------------------------------------------------------
 # Routes
 # ---------------------------------------------------------
 
 @api_bp.route("/")
 def home():
-    """Serve the external HTML file."""
-    static_dir = os.path.join(current_app.root_path, "app", "static")
+    """Serve external HTML file."""
+    static_dir = os.path.join(current_app.root_path, "static")
     return send_from_directory(static_dir, "index.html")
 
 
@@ -75,10 +71,8 @@ def chat_stream():
                     for token in response.response_gen:
                         yield f"data: {token}\n\n"
 
-                # Extract citations
-                print("[generate] Getting final response for citations...")
+                # Citations
                 source_nodes = getattr(response, "source_nodes", [])
-
                 cites = []
                 for i, sn in enumerate(source_nodes, start=1):
                     meta = sn.metadata or {}
@@ -90,7 +84,6 @@ def chat_stream():
                         "source_path": meta.get("source_path"),
                     })
 
-                print(f"[generate] Citations: {cites}")
                 yield f"data: {json.dumps({'citations': cites})}\n\n"
 
             except Exception as e:

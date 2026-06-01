@@ -55,9 +55,10 @@ This project automates that research using a modern RAG pipeline.
 - Query engine configured with top‑k similarity search  
 
 ### Application Layer
-- Flask API (`src.app`)  
-- `/chat_stream` endpoint with token streaming  
-- Lightweight HTML/JS UI  
+- ASGI application (src.app.asgi)
+- /chat_stream endpoint with async token streaming
+- Static HTML/JS/CSS served from src/app/static/
+- Frontend  loads external JS + CSS instead of embedding them in Python
 
 ### Deployment
 - Local Python environment  
@@ -70,7 +71,7 @@ This project automates that research using a modern RAG pipeline.
 ## Architecture Overview
 
 ```
-User → Flask API → Query Engine → LlamaIndex → ChromaDB → FAR/DFARS DITA Source
+User → ASGI API → Query Engine → LlamaIndex → ChromaDB → FAR/DFARS DITA Source
 ```
 
 Pipeline:
@@ -79,7 +80,7 @@ Pipeline:
 2. Parse `.dita` XML  
 3. Chunk + embed  
 4. Store in ChromaDB  
-5. Serve via Flask API  
+5. Serve via ASGI API  
 6. LLM generates answers with citations  
 
 ---
@@ -94,7 +95,11 @@ fedacq-rag-chatbot/
 │   │   ├── __init__.py
 │   │   ├── api.py
 │   │   ├── config.py
-│   │   └── wsgi.py
+│   │   ├── asgi.py
+│   │   └── static/
+│   │       ├── index.html
+│   │       ├── app.js
+│   │       └── style.css
 │   │
 │   ├── rag/
 │   │   ├── __init__.py
@@ -221,23 +226,17 @@ git push
 
 ## Running the Application
 
-### Flask (Windows‑friendly)
+### ASGI (Local Development)
 
 ```bash
-export FLASK_APP=app
-flask run --host=0.0.0.0 --port=8080
-```
-
-### Waitress (production on Windows)
-
-```bash
-waitress-serve --host=0.0.0.0 --port=8080 app.wsgi:app
+uvicorn src.app.asgi:app --host 0.0.0.0 --port 7860 --reload
 ```
 
 ### Docker
 
 ```bash
-docker compose up --build
+docker build -t fedacq-rag-chatbot .
+docker run -p 7860:7860 fedacq-rag-chatbot
 ```
 
 ---

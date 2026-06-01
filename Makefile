@@ -17,10 +17,7 @@ setup:
 # Run App
 # -------------------------
 run:
-    $(PYTHON) -m flask --app src.app run --host=0.0.0.0 --port=7860
-
-gunicorn:
-    gunicorn --bind 0.0.0.0:7860 src.app.wsgi:app
+    $(PYTHON) -m hypercorn src.app.asgi:asgi_app --bind 0.0.0.0:7860
 
 # -------------------------
 # Build Index
