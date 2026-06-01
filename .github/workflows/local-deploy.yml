@@ -36,6 +36,17 @@ jobs:
         RAG_TEST_MODE: "1"
       run: pytest -q
 
+    - name: Free disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /usr/local/lib/android
+        sudo rm -rf /opt/ghc
+        sudo rm -rf /usr/local/share/powershell
+        sudo rm -rf /usr/local/share/chromium
+        sudo rm -rf /usr/local/share/edge
+        docker system prune -af
+
+
     - name: Build Docker image
       run: docker build -t fedacq-rag-chatbot .
 
