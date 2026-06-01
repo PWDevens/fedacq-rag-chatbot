@@ -1,6 +1,8 @@
 # Runtime web server (ASGI)
 fastapi
 uvicorn[standard]
+hypercorn
+asgiref
 
 # RAG + Vector store
 chromadb

@@ -28,4 +28,4 @@ EXPOSE 7860
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
   CMD curl -f http://localhost:7860/ || exit 1
 
-CMD ["hypercorn", "src.app.asgi:asgi_app", "--bind", "0.0.0.0:7860"]
+CMD ["hypercorn", "--bind", "0.0.0.0:7860", "src.app.asgi:app"]
