@@ -3,13 +3,13 @@ from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
 
-PHI_MODEL = "microsoft/Phi-4-mini-flash-reasoning"
+PHI_MODEL = "microsoft/Phi-3-mini-128k-instruct"
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
 
 
 def init_models():
     """
-    Initialize Phi-4-mini-flash-reasoning (4-bit) + BGE embeddings
+    Initialize Phi-3-mini-128k-instruct (4-bit) + BGE embeddings
     and apply to global LlamaIndex Settings.
     """
 
@@ -17,18 +17,15 @@ def init_models():
         model_name=PHI_MODEL,
         tokenizer_name=PHI_MODEL,
         device_map="auto",
-        # Tactical cap to avoid rambling; generous but bounded
-        max_new_tokens=256,
-        # Deterministic, compliance-style answers
+        max_new_tokens=256,  # tactical cap to prevent rambling
         generate_kwargs={
             "temperature": 0.1,
             "top_p": 0.9,
-            "do_sample": False,
+            "do_sample": False,  # deterministic, compliance-style answers
         },
-        # 4-bit quantization + remote code for Phi-4
         model_kwargs={
             "trust_remote_code": True,
-            "load_in_4bit": True,
+            "load_in_4bit": True,  # CPU-friendly quantization
         },
     )
 

@@ -73,7 +73,8 @@ def chat_stream():
             "- Do not add pleasantries, follow-up questions, or chit-chat.\n"
             "- Do not repeat yourself.\n"
             "- If the answer is not clearly supported by the retrieved context, say: 'I am not certain.'\n"
-        )
+)
+
         full_prompt = f"{system_prompt}\nUser question: {q}"
 
         def generate():
