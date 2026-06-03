@@ -26,6 +26,7 @@ hf_cache/
 .cache/
 data/regs/far
 data/regs/dfars
+data/regs/*
 data/processed/
 
 *.log

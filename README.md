@@ -53,7 +53,7 @@ This project automates that research using a modern RAG pipeline.
 ### Retrieval‑Augmented Generation
 
 - LlamaIndex orchestration  
-- HuggingFace LLM (Microsoft Phi-4-mini) for generation  
+- HuggingFace LLM (Microsoft Phi-3-mini-128k-instruct) for generation  
 - ChromaVectorStore for retrieval  
 - Query engine configured with top‑k similarity search  
 
