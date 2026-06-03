@@ -24,7 +24,8 @@ huggingface/
 hf_cache/
 ~/.cache/huggingface/
 .cache/
-
+data/regs/far
+data/regs/dfars
 data/processed/
 
 *.log
