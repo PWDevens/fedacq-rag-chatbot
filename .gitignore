@@ -13,6 +13,7 @@ venv/
 *.ipynb
 
 chroma_fardfars/
+test_chroma/
 storage/
 index_store/
 vector_store/
