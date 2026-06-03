@@ -64,3 +64,5 @@ dist/
 *.sqlite
 pytest_cache/
 staticfiles/
+
+repo_state_validator.py
