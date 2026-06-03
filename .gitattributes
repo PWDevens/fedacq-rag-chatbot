@@ -1,3 +1,5 @@
+# Chroma index (large binary vectors)
 data/chroma/** filter=lfs diff=lfs merge=lfs -text
+
+# FAR/DFARS regulatory source files (XML, DITA, PDF)
 data/regs/** filter=lfs diff=lfs merge=lfs -text
-data/ filter=lfs diff=lfs merge=lfs -text
