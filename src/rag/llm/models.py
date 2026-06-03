@@ -9,7 +9,7 @@ EMBED_MODEL = "BAAI/bge-small-en-v1.5"
 
 def init_models():
     """
-    Initialize Phi-3-mini-128k-instruct (4-bit) + BGE embeddings
+    Initialize Phi-3-mini-128k-instruct + BGE embeddings
     and apply to global LlamaIndex Settings.
     """
 
@@ -25,7 +25,7 @@ def init_models():
         },
         model_kwargs={
             "trust_remote_code": True,
-            "load_in_4bit": True,  # CPU-friendly quantization
+            "torch_dtype": "auto",
         },
     )
 

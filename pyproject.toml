@@ -36,7 +36,7 @@ dev = [
     "pytest==9.0.3",
     "pytest-cov==7.1.0",
 ]
-phi4 = [
+phi3 = [
   "einops",
   "mamba-ssm",
   "causal-conv1d",
