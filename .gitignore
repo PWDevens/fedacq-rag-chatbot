@@ -1,69 +1,48 @@
+# Python
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.pkl
-*.pickle
 
-.env
-.venv
+# Virtual environments
+.venv/
 env/
 venv/
 
-.ipynb_checkpoints/
-*.ipynb
-
-chroma_fardfars/
-test_chroma/
-storage/
-index_store/
-vector_store/
-*.jsonl
-*.json
-
-huggingface/
-hf_cache/
-~/.cache/huggingface/
-.cache/
-data/regs/far
-data/regs/dfars
-data/regs/*
-data/processed/
-
+# Logs
 *.log
 logs/
-log/
 
+# OS/editor files
 .DS_Store
-Thumbs.db 
-*.swp
-*.swo
+Thumbs.db
 
+# VSCode
 .vscode/
+
+# PyCharm
 .idea/
 
-*.tar
-*.img
-
+# Docker
 docker/local.env
 docker-compose.override.yml
 
+# Secrets
 *.env
 .env.*
 secret_*.txt
 secrets/
 
-HF_Token
-OPEN_API_KEY
-GOOGLE_APPLICATION_CREDENTIALS
-
+# Build artifacts
 build/
 dist/
 *.egg-info/
 
-# ASGI / FastAPI
-*.db
-*.sqlite
-pytest_cache/
-staticfiles/
+# Ignore Chroma index (handled by LFS)
+data/chroma/
 
+# DO NOT ignore FAR/DFARS
+# data/regs/** must NOT be ignored
 repo_state_validator.py
+storage/
+test_chroma/
