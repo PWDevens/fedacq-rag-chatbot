@@ -1,15 +1,13 @@
-# src/rag/indexing/builder.py
+## src/rag/indexing/builder.py
 
 from pathlib import Path
 import os
 import chromadb
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext, VectorStoreIndex
-from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core.schema import TextNode
 from llama_index.core.settings import Settings
 from llama_index.core.embeddings import MockEmbedding
-from pathlib import Path
 
 from rag.retrieval.parser_dita import (
     clone_if_needed,
@@ -23,11 +21,11 @@ from rag.llm.models import init_models
 
 def build_index(chroma_path=None, test_mode=False):
     # -------------------------
-    # Test Mode: Disable OpenAI
+    # Test Mode
     # -------------------------
     if test_mode or os.getenv("RAG_TEST_MODE") == "1":
         Settings.embed_model = MockEmbedding(embed_dim=8)
-        Settings.llm = None  # ensure no LLM is initialized
+        Settings.llm = None
         os.environ["IS_TESTING"] = "1"
 
     # -------------------------
@@ -66,18 +64,24 @@ def build_index(chroma_path=None, test_mode=False):
     far_path = base_dir / "far"
     dfars_path = base_dir / "dfars"
 
+    # Clone FAR + DFARS repos if missing
     clone_if_needed(FAR_REPO_URL, far_path)
     clone_if_needed(DFARS_REPO_URL, dfars_path)
 
+    # Build one Document per DITA file (already semantically chunked)
     far_docs = build_documents_from_repo(far_path, "FAR")
     dfars_docs = build_documents_from_repo(dfars_path, "DFARS")
     documents = far_docs + dfars_docs
 
-    splitter = SentenceSplitter(chunk_size=8192, chunk_overlap=100)
-    nodes = splitter.get_nodes_from_documents(documents)
-    for n in nodes:
-        n.metadata = normalize_metadata(n.metadata)
+    # Convert each Document into a TextNode directly
+    nodes = []
+    for doc in documents:
+        meta = normalize_metadata(doc.metadata)
+        nodes.append(TextNode(text=doc.text, metadata=meta))
 
+    # -------------------------
+    # Build Chroma Index
+    # -------------------------
     client = chromadb.PersistentClient(path=str(chroma_path))
     coll = client.get_or_create_collection("far_dfars_chroma")
     vs = ChromaVectorStore(chroma_collection=coll)

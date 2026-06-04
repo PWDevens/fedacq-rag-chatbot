@@ -159,7 +159,7 @@ fedacq-rag-chatbot/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-org/fedacq-rag-chatbot.git
+git clone https://github.com/PWDevens/fedacq-rag-chatbot.git
 cd fedacq-rag-chatbot
 ```
 
@@ -226,7 +226,7 @@ This will:
 After rebuilding, commit the updated index using Git LFS:
 
 ```bash
-git add data/chroma data/regs
+git add data/chroma 
 git commit -m "Rebuild RAG index"
 git push
 ```
