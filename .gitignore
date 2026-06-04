@@ -41,8 +41,10 @@ dist/
 # Ignore Chroma index (handled by LFS)
 data/chroma/
 
-# DO NOT ignore FAR/DFARS
-# data/regs/** must NOT be ignored
+data/regs/
 repo_state_validator.py
 storage/
 test_chroma/
+# FAR/DFARS are cloned dynamically — do NOT track them
+data/regs/far/
+data/regs/dfars/
