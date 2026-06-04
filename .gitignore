@@ -38,8 +38,6 @@ build/
 dist/
 *.egg-info/
 
-# Ignore Chroma index (handled by LFS)
-data/chroma/
 
 data/regs/
 repo_state_validator.py
