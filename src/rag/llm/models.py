@@ -19,10 +19,7 @@ def init_models():
         device_map="auto",
         max_new_tokens=256,  # tactical cap to prevent rambling
         generate_kwargs={
-            """
-            Have to comment out generage kwargs uue to incompatibility between Phi‑3‑mini‑128k‑instruct and the version of Transformers that LlamaIndex
-            """
-            
+            # Have to comment out generage kwargs uue to incompatibility between Phi‑3‑mini‑128k‑instruct and the version of Transformers that LlamaIndex     
             #"temperature": 0.1,
             #"top_p": 0.9,
             "do_sample": False,  # deterministic, compliance-style answers
