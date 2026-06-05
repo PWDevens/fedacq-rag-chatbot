@@ -17,12 +17,9 @@ def init_models():
         model_name=PHI_MODEL,
         tokenizer_name=PHI_MODEL,
         device_map="auto",
-        max_new_tokens=256,  # tactical cap to prevent rambling
+        max_new_tokens=256,
         generate_kwargs={
-            # Have to comment out generage kwargs uue to incompatibility between Phi‑3‑mini‑128k‑instruct and the version of Transformers that LlamaIndex     
-            #"temperature": 0.1,
-            #"top_p": 0.9,
-            "do_sample": False,  # deterministic, compliance-style answers
+            "do_sample": False,
         },
         model_kwargs={
             "trust_remote_code": True,
@@ -33,7 +30,11 @@ def init_models():
 
     embed_model = HuggingFaceEmbedding(model_name=EMBED_MODEL)
 
+    # Apply globally
     Settings.llm = llm
     Settings.embed_model = embed_model
+
+    # CRITICAL: Force LlamaIndex to disable sampling
+    Settings.llm.generate_kwargs = {"do_sample": False}
 
     return llm, embed_model
