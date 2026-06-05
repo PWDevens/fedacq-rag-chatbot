@@ -46,3 +46,14 @@ test_chroma/
 # FAR/DFARS are cloned dynamically — do NOT track them
 data/regs/far/
 data/regs/dfars/
+
+# Ignore Chroma runtime mutations
+data/chroma/*.wal
+data/chroma/*.shm
+data/chroma/collections/*
+data/chroma/index/*
+data/chroma/uuid/*
+data/chroma/*.lock
+
+# Ignore the main sqlite file UNLESS explicitly force-added
+data/chroma/chroma.sqlite3
