@@ -25,7 +25,7 @@ def init_models():
             
             #"temperature": 0.1,
             #"top_p": 0.9,
-            #"do_sample": False,  # deterministic, compliance-style answers
+            "do_sample": False,  # deterministic, compliance-style answers
         },
         model_kwargs={
             "trust_remote_code": True,
