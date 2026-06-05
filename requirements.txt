@@ -13,7 +13,7 @@ llama-index-llms-huggingface
 llama-index-readers-file
 
 # HF stack
-transformers
+transformers>=4.41,<5
 accelerate
 sentencepiece
 huggingface-hub
