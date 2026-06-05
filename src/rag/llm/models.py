@@ -27,6 +27,7 @@ def init_models():
         model_kwargs={
             "trust_remote_code": True,
             "torch_dtype": "auto",
+            "use_cache": False,
         },
     )
 
