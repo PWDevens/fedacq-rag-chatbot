@@ -2,7 +2,7 @@
 name = "fedacq-rag-chatbot"
 version = "0.1.0"
 description = "FAR/DFARS RAG chatbot"
-requires-python = ">=3.10"
+requires-python = ">=3.10, <3.13"
 
 dependencies = [
     "accelerate>=1.13.0",
