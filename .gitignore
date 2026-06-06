@@ -19,6 +19,7 @@ Thumbs.db
 
 # VSCode
 .vscode/
+.vs/
 
 # PyCharm
 .idea/

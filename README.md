@@ -212,6 +212,8 @@ The RAG index is **not** built in CI due to the size of FAR/DFARS and the cost o
 
 To rebuild locally:
 
+First, edit .gitignore and comment out 'data/chroma/chroma.sqlite3'; then, 
+
 ```bash
 python -m scripts.build_index
 ```
