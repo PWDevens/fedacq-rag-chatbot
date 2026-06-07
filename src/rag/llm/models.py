@@ -3,17 +3,17 @@ from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
 
-PHI_MODEL = "microsoft/Phi-3-mini-128k-instruct"
+PHI_MODEL = "microsoft/Phi-4-mini-instruct"
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
 
 
 def init_models():
     """
-    Initialize Phi-3-mini-128k-instruct + BGE embeddings
+    Initialize microsoft/Phi-4-mini-instruct + BGE embeddings
     and apply to global LlamaIndex Settings.
 
     This configuration assumes a recent transformers version
-    compatible with Phi-3 (e.g. >= 4.41).
+    compatible with Phi-4 (e.g. >= 4.41).
     """
 
     llm = HuggingFaceLLM(
