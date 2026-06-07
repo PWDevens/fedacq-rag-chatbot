@@ -2,7 +2,7 @@ accelerate
 chromadb
 Flask
 gitpython
-huggingface-hub>=1.18.0
+huggingface-hub==0.36.2
 hypercorn
 llama-index>=0.14.12
 llama-index-core>=0.12.52
