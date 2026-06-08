@@ -1,34 +1,23 @@
 import os
-from llama_index.llms.huggingface import HuggingFaceLLM
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
+from rag.llm.phi4_onnx_llm import Phi4OnnxLLM
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
-PHI_MODEL = "microsoft/Phi-4-mini-instruct-onnx"
+PHI_MODEL = "./cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4"
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
 
 
 def init_models():
     """
-    Initialize microsoft/Phi-4-mini-instruct-onnx + BGE embeddings
-    and apply to global LlamaIndex Settings.
-
-    This configuration uses ONNX Runtime for CPU-only inference.
+    Initialize Phi-4-mini-instruct-onnx (CPU-only, ONNX Runtime GenAI)
+    and BGE-small embeddings, then apply them to global LlamaIndex Settings.
     """
 
-    llm = HuggingFaceLLM(
-        model_name=PHI_MODEL,
-        tokenizer_name=PHI_MODEL,
-        device_map="cpu",          # ONNXRuntime runs on CPU
+    llm = Phi4OnnxLLM(
+        model_dir=PHI_MODEL,
         max_new_tokens=256,
-        generate_kwargs={
-            "temperature": 0.1,
-            "top_p": 0.9,
-            "do_sample": False,    # deterministic, compliance-style answers
-        },
-        model_kwargs={
-            "trust_remote_code": True,
-            "provider": "CPUExecutionProvider",  # ONNXRuntime backend
-        },
+        temperature=0.1,
+        top_p=0.9,
     )
 
     embed_model = HuggingFaceEmbedding(model_name=EMBED_MODEL)
