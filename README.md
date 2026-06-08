@@ -53,9 +53,18 @@ This project automates that research using a modern RAG pipeline.
 ### Retrieval‑Augmented Generation
 
 - LlamaIndex orchestration  
-- HuggingFace LLM (Microsoft Phi-4-mini-instruct-onnx) for generation  
-- ChromaVectorStore for retrieval  
+- Custom ONNX Runtime GenAI LLM (Phi‑4‑mini‑instruct‑onnx)
+- ChromaDB for retrieval  
+- BGE-small embeddings
 - Query engine configured with top‑k similarity search  
+
+### Why ONNX Runtime GenAI?
+- Fast inference on CPU (no GPU required)
+- No PyTorch dependency
+- No external API calls (fully local)
+- Smaller memory footprint
+- Production-ready kernels optimized by Microsoft
+- Works well with smaller models like Phi-4-mini-instruct-onnx
 
 ### Application Layer
 
@@ -188,6 +197,13 @@ python -m venv .venv
 pip install -e .
 pip install -r requirements.txt
 ```
+
+```huggingface-cli
+huggingface-cli download microsoft/Phi-4-mini-instruct-onnx \
+  --include cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/* \
+  --local-dir .
+```
+This creates cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/ with the ONNX model files.
 
 ### 5. Verify the prebuilt RAG index
 

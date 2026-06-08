@@ -46,7 +46,6 @@ jobs:
         sudo rm -rf /usr/local/share/edge
         docker system prune -af
 
-
     - name: Build Docker image
       run: docker build -t fedacq-rag-chatbot .
 
