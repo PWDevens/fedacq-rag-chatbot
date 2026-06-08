@@ -13,6 +13,9 @@ venv/
 *.log
 logs/
 
+# ONNX model files
+cpu_and_mobile/
+
 # OS/editor files
 .DS_Store
 Thumbs.db
