@@ -1,11 +1,13 @@
-import os
-from typing import Optional, List
-
-from llama_index.core.llms import LLM, CompletionResponse, CompletionResponseGen
-from llama_index.core.llms.types import LLMMetadata
-from llama_index.core.bridge.pydantic import Field
-
 import onnxruntime_genai as og
+from typing import Optional
+
+from llama_index.core.llms.llm import LLM
+from llama_index.core.llms import (
+    LLMMetadata,
+    CompletionResponse,
+    CompletionResponseGen,
+)
+from llama_index.core.bridge.pydantic import Field
 
 
 class Phi4OnnxLLM(LLM):
@@ -14,17 +16,18 @@ class Phi4OnnxLLM(LLM):
     using ONNX Runtime GenAI for CPU inference.
     """
 
+    # Pydantic model fields (REQUIRED)
     model_dir: str = Field(description="Path to ONNX model directory")
-    max_new_tokens: int = 256
-    temperature: float = 0.1
-    top_p: float = 0.9
+    max_new_tokens: int = Field(default=256)
+    temperature: float = Field(default=0.1)
+    top_p: float = Field(default=0.9)
 
-    def __init__(self, model_dir: str, **kwargs):
-        super().__init__(model_dir=model_dir, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
         # Load ONNX model + tokenizer
-        self.tokenizer = og.Tokenizer(model_dir)
-        self.model = og.Model(model_dir)
+        self.tokenizer = og.Tokenizer(self.model_dir)
+        self.model = og.Model(self.model_dir)
         self.generator = og.Generator(self.model, self.tokenizer)
 
     @property
@@ -35,6 +38,9 @@ class Phi4OnnxLLM(LLM):
             model_name="phi-4-mini-instruct-onnx",
         )
 
+    # -----------------------------
+    # Core completion methods
+    # -----------------------------
     def complete(self, prompt: str, **kwargs) -> CompletionResponse:
         inputs = self.tokenizer.encode(prompt)
         outputs = self.generator.generate(
@@ -59,3 +65,26 @@ class Phi4OnnxLLM(LLM):
                 yield self.tokenizer.decode([token])
 
         return CompletionResponseGen(gen())
+
+    # -----------------------------
+    # Required abstract methods
+    # -----------------------------
+    async def acomplete(self, prompt: str, **kwargs):
+        return self.complete(prompt, **kwargs)
+
+    async def astream_complete(self, prompt: str, **kwargs):
+        return self.stream_complete(prompt, **kwargs)
+
+    def chat(self, messages, **kwargs):
+        prompt = messages[-1].content
+        return self.complete(prompt, **kwargs)
+
+    async def achat(self, messages, **kwargs):
+        return self.chat(messages, **kwargs)
+
+    def stream_chat(self, messages, **kwargs):
+        prompt = messages[-1].content
+        return self.stream_complete(prompt, **kwargs)
+
+    async def astream_chat(self, messages, **kwargs):
+        return self.stream_chat(messages, **kwargs)
