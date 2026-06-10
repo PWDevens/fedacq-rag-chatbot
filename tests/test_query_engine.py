@@ -10,3 +10,4 @@ def test_load_query_engine():
     qe = load_query_engine()
     assert qe is not None
     assert hasattr(qe, "retrieve")
+    assert callable(qe.retrieve)
