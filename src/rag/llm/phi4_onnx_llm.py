@@ -1,21 +1,12 @@
 import onnxruntime_genai as og
 
-from llama_index.core.llms.llm import LLM
-from llama_index.core.llms import (
-    LLMMetadata,
-    CompletionResponse,
-    CompletionResponseGen,
-)
+from llama_index.core.llms import CustomLLM, LLMMetadata
+from llama_index.core.llms import CompletionResponse
 from llama_index.core.bridge.pydantic import Field
 from pydantic import PrivateAttr
 
 
-class Phi4OnnxLLM(LLM):
-    """
-    Custom LlamaIndex LLM wrapper for Phi-4-mini-instruct-onnx
-    using ONNX Runtime GenAI 0.2.x API for CPU inference.
-    """
-
+class Phi4OnnxLLM(CustomLLM):
     model_dir: str = Field(description="Path to ONNX model directory")
     max_new_tokens: int = Field(default=256)
     temperature: float = Field(default=0.1)
@@ -23,28 +14,21 @@ class Phi4OnnxLLM(LLM):
 
     _model: og.Model = PrivateAttr()
     _tokenizer: og.Tokenizer = PrivateAttr()
-    _generator: og.Generator = PrivateAttr()
-    _generator_params: og.GeneratorParams = PrivateAttr()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-
-        # Load ONNX model + tokenizer
         self._model = og.Model(self.model_dir)
         self._tokenizer = og.Tokenizer(self._model)
 
-        # Build generator params (ORT GenAI 0.2.x API)
+    def _make_params(self, input_tokens):
         params = og.GeneratorParams(self._model)
-
-        # Old API: set_search_options(**kwargs)
+        total_max = len(input_tokens) + int(self.max_new_tokens)
         params.set_search_options(
             temperature=float(self.temperature),
             top_p=float(self.top_p),
-            max_length=int(self.max_new_tokens),   # THIS is the correct API
+            max_length=int(total_max),
         )
-
-        self._generator_params = params
-        self._generator = og.Generator(self._model, params)
+        return params
 
     @property
     def metadata(self) -> LLMMetadata:
@@ -54,27 +38,44 @@ class Phi4OnnxLLM(LLM):
             model_name="phi-4-mini-instruct-onnx",
         )
 
-    # -----------------------------
-    # Core completion methods
-    # -----------------------------
     def complete(self, prompt: str, **kwargs) -> CompletionResponse:
         input_tokens = self._tokenizer.encode(prompt)
-        output_tokens = self._generator.generate(input_tokens)
+        params = self._make_params(input_tokens)
+        generator = og.Generator(self._model, params)
+        generator.append_tokens(input_tokens)
+
+        output_tokens = []
+        while not generator.is_done():
+            generator.generate_next_token()
+            new_tokens = generator.get_next_tokens()
+            if new_tokens:
+                output_tokens.extend(new_tokens)
+            if len(output_tokens) >= self.max_new_tokens:
+                break
+
         text = self._tokenizer.decode(output_tokens)
         return CompletionResponse(text=text)
 
-    def stream_complete(self, prompt: str, **kwargs) -> CompletionResponseGen:
+    def stream_complete(self, prompt: str, **kwargs):
         input_tokens = self._tokenizer.encode(prompt)
+        params = self._make_params(input_tokens)
+        generator = og.Generator(self._model, params)
+        generator.append_tokens(input_tokens)
 
         def gen():
-            for token in self._generator.generate_stream(input_tokens):
-                yield self._tokenizer.decode([token])
+            output_tokens = []
+            while not generator.is_done():
+                generator.generate_next_token()
+                new_tokens = generator.get_next_tokens()
+                if not new_tokens:
+                    continue
+                output_tokens.extend(new_tokens)
+                yield self._tokenizer.decode(new_tokens)
+                if len(output_tokens) >= self.max_new_tokens:
+                    break
 
-        return CompletionResponseGen(gen())
+        return gen()
 
-    # -----------------------------
-    # Required abstract methods
-    # -----------------------------
     async def acomplete(self, prompt: str, **kwargs):
         return self.complete(prompt, **kwargs)
 

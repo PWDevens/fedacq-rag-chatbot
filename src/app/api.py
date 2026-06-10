@@ -1,5 +1,3 @@
-## src/app/api.py
-
 from flask import Blueprint, request, Response
 import json
 import traceback
@@ -39,13 +37,14 @@ def chat_stream():
         print(f"[chat_stream] Received question: {q}")
 
         if not q:
-            return Response(err_gen("Please enter a question."),
-                            mimetype="text/event-stream")
+            return Response(
+                err_gen("Please enter a question."),
+                mimetype="text/event-stream",
+            )
 
-        # Load query engine
         try:
             print("[chat_stream] Loading query engine...")
-            qe = get_qe()
+            retriever = get_qe()
             print("[chat_stream] Query engine loaded successfully")
         except Exception as e:
             traceback.print_exc()
@@ -63,39 +62,51 @@ def chat_stream():
             "- If unsure, say: 'I am not certain.'\n"
         )
 
-        full_prompt = f"{system_prompt}\nUser question: {q}"
-
         def generate():
             try:
-                print("[generate] Starting streaming query...")
-                response = qe.query(full_prompt)
+                print("[generate] Retrieving context...")
+                source_nodes = retriever.retrieve(q)
 
-                # Case 1: LlamaIndex streaming response
-                if hasattr(response, "response_gen"):
-                    for token in response.response_gen:
-                        if token:
-                            t = str(token)
-                            print(f"[generate] Token: {t}")
-                            yield f"data: {t}\n\n"
-
-                # Case 2: ONNX LLM returns a plain string
-                else:
-                    t = str(response)
-                    print(f"[generate] Full response: {t}")
-                    yield f"data: {t}\n\n"
-
-                # Citations
+                context_chunks = []
                 cites = []
-                for i, sn in enumerate(getattr(response, "source_nodes", []), start=1):
+                for i, sn in enumerate(source_nodes, start=1):
+                    context_chunks.append(sn.text)
                     meta = sn.metadata or {}
-                    cites.append({
-                        "index": i,
-                        "regulation": meta.get("regulation"),
-                        "part": meta.get("part"),
-                        "section": meta.get("section"),
-                        "source_path": meta.get("source_path"),
-                    })
+                    cites.append(
+                        {
+                            "index": i,
+                            "regulation": meta.get("regulation"),
+                            "part": meta.get("part"),
+                            "section": meta.get("section"),
+                            "source_path": meta.get("source_path"),
+                        }
+                    )
 
+                context_str = (
+                    "\n\n".join(context_chunks)
+                    if context_chunks
+                    else "No relevant context retrieved."
+                )
+
+                full_prompt = (
+                    f"{system_prompt}\n\n"
+                    f"Context:\n{context_str}\n\n"
+                    f"User question: {q}\n\n"
+                    f"Answer:"
+                )
+
+                print("[generate] Loading ONNX LLM...")
+                from rag.llm.models import init_models
+                llm, _ = init_models()
+
+                print("[generate] Starting ONNX streaming...")
+                for token in llm.stream_complete(full_prompt):
+                    if token:
+                        t = str(token)
+                        print(f"[generate] Token: {t}")
+                        yield f"data: {t}\n\n"
+
+                # send citations as JSON at the end
                 yield f"data: {json.dumps({'citations': cites})}\n\n"
 
             except Exception as e:

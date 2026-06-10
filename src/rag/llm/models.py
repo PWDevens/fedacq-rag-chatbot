@@ -1,30 +1,38 @@
-## src/rag/llm/models.py
-
-import os
 from llama_index.core import Settings
-from rag.llm.phi4_onnx_llm import Phi4OnnxLLM
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
-PHI_MODEL = "./cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4"
-EMBED_MODEL = "BAAI/bge-small-en-v1.5"
+from app.config import BaseConfig
+from rag.llm.phi4_onnx_llm import Phi4OnnxLLM
 
 
 def init_models():
     """
-    Initialize Phi-4-mini-instruct-onnx (CPU-only, ONNX Runtime GenAI)
-    and BGE-small embeddings, then apply them to global LlamaIndex Settings.
+    Initialize and register the global LLM + embedding model.
+    Returns: (llm, embed_model)
     """
 
+    # SAFE CHECK — do NOT access Settings.llm (it triggers OpenAI)
+    existing_llm = Settings.__dict__.get("_llm", None)
+    existing_embed = Settings.__dict__.get("_embed_model", None)
+
+    if existing_llm is not None and existing_embed is not None:
+        return existing_llm, existing_embed
+
+    # ONNX Phi-4 LLM
     llm = Phi4OnnxLLM(
-        model_dir=PHI_MODEL,
+        model_dir=BaseConfig.PHI4_MODEL_DIR,
         max_new_tokens=256,
         temperature=0.1,
         top_p=0.9,
     )
 
-    embed_model = HuggingFaceEmbedding(model_name=EMBED_MODEL)
+    # Embedding model
+    embed_model = HuggingFaceEmbedding(
+        model_name=BaseConfig.EMBED_MODEL_NAME
+    )
 
-    Settings.llm = llm
-    Settings.embed_model = embed_model
+    # Register WITHOUT triggering OpenAI
+    Settings._llm = llm
+    Settings._embed_model = embed_model
 
     return llm, embed_model

@@ -10,7 +10,7 @@ async function send() {
   const submitBtn = form.querySelector("button[type=submit]");
 
   citationsDiv.innerHTML = "";
-  typingDiv.textContent = "Bot is thinking...";
+  typingDiv.textContent = "FAR/DFARs Bot is thinking...";
   submitBtn.disabled = true;
 
   const userBubble = document.createElement("div");
@@ -67,16 +67,25 @@ async function send() {
         const data = part.slice(5).trim();
         if (!data) continue;
 
-        // Citations payload
+        // Citations payload (JSON)
         if (data.startsWith("{")) {
           try {
             const parsed = JSON.parse(data);
             if (parsed.citations) {
               citationsDiv.innerHTML =
-                "<b>Citations:</b><br>" +
+                "<b>Citations:</b>" +
                 parsed.citations
-                  .map((c) => "- " + JSON.stringify(c))
-                  .join("<br>");
+                  .map((c) => {
+                    const reg = c.regulation || "";
+                    const part = c.part || "";
+                    const section = c.section || "";
+                    const path = c.source_path || "";
+                    const label = [reg, part, section]
+                      .filter(Boolean)
+                      .join(" ");
+                    return `<div class="citation-item"><b>${label}</b><br><span>${path}</span></div>`;
+                  })
+                  .join("");
             }
           } catch {
             botBubble.textContent += "\n[Error parsing citations]";
@@ -84,9 +93,17 @@ async function send() {
           continue;
         }
 
-        // Token text
-        botBubble.textContent += data;
-      }
+        // Token text (streaming)
+        if (botBubble.textContent.length ===0) {
+          botBubble.textContent = data;
+        } else {
+          const needsSpace = 
+            !data.startsWith(" ") &&
+            !botBubble.textContent.endsWith(" ");
+        
+          botBubble.textContent += (needsSpace ? " " : "") + data;
+
+        }
 
       chat.scrollTop = chat.scrollHeight;
     }
@@ -108,4 +125,10 @@ document.getElementById("question").addEventListener("keydown", function (e) {
     e.preventDefault();
     this.form.requestSubmit();
   }
+});
+
+// simple auto-resize for textarea
+document.getElementById("question").addEventListener("input", function () {
+  this.style.height = "auto";
+  this.style.height = Math.min(this.scrollHeight, 120) + "px";
 });
