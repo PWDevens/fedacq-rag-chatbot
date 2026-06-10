@@ -10,7 +10,7 @@ async function send() {
   const submitBtn = form.querySelector("button[type=submit]");
 
   citationsDiv.innerHTML = "";
-  typingDiv.textContent = "FAR/DFARs Bot is thinking...";
+  typingDiv.textContent = "FAR/DFARS Bot is thinking...";
   submitBtn.disabled = true;
 
   const userBubble = document.createElement("div");
@@ -67,7 +67,7 @@ async function send() {
         const data = part.slice(5).trim();
         if (!data) continue;
 
-        // Citations payload (JSON)
+        // Citations payload
         if (data.startsWith("{")) {
           try {
             const parsed = JSON.parse(data);
@@ -93,17 +93,17 @@ async function send() {
           continue;
         }
 
-        // Token text (streaming)
-        if (botBubble.textContent.length ===0) {
+        // Token text with spacing fix
+        if (botBubble.textContent.length === 0) {
           botBubble.textContent = data;
         } else {
-          const needsSpace = 
+          const needsSpace =
             !data.startsWith(" ") &&
             !botBubble.textContent.endsWith(" ");
-        
-          botBubble.textContent += (needsSpace ? " " : "") + data;
 
+          botBubble.textContent += (needsSpace ? " " : "") + data;
         }
+      }
 
       chat.scrollTop = chat.scrollHeight;
     }
@@ -127,7 +127,7 @@ document.getElementById("question").addEventListener("keydown", function (e) {
   }
 });
 
-// simple auto-resize for textarea
+// Auto-resize textarea
 document.getElementById("question").addEventListener("input", function () {
   this.style.height = "auto";
   this.style.height = Math.min(this.scrollHeight, 120) + "px";
