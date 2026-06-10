@@ -5,7 +5,6 @@ import chromadb
 
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext, VectorStoreIndex
-from llama_index.core import Settings
 
 
 def load_query_engine(chroma_path=None, collection="far_dfars_chroma"):
