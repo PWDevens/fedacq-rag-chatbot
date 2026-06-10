@@ -9,12 +9,10 @@ async function send() {
   const form = document.getElementById("chat-form");
   const submitBtn = form.querySelector("button[type=submit]");
 
-  // Reset UI
   citationsDiv.innerHTML = "";
   typingDiv.textContent = "Bot is thinking...";
   submitBtn.disabled = true;
 
-  // User bubble
   const userBubble = document.createElement("div");
   userBubble.className = "bubble user-bubble";
   userBubble.textContent = q;
@@ -22,7 +20,6 @@ async function send() {
 
   textarea.value = "";
 
-  // Bot bubble
   const botBubble = document.createElement("div");
   botBubble.className = "bubble bot-bubble";
   botBubble.textContent = "";
@@ -41,19 +38,11 @@ async function send() {
     botBubble.textContent = "[Network error]";
     typingDiv.textContent = "";
     submitBtn.disabled = false;
-    console.error(err);
     return;
   }
 
   if (!response.ok) {
     botBubble.textContent = `[Error: HTTP ${response.status}]`;
-    typingDiv.textContent = "";
-    submitBtn.disabled = false;
-    return;
-  }
-
-  if (!response.body) {
-    botBubble.textContent = "[Error: no response body]";
     typingDiv.textContent = "";
     submitBtn.disabled = false;
     return;
@@ -103,7 +92,6 @@ async function send() {
     }
   } catch (err) {
     botBubble.textContent += "\n[Stream interrupted]";
-    console.error(err);
   }
 
   typingDiv.textContent = "";
