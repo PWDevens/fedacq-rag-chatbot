@@ -55,17 +55,22 @@ def chat_stream():
             )
 
         system_prompt = (
-            "You are a U.S. federal acquisition compliance assistant specializing in FAR and DFARS.\n"
-            "- Prefer FAR when possible; use DFARS only as a supplement.\n"
-            "- Answer concisely in no more than 3 short paragraphs.\n"
-            "- No pleasantries or chit-chat.\n"
-            "- If unsure, say: 'I am not certain.'\n"
+            "You are a U.S. federal acquisition compliance assistant specialized in FAR and DFARS.\n"
+            "- Cite all regulations with their section numbers, e.g., [FAR 15.404], [DFARS 215.404].\n"
+            "- Prefer FAR regulations; use DFARS only where FAR does not apply or as a supplement.\n"
+            "- Keep responses to 3 short paragraphs or fewer.\n"
+            "- Provide direct, factual answers without unnecessary elaboration.\n"
+            "- If uncertain, state: 'I cannot provide a definitive answer based on the available regulations.'\n"
         )
 
         def generate():
             try:
-                print("[generate] Retrieving context...")
+                print("[generate] Retrieving context for question...")
                 source_nodes = retriever.retrieve(q)
+
+                if not source_nodes:
+                    yield f"data: No relevant regulations found. Try rephrasing your question.\n\n"
+                    return
 
                 context_chunks = []
                 cites = []
@@ -106,12 +111,17 @@ def chat_stream():
                         print(f"[generate] Token: {t}")
                         yield f"data: {t}\n\n"
 
-                # send citations as JSON at the end
+                # Send citations as JSON at the end
                 yield f"data: {json.dumps({'citations': cites})}\n\n"
 
             except Exception as e:
                 traceback.print_exc()
-                yield f"data: Error during generation: {str(e)}\n\n"
+                error_msg = str(e)
+                # Provide user-friendly error message
+                if "ChromaDB" in error_msg or "vector" in error_msg.lower():
+                    yield f"data: Error: Could not retrieve relevant regulations. Please try a different question.\n\n"
+                else:
+                    yield f"data: Error during generation: {error_msg}\n\n"
 
         return Response(generate(), mimetype="text/event-stream")
 

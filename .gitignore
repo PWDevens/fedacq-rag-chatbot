@@ -36,6 +36,7 @@ docker-compose.override.yml
 .env.*
 secret_*.txt
 secrets/
+DEBUGGING_REPORT.md
 
 # Build artifacts
 build/

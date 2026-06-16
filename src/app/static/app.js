@@ -148,25 +148,34 @@ function scrollToBottom() {
 }
 
 /**
- * Update bot message content (with markdown)
+ * Update bot message content (with incremental markdown rendering)
  */
 function updateBotMessage(bubble, text) {
-  // First, show raw text while streaming
   if (!bubble.dataset.streaming) {
     bubble.innerHTML = "";
     bubble.dataset.streaming = "true";
   }
-  bubble.textContent = text;
+
+  // Render markdown incrementally for better visual experience
+  try {
+    const html = renderMarkdown(text);
+    bubble.innerHTML = html;
+  } catch (e) {
+    // If markdown fails, fall back to escaped text
+    bubble.textContent = text;
+  }
 }
 
 /**
- * Finalize bot message (render markdown)
+ * Finalize bot message (ensure proper markdown rendering)
  */
 function finalizeBotMessage(bubble) {
-  if (!bubble.textContent) return;
+  if (!bubble.textContent && !bubble.innerHTML) return;
 
   try {
-    const html = renderMarkdown(bubble.textContent);
+    // Get the text content and re-render to ensure final formatting is correct
+    const text = bubble.textContent;
+    const html = renderMarkdown(text);
     bubble.innerHTML = html;
   } catch (e) {
     console.warn("Markdown render error:", e);
@@ -238,7 +247,7 @@ async function send() {
         const data = part.slice(5).trim();
         if (!data) continue;
 
-        // Check for citations (JSON)
+        // Check for JSON (citations or structured data)
         if (data.startsWith("{")) {
           try {
             const parsed = JSON.parse(data);
@@ -248,6 +257,13 @@ async function send() {
             }
           } catch (e) {
             console.warn("Citation parse error:", e);
+            // Treat as regular text if JSON parsing fails
+            if (!botBubble) {
+              loadingMsg.remove();
+              botBubble = createBotMessage();
+            }
+            fullText += data;
+            updateBotMessage(botBubble, fullText);
           }
           continue;
         }
@@ -281,7 +297,9 @@ async function send() {
       botBubble = createBotMessage();
     }
     if (err.name === "TypeError") {
-      botBubble.innerHTML = "<strong>Network error:</strong> Unable to connect to server";
+      botBubble.innerHTML = "<strong>Connection Error:</strong> Unable to reach the server. Is it running?";
+    } else if (err.message.includes("HTTP")) {
+      botBubble.innerHTML = `<strong>Server Error:</strong> The server returned an error. Please try again.`;
     } else {
       botBubble.innerHTML = `<strong>Error:</strong> ${escapeHtml(err.message)}`;
     }
