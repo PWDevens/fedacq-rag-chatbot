@@ -1,22 +1,51 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>FAR / DFARS RAG Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAR/DFARS Chatbot</title>
   <link rel="stylesheet" href="/static/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
-  <div id="chat-container"></div>
-  <div id="typing"></div>
-  <div id="citations"></div>
+  <div id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-content">
+        <h1>FAR/DFARS Assistant</h1>
+        <p class="header-subtitle">Federal Acquisition Regulation Questions</p>
+      </div>
+    </header>
 
-  <form id="chat-form">
-    <div id="input-bar">
-      <textarea id="question" placeholder="Ask a question..."></textarea>
-      <button id="send-btn" type="submit">Send</button>
-    </div>
-  </form>
+    <!-- Main Chat Area -->
+    <main class="chat-section">
+      <div id="chat-container" class="messages-list" role="log" aria-label="Chat messages"></div>
+    </main>
+
+    <!-- Citations Panel -->
+    <aside id="citations-panel" class="citations-section" role="region" aria-label="Source citations">
+      <div id="citations" class="citations-content"></div>
+    </aside>
+
+    <!-- Input Form -->
+    <footer class="input-section">
+      <form id="chat-form" class="chat-form">
+        <div class="input-wrapper">
+          <textarea
+            id="question"
+            class="input-textarea"
+            placeholder="Ask a question about FAR/DFARS..."
+            aria-label="Question input"
+          ></textarea>
+          <button id="send-btn" class="send-button" type="submit" aria-label="Send message">
+            <span class="send-icon">→</span>
+          </button>
+        </div>
+        <div id="typing-indicator" class="typing-indicator" aria-live="polite" aria-atomic="true"></div>
+      </form>
+    </footer>
+  </div>
 
   <script src="/static/app.js"></script>
 </body>

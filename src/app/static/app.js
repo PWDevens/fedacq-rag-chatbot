@@ -1,58 +1,229 @@
+/**
+ * FAR/DFARS Chatbot Frontend
+ * Minimal, accurate UI for legal Q&A
+ */
+
+// State
+let isLoading = false;
+let currentBubble = null;
+let currentCitations = [];
+
+// Configure marked for safe markdown rendering
+marked.setOptions({
+  breaks: true,
+  gfm: true,
+  pedantic: false,
+});
+
+/**
+ * Render markdown to HTML with basic safety
+ */
+function renderMarkdown(text) {
+  let html = marked.parse(text);
+  // Remove outer <p> tags if that's all there is
+  if (html.startsWith("<p>") && html.endsWith("</p>\n")) {
+    html = html.slice(3, -5);
+  }
+  return html;
+}
+
+/**
+ * Create and append a user message
+ */
+function appendUserMessage(text) {
+  const chat = document.getElementById("chat-container");
+  const msg = document.createElement("div");
+  msg.className = "message user";
+
+  const bubble = document.createElement("div");
+  bubble.className = "bubble user-bubble";
+  bubble.textContent = text;
+
+  msg.appendChild(bubble);
+  chat.appendChild(msg);
+  scrollToBottom();
+}
+
+/**
+ * Create a bot message container
+ */
+function createBotMessage() {
+  const chat = document.getElementById("chat-container");
+  const msg = document.createElement("div");
+  msg.className = "message bot";
+
+  const bubble = document.createElement("div");
+  bubble.className = "bubble bot-bubble";
+  bubble.innerHTML = "";
+
+  msg.appendChild(bubble);
+  chat.appendChild(msg);
+
+  scrollToBottom();
+  return bubble;
+}
+
+/**
+ * Create loading indicator
+ */
+function createLoadingMessage() {
+  const chat = document.getElementById("chat-container");
+  const msg = document.createElement("div");
+  msg.className = "message bot loading";
+
+  const bubble = document.createElement("div");
+  bubble.className = "bubble bot-bubble";
+  bubble.innerHTML = `
+    <div class="typing-dots">
+      <span class="typing-dot"></span>
+      <span class="typing-dot"></span>
+      <span class="typing-dot"></span>
+    </div>
+  `;
+
+  msg.appendChild(bubble);
+  chat.appendChild(msg);
+
+  scrollToBottom();
+  return msg;
+}
+
+/**
+ * Display citations
+ */
+function displayCitations(citations) {
+  const panel = document.getElementById("citations-panel");
+  const container = document.getElementById("citations");
+
+  if (!citations || citations.length === 0) {
+    panel.classList.remove("visible");
+    return;
+  }
+
+  let html = '<div class="citations-header">Source Citations</div>';
+
+  citations.forEach((cite, idx) => {
+    const reg = cite.regulation || "FAR";
+    const part = cite.part || "";
+    const section = cite.section || "";
+    const path = cite.source_path || "";
+
+    const label = [reg, part, section].filter(Boolean).join(" ");
+    const display = label || "Source";
+
+    html += `
+      <div class="citation-item">
+        <div class="citation-label">${escapeHtml(display)}</div>
+        <div class="citation-path">${escapeHtml(path)}</div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+  panel.classList.add("visible");
+}
+
+/**
+ * HTML escape for safety
+ */
+function escapeHtml(text) {
+  const map = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  };
+  return text.replace(/[&<>"']/g, (c) => map[c]);
+}
+
+/**
+ * Scroll chat to bottom
+ */
+function scrollToBottom() {
+  const chat = document.getElementById("chat-container");
+  setTimeout(() => {
+    chat.scrollTop = chat.scrollHeight;
+  }, 0);
+}
+
+/**
+ * Update bot message content (with markdown)
+ */
+function updateBotMessage(bubble, text) {
+  // First, show raw text while streaming
+  if (!bubble.dataset.streaming) {
+    bubble.innerHTML = "";
+    bubble.dataset.streaming = "true";
+  }
+  bubble.textContent = text;
+}
+
+/**
+ * Finalize bot message (render markdown)
+ */
+function finalizeBotMessage(bubble) {
+  if (!bubble.textContent) return;
+
+  try {
+    const html = renderMarkdown(bubble.textContent);
+    bubble.innerHTML = html;
+  } catch (e) {
+    console.warn("Markdown render error:", e);
+    // Keep as text if markdown fails
+  }
+
+  delete bubble.dataset.streaming;
+  scrollToBottom();
+}
+
+/**
+ * Handle sending a message
+ */
 async function send() {
   const textarea = document.getElementById("question");
   const q = textarea.value.trim();
-  if (!q) return;
 
-  const chat = document.getElementById("chat-container");
-  const citationsDiv = document.getElementById("citations");
-  const typingDiv = document.getElementById("typing");
+  if (!q || isLoading) return;
+
+  isLoading = true;
+
+  // UI setup
   const form = document.getElementById("chat-form");
   const submitBtn = form.querySelector("button[type=submit]");
-
-  citationsDiv.innerHTML = "";
-  typingDiv.textContent = "FAR/DFARS Bot is thinking...";
   submitBtn.disabled = true;
 
-  const userBubble = document.createElement("div");
-  userBubble.className = "bubble user-bubble";
-  userBubble.textContent = q;
-  chat.appendChild(userBubble);
+  // Clear previous citations
+  currentCitations = [];
+  document.getElementById("citations-panel").classList.remove("visible");
 
+  // Add user message
+  appendUserMessage(q);
   textarea.value = "";
 
-  const botBubble = document.createElement("div");
-  botBubble.className = "bubble bot-bubble";
-  botBubble.textContent = "";
-  chat.appendChild(botBubble);
+  // Create loading indicator
+  let loadingMsg = createLoadingMessage();
+  let botBubble = null;
 
-  chat.scrollTop = chat.scrollHeight;
-
-  let response;
   try {
-    response = await fetch("/chat_stream", {
+    const response = await fetch("/chat_stream", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ question: q }),
     });
-  } catch (err) {
-    botBubble.textContent = "[Network error]";
-    typingDiv.textContent = "";
-    submitBtn.disabled = false;
-    return;
-  }
 
-  if (!response.ok) {
-    botBubble.textContent = `[Error: HTTP ${response.status}]`;
-    typingDiv.textContent = "";
-    submitBtn.disabled = false;
-    return;
-  }
+    if (!response.ok) {
+      loadingMsg.remove();
+      botBubble = createBotMessage();
+      botBubble.innerHTML = `<strong>Error:</strong> HTTP ${response.status}`;
+      throw new Error(`HTTP ${response.status}`);
+    }
 
-  const reader = response.body.getReader();
-  const decoder = new TextDecoder();
-  let buffer = "";
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    let fullText = "";
 
-  try {
     while (true) {
       const { value, done } = await reader.read();
       if (done) break;
@@ -67,68 +238,87 @@ async function send() {
         const data = part.slice(5).trim();
         if (!data) continue;
 
-        // Citations payload
+        // Check for citations (JSON)
         if (data.startsWith("{")) {
           try {
             const parsed = JSON.parse(data);
             if (parsed.citations) {
-              citationsDiv.innerHTML =
-                "<b>Citations:</b>" +
-                parsed.citations
-                  .map((c) => {
-                    const reg = c.regulation || "";
-                    const part = c.part || "";
-                    const section = c.section || "";
-                    const path = c.source_path || "";
-                    const label = [reg, part, section]
-                      .filter(Boolean)
-                      .join(" ");
-                    return `<div class="citation-item"><b>${label}</b><br><span>${path}</span></div>`;
-                  })
-                  .join("");
+              currentCitations = parsed.citations;
+              displayCitations(parsed.citations);
             }
-          } catch {
-            botBubble.textContent += "\n[Error parsing citations]";
+          } catch (e) {
+            console.warn("Citation parse error:", e);
           }
           continue;
         }
 
-        // Token text with spacing fix
-        if (botBubble.textContent.length === 0) {
-          botBubble.textContent = data;
-        } else {
-          const needsSpace =
-            !data.startsWith(" ") &&
-            !botBubble.textContent.endsWith(" ");
-
-          botBubble.textContent += (needsSpace ? " " : "") + data;
+        // Regular text token
+        if (!botBubble) {
+          loadingMsg.remove();
+          botBubble = createBotMessage();
         }
+
+        fullText += data;
+        updateBotMessage(botBubble, fullText);
       }
-
-      chat.scrollTop = chat.scrollHeight;
     }
-  } catch (err) {
-    botBubble.textContent += "\n[Stream interrupted]";
-  }
 
-  typingDiv.textContent = "";
-  submitBtn.disabled = false;
+    // Finalize
+    if (!botBubble) {
+      loadingMsg.remove();
+      botBubble = createBotMessage();
+      botBubble.textContent = "(No response)";
+    } else {
+      finalizeBotMessage(botBubble);
+    }
+
+  } catch (err) {
+    console.error("Chat error:", err);
+    if (loadingMsg && loadingMsg.parentNode) {
+      loadingMsg.remove();
+    }
+    if (!botBubble) {
+      botBubble = createBotMessage();
+    }
+    if (err.name === "TypeError") {
+      botBubble.innerHTML = "<strong>Network error:</strong> Unable to connect to server";
+    } else {
+      botBubble.innerHTML = `<strong>Error:</strong> ${escapeHtml(err.message)}`;
+    }
+  } finally {
+    isLoading = false;
+    submitBtn.disabled = false;
+    textarea.focus();
+  }
 }
 
-document.getElementById("chat-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  send();
-});
+/**
+ * Initialize event listeners
+ */
+function init() {
+  const form = document.getElementById("chat-form");
+  const textarea = document.getElementById("question");
 
-document.getElementById("question").addEventListener("keydown", function (e) {
-  if (e.key === "Enter" && !e.shiftKey) {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
-    this.form.requestSubmit();
-  }
-});
+    send();
+  });
 
-// Auto-resize textarea
-document.getElementById("question").addEventListener("input", function () {
-  this.style.height = "auto";
-  this.style.height = Math.min(this.scrollHeight, 120) + "px";
-});
+  textarea.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      form.requestSubmit();
+    }
+  });
+
+  // Auto-resize textarea
+  textarea.addEventListener("input", function () {
+    this.style.height = "auto";
+    this.style.height = Math.min(this.scrollHeight, 120) + "px";
+  });
+
+  textarea.focus();
+}
+
+// Start on load
+document.addEventListener("DOMContentLoaded", init);
