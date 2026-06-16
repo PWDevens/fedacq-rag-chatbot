@@ -138,6 +138,47 @@ function escapeHtml(text) {
 }
 
 /**
+ * Async generator that yields normalized SSE events from a fetch Response.
+ * Each yielded value is { type: "token", data: string }
+ *                     or { type: "json",  data: object }.
+ * Handles chunked delivery, partial frames, and space-only token values.
+ */
+async function* parseSSE(response) {
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) break;
+
+    buffer += decoder.decode(value, { stream: true });
+    const frames = buffer.split("\n\n");
+    buffer = frames.pop(); // last element may be an incomplete frame
+
+    for (const frame of frames) {
+      for (const line of frame.split("\n")) {
+        if (!line.startsWith("data:")) continue;
+
+        // Per SSE spec, strip exactly one leading space after "data:"
+        const raw = line.slice(5);
+        const value = raw.startsWith(" ") ? raw.slice(1) : raw;
+
+        if (value.startsWith("{")) {
+          try {
+            yield { type: "json", data: JSON.parse(value) };
+          } catch {
+            yield { type: "token", data: value };
+          }
+        } else {
+          yield { type: "token", data: value };
+        }
+      }
+    }
+  }
+}
+
+/**
  * Scroll chat to bottom
  */
 function scrollToBottom() {
@@ -170,18 +211,17 @@ function updateBotMessage(bubble, text) {
  * Finalize bot message (ensure proper markdown rendering)
  */
 function finalizeBotMessage(bubble) {
-  if (!bubble.textContent && !bubble.innerHTML) return;
+  const text = bubble.dataset.rawText;
+  if (!text) return;
 
   try {
-    // Get the text content and re-render to ensure final formatting is correct
-    const text = bubble.textContent;
-    const html = renderMarkdown(text);
-    bubble.innerHTML = html;
+    bubble.innerHTML = renderMarkdown(text);
   } catch (e) {
     console.warn("Markdown render error:", e);
-    // Keep as text if markdown fails
+    bubble.textContent = text;
   }
 
+  delete bubble.dataset.rawText;
   delete bubble.dataset.streaming;
   scrollToBottom();
 }
@@ -228,55 +268,25 @@ async function send() {
       throw new Error(`HTTP ${response.status}`);
     }
 
-    const reader = response.body.getReader();
-    const decoder = new TextDecoder();
-    let buffer = "";
     let fullText = "";
 
-    while (true) {
-      const { value, done } = await reader.read();
-      if (done) break;
-
-      buffer += decoder.decode(value, { stream: true });
-      const parts = buffer.split("\n\n");
-      buffer = parts.pop();
-
-      for (const part of parts) {
-        if (!part.startsWith("data:")) continue;
-
-        const data = part.slice(5).trim();
-        if (!data) continue;
-
-        // Check for JSON (citations or structured data)
-        if (data.startsWith("{")) {
-          try {
-            const parsed = JSON.parse(data);
-            if (parsed.citations) {
-              currentCitations = parsed.citations;
-              displayCitations(parsed.citations);
-            }
-          } catch (e) {
-            console.warn("Citation parse error:", e);
-            // Treat as regular text if JSON parsing fails
-            if (!botBubble) {
-              loadingMsg.remove();
-              botBubble = createBotMessage();
-            }
-            fullText += data;
-            updateBotMessage(botBubble, fullText);
-          }
-          continue;
+    for await (const event of parseSSE(response)) {
+      if (event.type === "json") {
+        if (event.data.citations) {
+          currentCitations = event.data.citations;
+          displayCitations(event.data.citations);
         }
-
-        // Regular text token
-        if (!botBubble) {
-          loadingMsg.remove();
-          botBubble = createBotMessage();
-        }
-
-        fullText += data;
-        updateBotMessage(botBubble, fullText);
+        continue;
       }
+
+      // text token
+      if (!botBubble) {
+        loadingMsg.remove();
+        botBubble = createBotMessage();
+      }
+      fullText += event.data;
+      botBubble.dataset.rawText = fullText;
+      updateBotMessage(botBubble, fullText);
     }
 
     // Finalize
