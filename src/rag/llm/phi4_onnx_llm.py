@@ -23,6 +23,7 @@ class Phi4OnnxLLM(CustomLLM):
     def _make_params(self, input_tokens):
         params = og.GeneratorParams(self._model)
         total_max = len(input_tokens) + int(self.max_new_tokens)
+        params.input_ids = input_tokens
         params.set_search_options(
             temperature=float(self.temperature),
             top_p=float(self.top_p),
@@ -42,10 +43,10 @@ class Phi4OnnxLLM(CustomLLM):
         input_tokens = self._tokenizer.encode(prompt)
         params = self._make_params(input_tokens)
         generator = og.Generator(self._model, params)
-        generator.append_tokens(input_tokens)
 
         output_tokens = []
         while not generator.is_done():
+            generator.compute_logits()
             generator.generate_next_token()
             new_tokens = generator.get_next_tokens()
             if new_tokens:
@@ -60,11 +61,11 @@ class Phi4OnnxLLM(CustomLLM):
         input_tokens = self._tokenizer.encode(prompt)
         params = self._make_params(input_tokens)
         generator = og.Generator(self._model, params)
-        generator.append_tokens(input_tokens)
 
         def gen():
             output_tokens = []
             while not generator.is_done():
+                generator.compute_logits()
                 generator.generate_next_token()
                 new_tokens = generator.get_next_tokens()
                 if not new_tokens:
