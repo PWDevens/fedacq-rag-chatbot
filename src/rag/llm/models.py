@@ -7,11 +7,19 @@ from rag.llm.phi4_onnx_llm import Phi4OnnxLLM
 
 def init_models():
     """
-    Initialize and register the global LLM + embedding model.
-    Returns: (llm, embed_model)
+    Initialize and register the global LLM and embedding model with LlamaIndex.
+
+    Uses Settings.__dict__ for the existence check rather than the Settings.llm
+    property accessor, because the property accessor auto-initializes an OpenAI
+    client when no LLM has been configured — a side effect we want to avoid in
+    a fully local ONNX deployment.
+
+    Returns:
+        tuple[Phi4OnnxLLM, HuggingFaceEmbedding]: (llm, embed_model)
     """
 
-    # SAFE CHECK — do NOT access Settings.llm (it triggers OpenAI)
+    # Check via __dict__ to avoid the property getter, which triggers OpenAI
+    # client initialization as a side effect when Settings._llm is unset.
     existing_llm = Settings.__dict__.get("_llm", None)
     existing_embed = Settings.__dict__.get("_embed_model", None)
 
@@ -26,12 +34,13 @@ def init_models():
         top_p=0.9,
     )
 
-    # Embedding model
+    # Embedding model — must match the model used at index-build time.
     embed_model = HuggingFaceEmbedding(
         model_name=BaseConfig.EMBED_MODEL_NAME
     )
 
-    # Register WITHOUT triggering OpenAI
+    # Assign via private attributes rather than the property setters to avoid
+    # triggering OpenAI auto-initialization in LlamaIndex's Settings class.
     Settings._llm = llm
     Settings._embed_model = embed_model
 

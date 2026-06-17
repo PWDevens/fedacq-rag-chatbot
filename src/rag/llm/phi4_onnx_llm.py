@@ -78,19 +78,27 @@ class Phi4OnnxLLM(CustomLLM):
         return gen()
 
     async def acomplete(self, prompt: str, **kwargs):
+        # NOTE: This is a synchronous wrapper declared async to satisfy the
+        # LlamaIndex CustomLLM interface. It delegates to self.complete() which
+        # runs ONNX inference synchronously and will block the event loop if
+        # called from a true async context. A future async migration should
+        # wrap this in asyncio.get_event_loop().run_in_executor(None, ...).
         return self.complete(prompt, **kwargs)
 
     async def astream_complete(self, prompt: str, **kwargs):
+        # NOTE: Synchronous wrapper — see acomplete for the same caveat.
         return self.stream_complete(prompt, **kwargs)
 
     def chat(self, messages, **kwargs):
         return self.complete(messages[-1].content, **kwargs)
 
     async def achat(self, messages, **kwargs):
+        # NOTE: Synchronous wrapper — see acomplete for the same caveat.
         return self.chat(messages, **kwargs)
 
     def stream_chat(self, messages, **kwargs):
         return self.stream_complete(messages[-1].content, **kwargs)
 
     async def astream_chat(self, messages, **kwargs):
+        # NOTE: Synchronous wrapper — see acomplete for the same caveat.
         return self.stream_chat(messages, **kwargs)
