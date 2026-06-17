@@ -2,10 +2,9 @@
 name = "fedacq-rag-chatbot"
 version = "0.1.0"
 description = "FAR/DFARS RAG chatbot"
-requires-python = ">=3.10, <3.13"
+requires-python = ">=3.10, <=3.13"
 
 dependencies = [
-    "accelerate==1.13.0",
     "chromadb==1.5.8",
     "Flask==3.1.3",
     "gitpython==3.1.50",
@@ -13,16 +12,13 @@ dependencies = [
     "hypercorn==0.17.3",
     "llama-index==0.14.12",
     "lxml==6.1.0",
-    "onnxruntime==1.19.2",
-    "onnxruntime-genai==0.4.0",
+    "onnxruntime==1.20.1",
+    "onnxruntime-genai==0.5.2",
     "python-dotenv==1.2.2",
-    "pytest==9.0.3",
-    "pytest-cov==7.1.0",
     "requests==2.34.2",
     "sentencepiece==0.2.1",
     "tqdm==4.67.3",
     "transformers==4.41.2",
-    "uvicorn==0.30.1",
 ]
 
 [project.optional-dependencies]
