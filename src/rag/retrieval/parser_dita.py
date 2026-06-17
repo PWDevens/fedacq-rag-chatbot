@@ -1,4 +1,10 @@
-# rag/retrieval/parser_dita.py
+"""
+DITA parsing pipeline for FAR and DFARS regulation source files.
+
+Clones the official GSA regulation repositories and parses each DITA topic
+file into a LlamaIndex Document with structured metadata for indexing.
+"""
+
 import os
 import re
 import json
@@ -10,11 +16,30 @@ from llama_index.core import Document
 FAR_REPO_URL = "https://github.com/GSA/GSA-Acquisition-FAR.git"
 DFARS_REPO_URL = "https://github.com/GSA/GSA-Acquisition-DFARS.git"
 
-def clone_if_needed(url, path):
+
+def clone_if_needed(url: str, path: Path) -> None:
+    """
+    Clone a git repository to path if it does not already exist locally.
+
+    Args:
+        url (str): Remote git URL to clone from.
+        path (Path): Local destination path.
+    """
     if not os.path.exists(path):
         Repo.clone_from(url, path)
 
-def parse_ditamap(ditamap_path: Path, regulation: str):
+
+def parse_ditamap(ditamap_path: Path, regulation: str) -> dict:
+    """
+    Parse a DITA map file and extract per-topic metadata.
+
+    Args:
+        ditamap_path (Path): Path to the .ditamap file.
+        regulation (str): Regulation label, e.g. "FAR" or "DFARS".
+
+    Returns:
+        dict[str, dict]: Mapping of href -> {regulation, navtitle, fill_types}.
+    """
     parser = etree.XMLParser(recover=True)
     tree = etree.parse(str(ditamap_path), parser=parser)
     root = tree.getroot()
@@ -31,7 +56,20 @@ def parse_ditamap(ditamap_path: Path, regulation: str):
         }
     return topic_info
 
+
 def extract_fillins_and_text(dita_path: Path):
+    """
+    Extract full text, fill-in entries, and revision markers from a DITA file.
+
+    Args:
+        dita_path (Path): Path to the .dita topic file.
+
+    Returns:
+        tuple[str, list[dict], list[dict]]:
+            - Full concatenated text of the topic.
+            - List of fill-in dicts: {type, format, placeholder}.
+            - List of revision marker dicts: {rev, text}.
+    """
     parser = etree.XMLParser(recover=True)
     tree = etree.parse(str(dita_path), parser=parser)
     root = tree.getroot()
@@ -55,7 +93,17 @@ def extract_fillins_and_text(dita_path: Path):
 
     return text, fillins, rev_markers
 
+
 def infer_part_subpart_section(href: str):
+    """
+    Infer FAR/DFARS structural identifiers from a DITA file href.
+
+    Args:
+        href (str): Relative href from the ditamap, e.g. "part-15.dita".
+
+    Returns:
+        tuple[str|None, str|None, str|None, str|None]: (part, subpart, section, clause)
+    """
     name = Path(href).stem
     part = subpart = section = clause = None
 
@@ -73,13 +121,27 @@ def infer_part_subpart_section(href: str):
 
     return part, subpart, section, clause
 
-def build_documents_from_repo(repo_path: str, regulation: str):
+
+def build_documents_from_repo(repo_path: str, regulation: str) -> list:
+    """
+    Parse all DITA topics in a regulation repository into LlamaIndex Documents.
+
+    Args:
+        repo_path (str): Local path to the cloned regulation repository.
+        regulation (str): Regulation label, e.g. "FAR" or "DFARS".
+
+    Returns:
+        list[Document]: One Document per non-empty DITA topic, with metadata.
+    """
     repo_path = Path(repo_path)
     ditamaps = list(repo_path.rglob("*.ditamap"))
     if not ditamaps:
         return []
 
-    main_map = next((dm for dm in ditamaps if dm.name.lower() == f"{regulation.lower()}.ditamap"), ditamaps[0])
+    main_map = next(
+        (dm for dm in ditamaps if dm.name.lower() == f"{regulation.lower()}.ditamap"),
+        ditamaps[0],
+    )
     topic_info = parse_ditamap(main_map, regulation)
 
     docs = []
