@@ -162,16 +162,16 @@ async function* parseSSE(response) {
 
         // Per SSE spec, strip exactly one leading space after "data:"
         const raw = line.slice(5);
-        const value = raw.startsWith(" ") ? raw.slice(1) : raw;
+        const sseValue = raw.startsWith(" ") ? raw.slice(1) : raw;
 
-        if (value.startsWith("{")) {
+        if (sseValue.startsWith("{")) {
           try {
-            yield { type: "json", data: JSON.parse(value) };
+            yield { type: "json", data: JSON.parse(sseValue) };
           } catch {
-            yield { type: "token", data: value };
+            yield { type: "token", data: sseValue };
           }
         } else {
-          yield { type: "token", data: value };
+          yield { type: "token", data: sseValue };
         }
       }
     }
@@ -231,26 +231,22 @@ function finalizeBotMessage(bubble) {
  */
 async function send() {
   const textarea = document.getElementById("question");
-  const q = textarea.value.trim();
+  const question = textarea.value.trim();
 
-  if (!q || isLoading) return;
+  if (!question || isLoading) return;
 
   isLoading = true;
 
-  // UI setup
   const form = document.getElementById("chat-form");
   const submitBtn = form.querySelector("button[type=submit]");
   submitBtn.disabled = true;
 
-  // Clear previous citations
   currentCitations = [];
   document.getElementById("citations-panel").classList.remove("visible");
 
-  // Add user message
-  appendUserMessage(q);
+  appendUserMessage(question);
   textarea.value = "";
 
-  // Create loading indicator
   let loadingMsg = createLoadingMessage();
   let botBubble = null;
 
@@ -258,7 +254,7 @@ async function send() {
     const response = await fetch("/chat_stream", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question: q }),
+      body: JSON.stringify({ question: question }),
     });
 
     if (!response.ok) {
@@ -339,7 +335,6 @@ function init() {
     }
   });
 
-  // Auto-resize textarea
   textarea.addEventListener("input", function () {
     this.style.height = "auto";
     this.style.height = Math.min(this.scrollHeight, 120) + "px";
@@ -348,5 +343,4 @@ function init() {
   textarea.focus();
 }
 
-// Start on load
 document.addEventListener("DOMContentLoaded", init);
