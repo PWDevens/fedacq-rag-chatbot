@@ -186,7 +186,7 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-```Windows (PowerShell)
+```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
@@ -198,7 +198,7 @@ pip install -e .
 pip install -r requirements.txt
 ```
 
-```huggingface-cli
+```bash
 huggingface-cli download microsoft/Phi-4-mini-instruct-onnx \
   --include cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/* \
   --local-dir .
@@ -302,9 +302,9 @@ Index building is performed locally and versioned via Git LFS.
 Send a POST request:
 
 ```bash
-curl -X POST http://localhost:8080/chat \
+curl -X POST http://localhost:7860/chat_stream \
   -H "Content-Type: application/json" \
-  -d '{"message": "What does FAR 15.404 say about price analysis?"}'
+  -d '{"question": "What does FAR 15.404 say about price analysis?"}'
 ```
 
 Expected response:
