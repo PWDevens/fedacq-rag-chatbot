@@ -67,3 +67,7 @@ data/chroma/*.lock
 
 # Ignore the main sqlite file UNLESS explicitly force-added
 data/chroma/chroma.sqlite3
+
+# Reports and Test Results
+.coverage
+.pipeline/**
