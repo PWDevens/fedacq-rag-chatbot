@@ -20,6 +20,32 @@ def _require_env(key: str, default: str = None) -> str:
     )
 
 
+class LazyEnvDescriptor:
+    """Descriptor that lazily evaluates environment variables at access time."""
+    def __init__(self, key: str, default: str = None, required_in_prod: bool = False):
+        self.key = key
+        self.default = default
+        self.required_in_prod = required_in_prod
+
+    def __get__(self, obj, objtype=None):
+        """Evaluate the environment variable when accessed."""
+        value = os.environ.get(self.key)
+        if value:
+            return value
+
+        # Only enforce in production if required_in_prod is True
+        if self.required_in_prod and os.environ.get("FLASK_ENV") == "production":
+            raise RuntimeError(
+                f"Required environment variable '{self.key}' is not set. "
+                f"Set it before starting the application in production."
+            )
+
+        if self.default is not None:
+            return self.default
+
+        return None
+
+
 class BaseConfig:
     """
     Base configuration shared across all environments.
@@ -65,8 +91,10 @@ class LocalConfig(BaseConfig):
 class ProdConfig(BaseConfig):
     DEBUG = False
 
-    # In production, SECRET_KEY must be explicitly provided.
-    SECRET_KEY = _require_env("SECRET_KEY")
+    # SECRET_KEY is lazily evaluated at access time, not at class definition time.
+    # This allows local development to work without setting SECRET_KEY env var,
+    # while still enforcing it in production mode.
+    SECRET_KEY = LazyEnvDescriptor("SECRET_KEY", required_in_prod=True)
 
 
 def get_config(name):
