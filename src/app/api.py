@@ -11,6 +11,7 @@ Routes:
 
 import json
 import logging
+import sys
 import traceback
 import threading
 
@@ -71,6 +72,12 @@ def chat_stream():
         question = (data.get("question") or "").strip()
         logger.info("[chat_stream] Received question (length=%d)", len(question))
 
+        # DEBUG: Log environment for troubleshooting
+        import os
+        logger.info("[chat_stream] CHROMA_HOST=%s, CHROMA_PORT=%s",
+                   os.environ.get("CHROMA_HOST", "localhost"),
+                   os.environ.get("CHROMA_PORT", "8000"))
+
         if not question:
             return Response(
                 yield_error_event("Please enter a question."),
@@ -91,7 +98,10 @@ def chat_stream():
             retriever = get_query_engine()
             logger.info("[chat_stream] Query engine loaded successfully")
         except Exception as e:
+            import traceback
             logger.error("[chat_stream] Failed to load query engine: %s", e, exc_info=True)
+            print(f"ERROR loading query engine: {e}", file=sys.stderr)
+            traceback.print_exc(file=sys.stderr)
             return Response(
                 yield_error_event("Could not initialize the retrieval engine. Please try again later."),
                 mimetype="text/event-stream",

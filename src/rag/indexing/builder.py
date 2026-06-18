@@ -4,9 +4,16 @@ Index builder for the FAR/DFARS RAG pipeline.
 Clones the FAR and DFARS regulation repositories, parses DITA source files,
 and persists a ChromaDB vector store for use by the query engine at runtime.
 
+ChromaDB Server Configuration:
+  - CHROMA_HOST: Host where ChromaDB server is running (default: None - use local)
+  - CHROMA_PORT: Port where ChromaDB server is running (default: None - use local)
+
 Usage:
     python -m scripts.build_index
     build_index(test_mode=True)   # for CI / unit tests
+
+To use with ChromaDB server:
+    CHROMA_HOST=localhost CHROMA_PORT=8000 python -m scripts.build_index
 """
 
 from pathlib import Path
@@ -26,6 +33,23 @@ from rag.retrieval.parser_dita import (
 )
 from rag.retrieval.metadata import normalize_metadata
 from rag.llm.models import init_models
+
+
+def _get_chroma_client():
+    """
+    Get ChromaDB client, using HTTP if server is configured, else local PersistentClient.
+
+    Returns:
+        chromadb.Client: Either HttpClient (if CHROMA_HOST set) or PersistentClient.
+    """
+    chroma_host = os.environ.get("CHROMA_HOST")
+    if chroma_host:
+        # Use HTTP client for remote ChromaDB server
+        chroma_port = int(os.environ.get("CHROMA_PORT", 8000))
+        return chromadb.HttpClient(host=chroma_host, port=chroma_port)
+    else:
+        # Use local persistent client (legacy mode)
+        return None  # Will be handled by caller with path
 
 
 def build_index(chroma_path=None, test_mode=False):
@@ -72,13 +96,18 @@ def _build_test_index(chroma_path: Path) -> None:
     Write a minimal two-node ChromaDB index for test/CI use.
 
     Args:
-        chroma_path (Path): Directory for ChromaDB persistence.
+        chroma_path (Path): Directory for ChromaDB persistence (ignored if using HTTP).
     """
     dummy_nodes = [
         TextNode(text="dummy FAR text", id_="1"),
         TextNode(text="dummy DFARS text", id_="2"),
     ]
-    client = chromadb.PersistentClient(path=str(chroma_path))
+
+    # Use HTTP client if configured, else local persistent client
+    client = _get_chroma_client()
+    if client is None:
+        client = chromadb.PersistentClient(path=str(chroma_path))
+
     collection = client.get_or_create_collection("far_dfars_chroma")
     vector_store = ChromaVectorStore(chroma_collection=collection)
     storage = StorageContext.from_defaults(vector_store=vector_store)
@@ -91,7 +120,7 @@ def _build_production_index(data_dir: Path, chroma_path: Path) -> None:
 
     Args:
         data_dir (Path): Root data directory; repos cloned under data_dir/regs/.
-        chroma_path (Path): Directory for ChromaDB persistence.
+        chroma_path (Path): Directory for ChromaDB persistence (ignored if using HTTP).
     """
     init_models()
 
@@ -113,7 +142,11 @@ def _build_production_index(data_dir: Path, chroma_path: Path) -> None:
         meta = normalize_metadata(doc.metadata)
         nodes.append(TextNode(text=doc.text, metadata=meta))
 
-    client = chromadb.PersistentClient(path=str(chroma_path))
+    # Use HTTP client if configured, else local persistent client
+    client = _get_chroma_client()
+    if client is None:
+        client = chromadb.PersistentClient(path=str(chroma_path))
+
     collection = client.get_or_create_collection("far_dfars_chroma")
     vector_store = ChromaVectorStore(chroma_collection=collection)
     storage = StorageContext.from_defaults(vector_store=vector_store)
