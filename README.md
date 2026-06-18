@@ -271,6 +271,36 @@ docker build -t fedacq-rag-chatbot .
 docker run -d -p 7860:7860 --name ragbot fedacq-rag-chatbot
 ```
 The container uses Hypercorn to serve the ASGI‑wrapped Flask app.
+
+### ChromaDB HTTP Server (Production-Ready)
+
+To run the application with ChromaDB as a separate HTTP service:
+
+**Terminal 1: Start ChromaDB server**
+```bash
+chroma run --host 127.0.0.1 --port 8000
+```
+
+**Terminal 2: Run the Flask application**
+```bash
+export CHROMA_HOST=127.0.0.1
+export CHROMA_PORT=8000
+python -m flask --app src.app run --host=0.0.0.0 --port=7860
+```
+
+Or with Hypercorn:
+```bash
+export CHROMA_HOST=127.0.0.1
+export CHROMA_PORT=8000
+hypercorn --bind 0.0.0.0:7860 src.app.asgi:app
+```
+
+**Benefits:**
+- Separates vector database from application server
+- Supports horizontal scaling
+- Enables containerized deployments
+- Production-ready architecture
+
 ---
 
 ## Testing

@@ -52,6 +52,9 @@ dist/
 data/regs/
 repo_state_validator.py
 storage/
+
+# ChromaDB runtime files (moved to data/chroma, keep root ignored)
+chroma/
 test_chroma/
 # FAR/DFARS are cloned dynamically — do NOT track them
 data/regs/far/
