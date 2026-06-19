@@ -36,13 +36,13 @@ This project automates that research using a modern RAG pipeline.
  
  ___
 #### Landing Page
-![Landing-Page](Landing.png)
+![Landing-Page](demo_artifacts/Landing.png)
 
 #### Query Response
-![Response-to-Query](MAS.png)
+![Response-to-Query](demo_artifacts/MAS.png)
 
 #### Query Loading
-![Pending-Response-to-Query](IDIQ-pre.png)
+![Pending-Response-to-Query](demo_artifacts/IDIQ-pre.png)
 ---
 
 ## Technical Approach

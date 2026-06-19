@@ -74,7 +74,3 @@ data/chroma/*.lock
 
 # Internal session/handoff artifacts (not for public repo)
 handoff.md
-
-# Demo Artifacts
-*.png
-*.jpg
