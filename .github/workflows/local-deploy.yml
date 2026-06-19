@@ -31,6 +31,9 @@ jobs:
         pip install -r requirements.lock
         pip install .[dev]
 
+    - name: Audit dependencies for CVEs
+      run: pip install pip-audit && pip-audit -r requirements.lock
+
     - name: Run tests
       env:
         RAG_TEST_MODE: "1"

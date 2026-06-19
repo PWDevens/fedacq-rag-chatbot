@@ -34,7 +34,7 @@ from rag.retrieval.parser_dita import (
     DFARS_REPO_URL,
 )
 from rag.retrieval.metadata import normalize_metadata
-from app.config import BaseConfig
+from rag.config import RagConfig
 
 # Chunking: split each DITA topic into passages that fit the embedding model's
 # context window, instead of embedding whole files (which truncates ~34% of
@@ -164,8 +164,8 @@ def _build_production_index(data_dir: Path, chroma_path: Path) -> None:
         chroma_path (Path): Directory for ChromaDB persistence (ignored if using HTTP).
     """
     # Embedding model only — the LLM is not needed to build the index.
-    # Must match the model used by the query path (app.config.EMBED_MODEL_NAME).
-    Settings.embed_model = HuggingFaceEmbedding(model_name=BaseConfig.EMBED_MODEL_NAME)
+    # Must match the model used by the query path (rag.config.RagConfig.EMBED_MODEL_NAME).
+    Settings.embed_model = HuggingFaceEmbedding(model_name=RagConfig.EMBED_MODEL_NAME)
 
     base_dir = data_dir / "regs"
     far_path = base_dir / "far"

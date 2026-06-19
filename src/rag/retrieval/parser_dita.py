@@ -167,7 +167,7 @@ def build_documents_from_repo(repo_path: str, regulation: str) -> list:
             "subpart": subpart,
             "section": section,
             "clause": clause,
-            "source_path": str(dita_file),
+            "source_path": dita_file.relative_to(repo_path).as_posix() if dita_file.is_relative_to(repo_path) else href,
         }
 
         docs.append(Document(text=text, metadata=metadata))

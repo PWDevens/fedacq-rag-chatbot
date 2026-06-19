@@ -121,10 +121,12 @@ fedacq-rag-chatbot/
 │   │   └── static/
 │   │       ├── index.html
 │   │       ├── app.js
+│   │       ├── purify.min.js
 │   │       └── styles.css
 │   │
 │   ├── rag/
 │   │   ├── __init__.py
+│   │   ├── config.py
 │   │   │
 │   │   ├── indexing/
 │   │   │   ├── __init__.py
@@ -153,7 +155,8 @@ fedacq-rag-chatbot/
 │   ├── test_llm.py
 │   ├── test_metadata.py
 │   ├── test_parser.py
-│   └── test_query_engine.py
+│   ├── test_query_engine.py
+│   └── test_query_engine_load.py
 │
 ├── docker/
 │   ├── docker-compose.yml
@@ -162,6 +165,7 @@ fedacq-rag-chatbot/
 ├── .dockerignore
 ├── .gitattributes
 ├── .gitignore
+├── CODEOWNERS
 ├── Dockerfile
 ├── Makefile
 ├── pyproject.toml
@@ -169,6 +173,15 @@ fedacq-rag-chatbot/
 ├── requirements.txt
 └── requirements.lock
 ```
+
+---
+
+## Prerequisites
+
+- **Python 3.10–3.13** (3.12 recommended; matches CI)
+- **Git LFS** — required to pull the prebuilt ChromaDB index (`git lfs install`)
+- **~5 GB free disk space** — for the Phi-4 ONNX model download
+- **Git**
 
 ---
 
@@ -312,6 +325,8 @@ All have working defaults for local use; override only if needed.
 | `EMBED_MODEL_NAME` | `BAAI/bge-small-en-v1.5` | Embedding model (must match the index) |
 | `FLASK_ENV` | `local` | Set to `production` to require a real `SECRET_KEY` |
 | `SECRET_KEY` | dev fallback | Required only when `FLASK_ENV=production` |
+| `CHROMA_HOST` | _(unset)_ | If set, connect to a remote ChromaDB HTTP server instead of on-disk |
+| `CHROMA_PORT` | `8000` | Port for the remote ChromaDB server (only used when `CHROMA_HOST` is set) |
 
 ### Optional — Remote ChromaDB server (advanced / scaling)
 
@@ -373,6 +388,24 @@ Expected response:
 - Citations  
 - Retrieved sections  
 - LLM‑generated explanation  
+
+---
+
+## API / SSE Response Format
+
+`POST /chat_stream` — accepts JSON, returns a Server-Sent Events stream.
+
+**Request:**
+
+```json
+{"question": "What does FAR 15.404 say about price analysis?"}
+```
+
+**Response stream** (`text/event-stream`):
+
+- Zero or more token events: `data: <token text>\n\n`
+- One final citation event: `data: {"citations": [{"index": 1, "regulation": "FAR", "part": "15", "section": "15.404", "source_path": "..."}]}\n\n`
+- On error: `data: <user-safe error message>\n\n`
 
 ---
 

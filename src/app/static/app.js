@@ -19,7 +19,7 @@ marked.setOptions({
  * Render markdown to HTML with basic safety
  */
 function renderMarkdown(text) {
-  let html = marked.parse(text);
+  let html = DOMPurify.sanitize(marked.parse(text));
   // Remove outer <p> tags if that's all there is
   if (html.startsWith("<p>") && html.endsWith("</p>\n")) {
     html = html.slice(3, -5);

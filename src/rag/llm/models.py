@@ -1,7 +1,7 @@
 from llama_index.core import Settings
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
-from app.config import BaseConfig
+from rag.config import RagConfig
 from rag.llm.phi4_onnx_llm import Phi4OnnxLLM
 
 
@@ -28,7 +28,7 @@ def init_models():
 
     # ONNX Phi-4 LLM
     llm = Phi4OnnxLLM(
-        model_dir=BaseConfig.PHI4_MODEL_DIR,
+        model_dir=RagConfig.PHI4_MODEL_DIR,
         max_new_tokens=128,
         temperature=0.1,
         top_p=0.9,
@@ -36,7 +36,7 @@ def init_models():
 
     # Embedding model — must match the model used at index-build time.
     embed_model = HuggingFaceEmbedding(
-        model_name=BaseConfig.EMBED_MODEL_NAME
+        model_name=RagConfig.EMBED_MODEL_NAME
     )
 
     # Assign via private attributes rather than the property setters to avoid

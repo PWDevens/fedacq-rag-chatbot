@@ -58,6 +58,8 @@ class BaseConfig:
     Optional environment variables:
       HF_TOKEN         - HuggingFace API token (anonymous access used if unset).
       EMBED_MODEL_NAME - HuggingFace embedding model name.
+
+    Note: the RAG subsystem reads CHROMA_PATH, EMBED_MODEL_NAME, PHI4_MODEL_DIR, and HF_TOKEN independently via src/rag/config.py (RagConfig).
     """
 
     DEBUG = False
@@ -101,5 +103,6 @@ def get_config(name):
     return {
         "local": LocalConfig,
         "prod": ProdConfig,
+        "production": ProdConfig,
         "default": LocalConfig,
     }.get(name, LocalConfig)
