@@ -46,16 +46,16 @@ This project automates that research using a modern RAG pipeline.
 
 ### Embeddings + Vector Store
 
-- HuggingFace Embeddings (BGE‑small)  
-- ChromaDB persistent vector store  
-- Chunking via LlamaIndex `SentenceSplitter`  
+- HuggingFace Embeddings (`BAAI/bge-small-en-v1.5`)  
+- ChromaDB persistent (on‑disk) vector store  
+- Chunking via LlamaIndex `SentenceSplitter` (512-token chunks, 64 overlap)  
 
 ### Retrieval‑Augmented Generation
 
 - LlamaIndex orchestration  
 - Custom ONNX Runtime GenAI LLM (Phi‑4‑mini‑instruct‑onnx)
 - ChromaDB for retrieval  
-- BGE-small embeddings
+- `BAAI/bge-small-en-v1.5` embeddings (must match the model used to build the index)
 - Query engine configured with top‑k similarity search  
 
 ### Why ONNX Runtime GenAI?
@@ -226,9 +226,7 @@ git lfs pull
 
 The RAG index is **not** built in CI due to the size of FAR/DFARS and the cost of embedding.
 
-To rebuild locally:
-
-First, edit .gitignore and comment out 'data/chroma/chroma.sqlite3'; then, 
+To rebuild locally (from the repository root):
 
 ```bash
 python -m scripts.build_index
@@ -241,65 +239,93 @@ This will:
 - Chunk and embed text
 - Write a new ChromaDB index into `data/chroma/`
 
-After rebuilding, commit the updated index using Git LFS:
+After rebuilding, commit the updated index via Git LFS (the whole
+`data/chroma/` directory, including `chroma.sqlite3`, is LFS‑tracked and is
+committed so clones run without rebuilding):
 
 ```bash
-git add data/chroma 
+git add data/chroma
 git commit -m "Rebuild RAG index"
 git push
 ```
+
+> **One-time cleanup:** an obsolete `chroma/` directory at the repo root was
+> committed by an earlier version. It is unused (the live index is
+> `data/chroma/`). Remove it from tracking with
+> `git rm -r --cached chroma/ && git commit -m "Remove stale root chroma index"`.
 
 ---
 
 ## Running the Application
 
-### Flask Development Server (local)
+The app reads the ChromaDB index **directly from disk** (`data/chroma/`) — no
+separate database server is required. You need two things present locally
+before starting: the prebuilt index (`data/chroma/`, via Git LFS) and the
+Phi‑4 ONNX model (`cpu_and_mobile/...`, downloaded in Setup step 4).
+
+### Option A — Docker (recommended, one command)
 
 ```bash
+cd docker
+docker compose up --build
+```
+
+Then open <http://localhost:7860>.
+
+The Compose file mounts the model and index from your local checkout into the
+container **read‑only**, so the image stays small and rebuilds are fast (the
+4.6 GB model and 135 MB index are never copied into the image). Stop with
+`docker compose down`.
+
+### Option B — Local Python
+
+After completing Setup & Installation, from the repository root:
+
+```bash
+# Flask dev server (simplest; recommended on Windows)
 python -m flask --app src.app run --host=0.0.0.0 --port=7860
 ```
 
-### Hypercorn (ASGI, local production-like)
 ```bash
+# Hypercorn (ASGI, production-like) — recommended on Linux/macOS/Docker
 hypercorn --bind 0.0.0.0:7860 src.app.asgi:app
 ```
 
-### Docker
+Then open <http://localhost:7860>.
+
+> **Windows note:** Hypercorn's multiprocessing worker model can fail to start
+> on native Windows. Use the Flask dev server (above) or Docker on Windows;
+> use Hypercorn on Linux/macOS or inside the container.
+
+### Configuration (environment variables)
+
+All have working defaults for local use; override only if needed.
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `CHROMA_PATH` | `./data/chroma` | On-disk ChromaDB index directory |
+| `PHI4_MODEL_DIR` | `./cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4` | Phi‑4 ONNX model directory |
+| `EMBED_MODEL_NAME` | `BAAI/bge-small-en-v1.5` | Embedding model (must match the index) |
+| `FLASK_ENV` | `local` | Set to `production` to require a real `SECRET_KEY` |
+| `SECRET_KEY` | dev fallback | Required only when `FLASK_ENV=production` |
+
+### Optional — Remote ChromaDB server (advanced / scaling)
+
+The default embedded mode is recommended. To instead run ChromaDB as a
+separate HTTP service (e.g. for horizontal scaling), set `CHROMA_HOST` — this
+switches both the builder and the query engine to the HTTP client. You must
+(re)build the index *through the server* so its storage holds the vectors;
+the on-disk `data/chroma/` index is not used in this mode.
 
 ```bash
-docker build -t fedacq-rag-chatbot .
-docker run -d -p 7860:7860 --name ragbot fedacq-rag-chatbot
-```
-The container uses Hypercorn to serve the ASGI‑wrapped Flask app.
-
-### ChromaDB HTTP Server (Production-Ready)
-
-To run the application with ChromaDB as a separate HTTP service:
-
-**Terminal 1: Start ChromaDB server**
-```bash
+# Terminal 1
 chroma run --host 127.0.0.1 --port 8000
-```
 
-**Terminal 2: Run the Flask application**
-```bash
-export CHROMA_HOST=127.0.0.1
-export CHROMA_PORT=8000
-python -m flask --app src.app run --host=0.0.0.0 --port=7860
-```
-
-Or with Hypercorn:
-```bash
-export CHROMA_HOST=127.0.0.1
-export CHROMA_PORT=8000
+# Terminal 2
+export CHROMA_HOST=127.0.0.1 CHROMA_PORT=8000
+python -m scripts.build_index          # ingest into the running server
 hypercorn --bind 0.0.0.0:7860 src.app.asgi:app
 ```
-
-**Benefits:**
-- Separates vector database from application server
-- Supports horizontal scaling
-- Enables containerized deployments
-- Production-ready architecture
 
 ---
 

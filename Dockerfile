@@ -18,9 +18,26 @@ RUN pip install --upgrade pip && \
 # Install project
 COPY pyproject.toml README.md ./
 COPY src ./src
-COPY data ./data
 
 RUN pip install --no-cache-dir .
+
+# Bake the embedding model into the image so the first query does NOT download
+# it at runtime. The model (~90MB) is cached under HF_HOME during build; at
+# runtime the app reads it from cache with no network access.
+ENV HF_HOME=/opt/hf \
+    EMBED_MODEL_NAME=BAAI/bge-small-en-v1.5
+RUN python -c "from llama_index.embeddings.huggingface import HuggingFaceEmbedding; HuggingFaceEmbedding(model_name='BAAI/bge-small-en-v1.5')"
+
+# After the build-time download, run fully offline at runtime: the embedding
+# model is in the image cache and never needs Hugging Face again.
+ENV HF_HUB_OFFLINE=1 \
+    TRANSFORMERS_OFFLINE=1
+
+# The 135MB Chroma index and 4.6GB Phi-4 ONNX model are NOT baked into the
+# image. They are mounted at runtime via docker-compose (see
+# docker/docker-compose.yml), keeping the image small and builds fast.
+ENV CHROMA_PATH=/code/data/chroma \
+    PHI4_MODEL_DIR=/code/cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4
 
 EXPOSE 7860
 

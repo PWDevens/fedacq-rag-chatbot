@@ -106,15 +106,14 @@ function displayCitations(citations) {
     const reg = cite.regulation || "FAR";
     const part = cite.part || "";
     const section = cite.section || "";
-    const path = cite.source_path || "";
 
-    const label = [reg, part, section].filter(Boolean).join(" ");
-    const display = label || "Source";
+    let display = reg;
+    if (section) display += ` ${section}`;
+    else if (part) display += ` ${part}`;
 
     html += `
       <div class="citation-item">
         <div class="citation-label">${escapeHtml(display)}</div>
-        <div class="citation-path">${escapeHtml(path)}</div>
       </div>
     `;
   });

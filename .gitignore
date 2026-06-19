@@ -54,22 +54,19 @@ repo_state_validator.py
 storage/
 
 # ChromaDB runtime files (moved to data/chroma, keep root ignored)
-chroma/
+/chroma/
 test_chroma/
 # FAR/DFARS are cloned dynamically — do NOT track them
 data/regs/far/
 data/regs/dfars/
 
-# Ignore Chroma runtime mutations
+# Ignore Chroma runtime mutations only (NOT the committed index itself).
+# data/chroma/** is tracked via Git LFS (see .gitattributes); the index —
+# including chroma.sqlite3 and the segment .bin files — must be committed so
+# clones can run without rebuilding.
 data/chroma/*.wal
 data/chroma/*.shm
-data/chroma/collections/*
-data/chroma/index/*
-data/chroma/uuid/*
 data/chroma/*.lock
-
-# Ignore the main sqlite file UNLESS explicitly force-added
-data/chroma/chroma.sqlite3
 
 # Reports and Test Results
 .coverage

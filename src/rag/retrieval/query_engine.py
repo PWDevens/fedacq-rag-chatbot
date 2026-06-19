@@ -1,16 +1,14 @@
 """
 Query engine loader for the FAR/DFARS RAG pipeline.
 
-Loads the ChromaDB vector store via HTTP client and returns a LlamaIndex retriever
-using the same embedding model that was used at index-build time. The embedding
-model is sourced from BaseConfig so the build path and query path stay in sync.
+Loads the on-disk ChromaDB index (PersistentClient) and returns a LlamaIndex
+retriever using the same embedding model used at build time. Set CHROMA_HOST
+to opt into a remote HTTP server instead.
 
-ChromaDB Server Configuration:
-  - CHROMA_HOST: Host where ChromaDB server is running (default: localhost)
-  - CHROMA_PORT: Port where ChromaDB server is running (default: 8000)
-
-To run ChromaDB server:
-  $ chroma run --host localhost --port 8000
+Environment variables:
+  CHROMA_PATH  - Path to the on-disk ChromaDB directory (default: BaseConfig.CHROMA_PATH)
+  CHROMA_HOST  - If set, connect to a remote ChromaDB HTTP server instead
+  CHROMA_PORT  - Port for the remote server (default: 8000)
 """
 
 import os
@@ -26,36 +24,57 @@ def load_query_engine(chroma_path=None, collection="far_dfars_chroma"):
     """
     Load the ChromaDB-backed retriever for the FAR/DFARS index.
 
-    Connects to a ChromaDB HTTP server for vector storage.
-
     Args:
-        chroma_path (str | None): Deprecated. Previously used for PersistentClient.
-            Now ignored; ChromaDB server connection is configured via env vars.
+        chroma_path (str | None): Override for the on-disk ChromaDB directory.
+            Defaults to BaseConfig.CHROMA_PATH. Ignored when CHROMA_HOST is set.
         collection (str): Name of the ChromaDB collection to load.
 
     Returns:
-        llama_index retriever: Configured with similarity_top_k=5.
+        llama_index retriever: Configured with similarity_top_k=8.
 
     Raises:
-        RuntimeError: If ChromaDB server is not reachable.
+        RuntimeError: If the collection is missing (index not built yet) or
+            the remote ChromaDB server is not reachable.
     """
-    # Get ChromaDB server configuration from environment
-    chroma_host = os.environ.get("CHROMA_HOST", "localhost")
-    chroma_port = int(os.environ.get("CHROMA_PORT", 8000))
+    # Default: read the on-disk index built by builder.py (PersistentClient).
+    # This matches how the index is created and committed (data/chroma) and
+    # needs no separate service. Set CHROMA_HOST to opt into a remote HTTP
+    # ChromaDB server instead (for scaled/multi-process deployments).
+    chroma_host = os.environ.get("CHROMA_HOST")
+    if chroma_host:
+        chroma_port = int(os.environ.get("CHROMA_PORT", 8000))
+        client = chromadb.HttpClient(host=chroma_host, port=chroma_port)
+    else:
+        path = chroma_path or BaseConfig.CHROMA_PATH
+        client = chromadb.PersistentClient(path=str(path))
 
-    # Connect to ChromaDB HTTP server
-    client = chromadb.HttpClient(host=chroma_host, port=chroma_port)
     # Use get_collection (not get_or_create_collection) at query time: the
-    # index must already exist. get_or_create_collection is reserved for
-    # builder.py so query startup fails clearly if the index is missing.
-    collection_obj = client.get_or_create_collection(collection)
+    # index must already exist, so a missing/empty index fails loudly here
+    # instead of silently returning zero results.
+    target = chroma_host or chroma_path or BaseConfig.CHROMA_PATH
+    try:
+        collection_obj = client.get_collection(collection)
+    except Exception as exc:
+        msg = (
+            "ChromaDB collection '" + str(collection) + "' not found. "
+            "Build the index first (python -m scripts.build_index) and ensure "
+            "CHROMA_PATH points to it (current target: " + str(target) + ")."
+        )
+        raise RuntimeError(msg) from exc
 
     vector_store = ChromaVectorStore(chroma_collection=collection_obj)
     storage = StorageContext.from_defaults(vector_store=vector_store)
 
     # Use the same embedding model as the index-build path so cosine
     # similarity between query vectors and stored vectors is meaningful.
-    embed_model = HuggingFaceEmbedding(model_name=BaseConfig.EMBED_MODEL_NAME)
+    # bge models expect an asymmetric query instruction prepended at search
+    # time (passages are embedded plain at build time). Adding it for bge only.
+    _embed_kwargs = {"model_name": BaseConfig.EMBED_MODEL_NAME}
+    if "bge" in BaseConfig.EMBED_MODEL_NAME.lower():
+        _embed_kwargs["query_instruction"] = (
+            "Represent this sentence for searching relevant passages:"
+        )
+    embed_model = HuggingFaceEmbedding(**_embed_kwargs)
 
     index = VectorStoreIndex.from_vector_store(
         vector_store=vector_store,
@@ -63,4 +82,4 @@ def load_query_engine(chroma_path=None, collection="far_dfars_chroma"):
         embed_model=embed_model,
     )
 
-    return index.as_retriever(similarity_top_k=5)
+    return index.as_retriever(similarity_top_k=8)

@@ -80,7 +80,7 @@ class BaseConfig:
     # Must match the model used at index-build time.
     EMBED_MODEL_NAME = os.environ.get(
         "EMBED_MODEL_NAME",
-        "sentence-transformers/all-MiniLM-L6-v2"
+        "BAAI/bge-small-en-v1.5"
     )
 
 

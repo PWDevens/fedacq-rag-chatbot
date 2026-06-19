@@ -1,0 +1,47 @@
+# One-command local deployment for the FAR/DFARS RAG chatbot.
+#
+#   cd docker && docker compose up --build
+#
+# The image stays small: the 4.6GB Phi-4 ONNX model and the 135MB Chroma
+# index live on the host and are mounted read-only into the container, so the
+# build does not copy gigabytes and rebuilds stay fast.
+#
+# Paths below are relative to this file (the docker/ directory). The host must
+# already contain:
+#   ../cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4   (the ONNX model)
+#   ../data/chroma                                        (the prebuilt index)
+# See the README for how to obtain both.
+
+services:
+  ragbot:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: fedacq-rag-chatbot
+    container_name: ragbot
+    ports:
+      - "7860:7860"
+    environment:
+      # Embedded on-disk ChromaDB (no separate Chroma server needed).
+      CHROMA_PATH: /code/data/chroma
+      PHI4_MODEL_DIR: /code/cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4
+      EMBED_MODEL_NAME: BAAI/bge-small-en-v1.5
+      # FLASK_ENV=local uses a built-in dev SECRET_KEY. For production set
+      # FLASK_ENV=production and provide SECRET_KEY (e.g. via local.env below).
+      FLASK_ENV: local
+    # Optional: uncomment to load SECRET_KEY / HF_TOKEN from docker/local.env
+    # env_file:
+    #   - local.env
+    volumes:
+      # Model is read-only (ONNX weights never change).
+      - ../cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4:/code/cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4:ro
+      # Index must be writable: ChromaDB's PersistentClient opens SQLite in
+      # read-write mode and creates WAL/journal files even for read-only queries.
+      - ../data/chroma:/code/data/chroma
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7860/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped

@@ -11,6 +11,8 @@ dependencies = [
     "huggingface-hub==0.36.2",
     "hypercorn==0.17.3",
     "llama-index==0.14.12",
+    "llama-index-vector-stores-chroma",
+    "llama-index-embeddings-huggingface",
     "lxml==6.1.0",
     "onnxruntime==1.20.1",
     "onnxruntime-genai==0.5.2",
@@ -34,3 +36,9 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.packages.find]
 where = ["src"]
 include = ["*"]
+
+# Ship the frontend assets inside the installed package. Without this,
+# `pip install .` (non-editable, as in Docker) omits the static files and the
+# app returns 404 for "/" and "/static/*".
+[tool.setuptools.package-data]
+app = ["static/*"]
