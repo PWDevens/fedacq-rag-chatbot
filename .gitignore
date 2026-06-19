@@ -71,3 +71,6 @@ data/chroma/*.lock
 # Reports and Test Results
 .coverage
 .pipeline/**
+
+# Internal session/handoff artifacts (not for public repo)
+handoff.md

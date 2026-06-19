@@ -98,6 +98,15 @@ Pipeline:
 
 ---
 
+## Screenshots
+
+<!-- Add a screenshot of the chat UI here, e.g.: -->
+<!-- ![FAR/DFARS chatbot UI](docs/screenshot.png) -->
+
+_UI screenshot to be added._
+
+---
+
 ## Repository Structure
 
 ```
@@ -148,7 +157,7 @@ fedacq-rag-chatbot/
 │
 ├── docker/
 │   ├── docker-compose.yml
-│   └── local.env
+│   └── local.env.example
 │
 ├── .dockerignore
 ├── .gitattributes
@@ -248,11 +257,6 @@ git add data/chroma
 git commit -m "Rebuild RAG index"
 git push
 ```
-
-> **One-time cleanup:** an obsolete `chroma/` directory at the repo root was
-> committed by an earlier version. It is unused (the live index is
-> `data/chroma/`). Remove it from tracking with
-> `git rm -r --cached chroma/ && git commit -m "Remove stale root chroma index"`.
 
 ---
 
@@ -370,3 +374,22 @@ Expected response:
 - Retrieved sections  
 - LLM‑generated explanation  
 
+---
+
+## Data & Model Attribution
+
+- **FAR / DFARS text** is a work of the U.S. Government and is in the public
+  domain. It is sourced from the official `.dita` XML repositories.
+- **Phi-4-mini-instruct-onnx** is provided by Microsoft under its own model
+  license. It is **not** redistributed in this repository; download it directly
+  from Hugging Face (see Setup) and comply with Microsoft's license terms.
+- **BAAI/bge-small-en-v1.5** (embeddings) is downloaded from Hugging Face at
+  build time and is governed by its own license.
+
+---
+
+## License
+
+This project is released under the MIT License. See [LICENSE](LICENSE).
+
+Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
