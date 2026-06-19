@@ -32,8 +32,17 @@ This project automates that research using a modern RAG pipeline.
 - Accurate, citation‑backed responses  
 - Up‑to‑date regulatory text  
 - Reproducible end‑to‑end pipeline  
-- Deployable locally or via Docker  
+- Deployable locally or via Docker 
+ 
+ ___
+#### Landing Page
+![Landing-Page](Landing.png)
 
+#### Query Response
+![Response-to-Query](MAS.png)
+
+#### Query Loading
+![Pending-Response-to-Query](IDIQ-pre.png)
 ---
 
 ## Technical Approach
