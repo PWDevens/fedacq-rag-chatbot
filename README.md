@@ -1,7 +1,7 @@
 # fedacq‑rag‑chatbot
 ### Federal Acquisition Regulation Retrieval‑Augmented Generation (RAG) Chatbot
 
-A production‑ready Retrieval‑Augmented Generation (RAG) system that provides fast, accurate, citation‑backed answers to questions about the Federal Acquisition Regulation (FAR) and Defense Federal Acquisition Regulation Supplement (DFARS). Designed for federal contractors, acquisition professionals, and businesses navigating the federal market.
+A production‑ready Retrieval‑Augmented Generation (RAG) system that provides fast, accurate, citation‑backed answers to questions about the Federal Acquisition Regulation (FAR) and Defense Federal Acquisition Regulation Supplement (DFARS). Designed for federal contractors, acquisition professionals, and businesses navigating the federal market. Runs entirely locally on a consumer laptop — no GPU, no cloud API, no subscription required.
 
 ---
 
@@ -187,10 +187,19 @@ fedacq-rag-chatbot/
 
 ## Prerequisites
 
-- **Python 3.10–3.13** (3.12 recommended; matches CI)
-- **Git LFS** — required to pull the prebuilt ChromaDB index (`git lfs install`)
-- **~5 GB free disk space** — for the Phi-4 ONNX model download
-- **Git**
+> **Hardware:** this project runs entirely on CPU. No GPU is required.
+> It has been validated on a consumer laptop (Intel Core i5, 16 GB RAM, integrated graphics).
+
+| Requirement | Minimum | Notes |
+|---|---|---|
+| **RAM** | 16 GB | Phi-4 int4 model loads ~4.6 GB into RAM at startup; 16 GB is the practical floor |
+| **CPU** | Any modern x86-64 or Apple Silicon | Inference is CPU-bound; expect 10–60 s per response depending on question length |
+| **GPU** | None required | ONNX Runtime runs on CPU; integrated graphics are not used |
+| **Disk** | ~8 GB free | ~4.6 GB model + ~135 MB index + ~500 MB venv + FAR/DFARS repos |
+| **OS** | Windows 10/11, Linux, macOS | Windows users: use the Flask dev server or Docker (see Running the Application) |
+| **Python** | 3.10–3.12 | 3.12 recommended; matches the `python:3.12-slim` Docker base image |
+| **Git LFS** | Required | Pulls the prebuilt ChromaDB index (`git lfs install` before cloning) |
+| **Docker** | Optional | Only for the containerized run path; not needed for local Python setup |
 
 ---
 
@@ -288,6 +297,8 @@ The app reads the ChromaDB index **directly from disk** (`data/chroma/`) — no
 separate database server is required. You need two things present locally
 before starting: the prebuilt index (`data/chroma/`, via Git LFS) and the
 Phi‑4 ONNX model (`cpu_and_mobile/...`, downloaded in Setup step 4).
+
+> **Performance note:** on first startup, the app maps the Phi-4 model into memory — expect 15–30 seconds before the first response token appears. Subsequent queries in the same session are faster (model stays loaded). This is normal on CPU-only hardware.
 
 ### Option A — Docker (recommended, one command)
 
