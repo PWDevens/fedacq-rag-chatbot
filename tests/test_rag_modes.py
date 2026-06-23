@@ -100,3 +100,29 @@ def test_answer_cache_disabled_is_noop(tmp_path, monkeypatch):
 
     cache.put("q", "a", [])
     assert cache.get("q") is None
+
+
+def test_rerank_empty_list_returns_empty():
+    from rag.retrieval import reranker
+
+    # No model load needed for an empty candidate set.
+    assert reranker.rerank("q", [], top_n=5) == []
+
+
+def test_cache_key_separates_by_mode(tmp_path, monkeypatch):
+    """Same question under different RAG_MODE must not collide in the cache."""
+    from rag import cache
+
+    monkeypatch.setattr(RagConfig, "ANSWER_CACHE", True)
+    monkeypatch.setattr(RagConfig, "ANSWER_CACHE_PATH", str(tmp_path / "cache.db"))
+    monkeypatch.setattr(cache, "_conn", None)
+
+    monkeypatch.setattr(RagConfig, "RAG_MODE", "naive")
+    cache.put("q", "naive-answer", [])
+
+    monkeypatch.setattr(RagConfig, "RAG_MODE", "hybrid")
+    assert cache.get("q") is None  # different mode -> different key -> miss
+    cache.put("q", "hybrid-answer", [])
+
+    monkeypatch.setattr(RagConfig, "RAG_MODE", "naive")
+    assert cache.get("q")["answer"] == "naive-answer"

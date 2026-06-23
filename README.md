@@ -409,22 +409,31 @@ Set `RAG_MODE` in your environment (or `docker/local.env`) and restart.
 
 | Mode | What it does | Cost on CPU |
 |---|---|---|
-| `naive` | Dense vector search over Chroma (the baseline). | Cheapest |
-| `hybrid` | Dense **+** BM25 (`rank-bm25`) fused with Reciprocal Rank Fusion. Catches exact-term matches (clause numbers, defined terms) that pure embeddings miss. | + a few ms (BM25 is pure CPU) |
-| `graph` | **GraphRAG via LightRAG** — retrieves over a prebuilt knowledge graph of entities/relations (dual-level local+global). Requires an offline build first. | Highest (one extra LLM call for keyword extraction per query) |
+| `naive` | Dense vector search over Chroma (the baseline). | Cheapest — **supported** |
+| `hybrid` | Dense **+** BM25 (`rank-bm25`) fused with Reciprocal Rank Fusion. Catches exact-term matches (clause numbers, defined terms) that pure embeddings miss. | + a few ms (BM25 is pure CPU) — **supported** |
+| `graph` | **GraphRAG via LightRAG** — retrieves over a prebuilt knowledge graph of entities/relations (dual-level local+global). Requires an offline build first. | **⚠️ Experimental / deferred** — see below |
+
+> **⚠️ Graph mode is experimental and currently deferred.** Building the
+> knowledge graph runs LLM entity/relation extraction over the corpus, which is
+> **not viable on CPU** with Phi‑4‑mini (a 3‑document build ran ~22 min without
+> completing a single extraction). The runtime code path is implemented and
+> safe to leave installed, but the **offline build requires a GPU** (e.g. an
+> ephemeral RunPod pod, or `GRAPH_BUILD_LLM` pointed at a hosted model). The
+> supported, CPU‑ready modes are **`naive`** and **`hybrid`**.
 
 The reranker (`RERANK=true`) applies to `naive` and `hybrid`: it pulls a larger
 candidate pool (`RETRIEVAL_TOP_K`) and re-scores it with a cross-encoder down to
 `RERANK_TOP_N`, improving both the injected context and the citations.
 
-**Graph mode setup** (one-time, offline):
+**Graph mode setup** (one-time, offline — **GPU strongly recommended**):
 
 ```bash
 # 1. Install the optional graph dependencies (kept out of the core install).
 pip install -r requirements_graph.txt        # or: pip install -e ".[graph]"
 
-# 2. Build a knowledge graph from a subset of the committed index using the
-#    local Phi-4 model. Runs LLM extraction on CPU — start small.
+# 2. Build a knowledge graph from a subset of the committed index.
+#    NOTE: extraction on CPU with Phi-4-mini is impractical (see warning above).
+#    Run this on a GPU host, or set GRAPH_BUILD_LLM to a hosted model.
 GRAPH_BUILD_MAX_DOCS=40 python -m scripts.build_graph
 # Optional: better extraction quality with an API model (needs OPENAI_API_KEY):
 # GRAPH_BUILD_LLM=gpt-4o-mini python -m scripts.build_graph
