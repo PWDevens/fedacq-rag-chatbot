@@ -3,6 +3,8 @@
 
 A production‑ready Retrieval‑Augmented Generation (RAG) system that provides fast, accurate, citation‑backed answers to questions about the Federal Acquisition Regulation (FAR) and Defense Federal Acquisition Regulation Supplement (DFARS). Designed for federal contractors, acquisition professionals, and businesses navigating the federal market. Runs entirely locally on a consumer laptop — no GPU, no cloud API, no subscription required.
 
+Beyond a baseline (naive) pipeline, it implements **selectable advanced retrieval strategies** — **Hybrid** (dense + BM25 with Reciprocal Rank Fusion) and **GraphRAG** (LightRAG knowledge graph) — plus a cross‑encoder **reranker** and a persistent exact‑match **answer cache**. All are switchable from the environment (`RAG_MODE`, `RERANK`, …) with no code changes, and every mode shares one generation + citation path. See [Retrieval Modes](#retrieval-modes-rag_mode).
+
 ---
 
 ## Background
@@ -97,18 +99,27 @@ citations)` and the existing Phi‑4 streaming endpoint does the rest.
 
 ## Architecture Overview
 
+**Query path** — one shared serving path; only retrieval differs by `RAG_MODE`:
+
 ```text
-User → Flask (ASGI via Hypercorn) → Query Engine → LlamaIndex → ChromaDB → FAR/DFARS DITA Source
+POST /chat_stream ─▶ exact-match answer cache ─▶ retrieval engine ─(context, citations)─▶ Phi-4 (ONNX) ─▶ SSE stream
+   (question)          hit ─▶ instant replay        │                                       tokens + citations
+                                                     ├─ naive  : dense vector search (ChromaDB)
+                                                     ├─ hybrid : dense + BM25, fused with RRF
+                                                     └─ graph  : LightRAG knowledge graph
+                                                     └─ + cross-encoder reranker (naive/hybrid, optional)
 ```
 
-Pipeline:
+Every engine returns `(context, citations)`, so the cache, Phi‑4 streaming, and
+citation events are written once and reused across all modes.
 
-1. Clone FAR/DFARS repos  
-2. Parse `.dita` XML  
-3. Chunk + embed  
-4. Store in ChromaDB  
-5. Serve via Flask API (ASGI)  
-6. LLM generates answers with citations  
+**Offline pipelines:**
+
+- *Index build* (`scripts/build_index.py`): clone FAR/DFARS → parse `.dita` XML
+  → chunk + embed → persist ChromaDB (committed via Git LFS).
+- *Graph build* (`scripts/build_graph.py`): pull a subset of the committed
+  index → LightRAG LLM entity/relation extraction → knowledge graph artifacts
+  (per‑machine, built on demand for `RAG_MODE=graph`).
 
 ---
 
@@ -140,7 +151,8 @@ fedacq-rag-chatbot/
 │   │
 │   ├── rag/
 │   │   ├── __init__.py
-│   │   ├── config.py
+│   │   ├── config.py            # RagConfig + env vars + runtime_chroma_path()
+│   │   ├── cache.py             # persistent exact-match answer cache (SQLite)
 │   │   │
 │   │   ├── indexing/
 │   │   │   ├── __init__.py
@@ -153,24 +165,34 @@ fedacq-rag-chatbot/
 │   │   │
 │   │   └── retrieval/
 │   │       ├── __init__.py
+│   │       ├── factory.py         # get_engine(): naive | hybrid | graph
+│   │       ├── reranker.py        # cross-encoder reranker (RERANK)
+│   │       ├── graph_lightrag.py  # GraphRAG via LightRAG (RAG_MODE=graph)
 │   │       ├── metadata.py
 │   │       ├── parser_dita.py
 │   │       └── query_engine.py
 │   │
 │   └── scripts/
-│       └── build_index.py
+│       ├── build_index.py       # build the ChromaDB vector index
+│       └── build_graph.py       # build the LightRAG knowledge graph (offline)
 │
 ├── data/
-│   ├── chroma/      # Persistent ChromaDB index (Git LFS)
-│   └── regs/        # FAR/DFARS cloned repositories (Git LFS)
+│   ├── chroma/          # Persistent ChromaDB index (Git LFS, committed)
+│   ├── chroma_runtime/  # Writable runtime copy of the index (gitignored)
+│   ├── lightrag/        # GraphRAG artifacts, built on demand (gitignored)
+│   ├── cache.db         # Answer cache (gitignored)
+│   └── regs/            # FAR/DFARS cloned repositories
 │
 ├── tests/
+│   ├── test_api.py
+│   ├── test_config.py
 │   ├── test_indexing.py
 │   ├── test_llm.py
 │   ├── test_metadata.py
 │   ├── test_parser.py
 │   ├── test_query_engine.py
-│   └── test_query_engine_load.py
+│   ├── test_query_engine_load.py
+│   └── test_rag_modes.py        # factory dispatch, reranker, RRF, cache
 │
 ├── docker/
 │   ├── docker-compose.yml
@@ -200,7 +222,7 @@ fedacq-rag-chatbot/
 | **RAM** | 16 GB | Phi-4 int4 model loads ~4.6 GB into RAM at startup; 16 GB is the practical floor |
 | **CPU** | Any modern x86-64 or Apple Silicon | Inference is CPU-bound; expect 10–60 s per response depending on question length |
 | **GPU** | None required | ONNX Runtime runs on CPU; integrated graphics are not used |
-| **Disk** | ~8 GB free | ~4.6 GB model + ~135 MB index + ~500 MB venv + FAR/DFARS repos |
+| **Disk** | ~8 GB free | ~4.6 GB model + ~135 MB index (+ ~135 MB runtime copy) + ~80 MB reranker + ~500 MB venv + FAR/DFARS repos |
 | **OS** | Windows 10/11, Linux, macOS | Windows users: use the Flask dev server or Docker (see Running the Application) |
 | **Python** | 3.10–3.12 | 3.12 recommended; matches the `python:3.12-slim` Docker base image |
 | **Git LFS** | Required | Pulls the prebuilt ChromaDB index (`git lfs install` before cloning) |
@@ -398,7 +420,9 @@ The chatbot is CPU-bound; generation dominates the 10–60 s/response range.
   `asgi.py`), so the first request no longer pays the 15–30 s cold start. Set
   `RAG_NO_WARM=1` to opt out.
 - **Answer cache:** `ANSWER_CACHE=true` replays repeated questions instantly
-  from `data/cache.db` (survives restarts).
+  from `data/cache.db` (survives restarts). Measured locally: a repeated
+  question returned in **~140 ms** versus tens of seconds for a fresh
+  generation — a ~1000× speedup on cache hits.
 - **Tunable knobs:** lower `MAX_NEW_TOKENS` and `RERANK_TOP_N` to cut generation
   time; the reranker shrinks the prompt to the most relevant chunks, which also
   helps prefill.
@@ -489,6 +513,10 @@ Expected response:
 - Zero or more token events: `data: <token text>\n\n`
 - One final citation event: `data: {"citations": [{"index": 1, "regulation": "FAR", "part": "15", "section": "15.404", "source_path": "..."}]}\n\n`
 - On error: `data: <user-safe error message>\n\n`
+
+On an answer-cache hit the same format is used, but the full answer arrives in a
+single token event (followed by the citation event) rather than streaming
+token‑by‑token.
 
 ---
 
