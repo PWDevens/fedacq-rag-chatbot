@@ -134,12 +134,8 @@ citation events are written once and reused across all modes.
 
 ---
 
-## Screenshots
-
-<!-- Add a screenshot of the chat UI here, e.g.: -->
-<!-- ![FAR/DFARS chatbot UI](docs/screenshot.png) -->
-
-_UI screenshot to be added._
+> **Screenshots** of the running UI (landing page, query response, loading
+> state) are shown under [Acceptance Criteria](#acceptance-criteria) above.
 
 ---
 
@@ -277,6 +273,16 @@ python -m venv .venv
 pip install -e .
 pip install -r requirements.txt
 ```
+
+This installs everything needed for `naive` and `hybrid` modes and the reranker.
+For `graph` mode, also install the optional GraphRAG dependencies (see
+[Retrieval Modes](#retrieval-modes-rag_mode)):
+
+```bash
+pip install -r requirements_graph.txt        # or: pip install -e ".[graph]"
+```
+
+Then download the Phi‑4 ONNX model:
 
 ```bash
 huggingface-cli download microsoft/Phi-4-mini-instruct-onnx \
@@ -482,6 +488,15 @@ hypercorn --bind 0.0.0.0:7860 src.app.asgi:app
 ```bash
 pytest -q
 ```
+
+Covers config defaults, DITA parsing, metadata normalization, the API routes,
+and the multi-mode additions (engine factory dispatch, the reranker, hybrid
+Reciprocal Rank Fusion, and the answer cache) in `tests/test_rag_modes.py`.
+
+- Tests that require the Phi‑4 model are skipped unless `ENABLE_PHI4_TESTS=1`.
+- `tests/test_indexing.py::test_build_index_smoke` requires `hnswlib` (only
+  needed to **build** a new index; runtime retrieval over the committed index
+  works without it).
 
 ---
 
