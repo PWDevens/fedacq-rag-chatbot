@@ -1,0 +1,16 @@
+# Optional dependencies for GraphRAG mode (RAG_MODE=graph).
+#
+# LightRAG and its transitive tree (google-genai, cryptography, nano-vectordb,
+# pipmaster, ...) are heavy and only needed for the knowledge-graph retrieval
+# mode. They are kept OUT of the core requirements so that naive/hybrid installs
+# stay lean. naive + hybrid + reranker do not need anything in this file.
+#
+# Install on top of the core requirements:
+#   pip install -r requirements.txt -r requirements_graph.txt
+# or, via the project extra:
+#   pip install -e ".[graph]"
+#
+# Reproducible pinned versions are in requirements_graph.lock.
+# After installing, build the graph once:  python -m scripts.build_graph
+
+lightrag-hku==1.5.3

@@ -15,7 +15,6 @@ dependencies = [
     "llama-index-embeddings-huggingface",
     "sentence-transformers",        # cross-encoder reranker (RERANK)
     "rank-bm25==0.2.2",             # sparse arm of hybrid RAG (RAG_MODE=hybrid)
-    "lightrag-hku==1.5.3",          # GraphRAG knowledge graph (RAG_MODE=graph)
     "lxml==6.1.0",
     "onnxruntime==1.20.1",
     "onnxruntime-genai==0.5.2",
@@ -30,6 +29,11 @@ dependencies = [
 dev = [
     "pytest==9.0.3",
     "pytest-cov==7.1.0",
+]
+# GraphRAG mode (RAG_MODE=graph). Heavy, optional — install with
+# `pip install -e ".[graph]"`. See requirements_graph.txt / .lock.
+graph = [
+    "lightrag-hku==1.5.3",
 ]
 
 [build-system]

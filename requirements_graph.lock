@@ -1,0 +1,29 @@
+# Pinned dependency lock for GraphRAG mode (RAG_MODE=graph).
+#
+# These are the packages LightRAG adds ON TOP OF the core stack — the transitive
+# closure of lightrag-hku minus everything requirements.lock already provides
+# (numpy, pandas, pydantic, networkx, tiktoken, aiohttp, httpx, etc. come from
+# the core install). Install layered, core first:
+#   pip install -r requirements.lock -r requirements_graph.lock
+#
+# Generated from the validated .venv (Python 3.12). 19 packages.
+
+ascii-colors==0.11.25
+cffi==2.0.0
+configparser==7.2.0
+cryptography==49.0.0
+google-api-core==2.31.0
+google-auth==2.55.0
+google-genai==2.9.0
+json-repair==0.61.0
+lightrag-hku==1.5.3
+nano-vectordb==0.0.4.3
+pipmaster==1.1.13
+proto-plus==1.28.0
+pyasn1==0.6.3
+pyasn1-modules==0.4.2
+pycparser==3.0
+pypinyin==0.55.0
+wcwidth==0.8.1
+websockets==16.0
+xlsxwriter==3.2.9

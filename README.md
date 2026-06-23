@@ -206,8 +206,10 @@ fedacq-rag-chatbot/
 ├── Makefile
 ├── pyproject.toml
 ├── pytest.ini
-├── requirements.txt
-└── requirements.lock
+├── requirements.txt          # core deps (naive + hybrid + reranker)
+├── requirements.lock         # core deps, fully pinned
+├── requirements_graph.txt    # optional GraphRAG deps (RAG_MODE=graph)
+└── requirements_graph.lock   # GraphRAG deps, fully pinned
 ```
 
 ---
@@ -401,13 +403,22 @@ candidate pool (`RETRIEVAL_TOP_K`) and re-scores it with a cross-encoder down to
 **Graph mode setup** (one-time, offline):
 
 ```bash
-# Builds a knowledge graph from a subset of the committed index using the local
-# Phi-4 model. Runs LLM extraction on CPU — start small.
+# 1. Install the optional graph dependencies (kept out of the core install).
+pip install -r requirements_graph.txt        # or: pip install -e ".[graph]"
+
+# 2. Build a knowledge graph from a subset of the committed index using the
+#    local Phi-4 model. Runs LLM extraction on CPU — start small.
 GRAPH_BUILD_MAX_DOCS=40 python -m scripts.build_graph
 # Optional: better extraction quality with an API model (needs OPENAI_API_KEY):
 # GRAPH_BUILD_LLM=gpt-4o-mini python -m scripts.build_graph
+
+# 3. Run with graph retrieval.
 RAG_MODE=graph make run
 ```
+
+> Graph dependencies (LightRAG + its tree) are isolated in
+> `requirements_graph.txt` / `requirements_graph.lock` so the core install (used
+> by `naive`, `hybrid`, and the reranker) stays lean.
 
 Graph mode answers from graph-assembled context; it does not map back to
 discrete FAR sections, so its citation panel is intentionally sparse.
