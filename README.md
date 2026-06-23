@@ -65,7 +65,12 @@ This project automates that research using a modern RAG pipeline.
 - Custom ONNX Runtime GenAI LLM (Phi‑4‑mini‑instruct‑onnx)
 - ChromaDB for retrieval  
 - `BAAI/bge-small-en-v1.5` embeddings (must match the model used to build the index)
-- Query engine configured with top‑k similarity search  
+- **Selectable retrieval strategy** via `RAG_MODE` (`naive` | `hybrid` | `graph`)
+- **Cross-encoder reranker** (`RERANK`, on by default) layered over naive/hybrid
+- See [Retrieval Modes](#retrieval-modes-rag_mode) below
+
+All modes share one generation + citation path: each produces `(context,
+citations)` and the existing Phi‑4 streaming endpoint does the rest.
 
 ### Why ONNX Runtime GenAI?
 - Fast inference on CPU (no GPU required)
@@ -347,6 +352,64 @@ All have working defaults for local use; override only if needed.
 | `SECRET_KEY` | dev fallback | Required only when `FLASK_ENV=production` |
 | `CHROMA_HOST` | _(unset)_ | If set, connect to a remote ChromaDB HTTP server instead of on-disk |
 | `CHROMA_PORT` | `8000` | Port for the remote ChromaDB server (only used when `CHROMA_HOST` is set) |
+| `RAG_MODE` | `naive` | Retrieval strategy: `naive`, `hybrid`, or `graph` |
+| `RERANK` | `true` | Cross-encoder reranker over naive/hybrid results |
+| `RERANK_MODEL` | `cross-encoder/ms-marco-MiniLM-L-6-v2` | Reranker model (small, CPU) |
+| `RETRIEVAL_TOP_K` | `20` | Candidate pool retrieved before reranking |
+| `RERANK_TOP_N` | `5` | Final chunks fed to the LLM |
+| `MAX_NEW_TOKENS` | `128` | Generation length cap (latency lever) |
+| `ANSWER_CACHE` | `true` | Persistent exact-match answer cache (`data/cache.db`) |
+| `LIGHTRAG_WORKING_DIR` | `./data/lightrag` | GraphRAG artifacts directory |
+| `GRAPH_BUILD_LLM` | _(unset)_ | Optional API model for offline graph extraction (else Phi‑4) |
+
+### Retrieval Modes (`RAG_MODE`)
+
+Set `RAG_MODE` in your environment (or `docker/local.env`) and restart.
+
+| Mode | What it does | Cost on CPU |
+|---|---|---|
+| `naive` | Dense vector search over Chroma (the baseline). | Cheapest |
+| `hybrid` | Dense **+** BM25 (`rank-bm25`) fused with Reciprocal Rank Fusion. Catches exact-term matches (clause numbers, defined terms) that pure embeddings miss. | + a few ms (BM25 is pure CPU) |
+| `graph` | **GraphRAG via LightRAG** — retrieves over a prebuilt knowledge graph of entities/relations (dual-level local+global). Requires an offline build first. | Highest (one extra LLM call for keyword extraction per query) |
+
+The reranker (`RERANK=true`) applies to `naive` and `hybrid`: it pulls a larger
+candidate pool (`RETRIEVAL_TOP_K`) and re-scores it with a cross-encoder down to
+`RERANK_TOP_N`, improving both the injected context and the citations.
+
+**Graph mode setup** (one-time, offline):
+
+```bash
+# Builds a knowledge graph from a subset of the committed index using the local
+# Phi-4 model. Runs LLM extraction on CPU — start small.
+GRAPH_BUILD_MAX_DOCS=40 python -m scripts.build_graph
+# Optional: better extraction quality with an API model (needs OPENAI_API_KEY):
+# GRAPH_BUILD_LLM=gpt-4o-mini python -m scripts.build_graph
+RAG_MODE=graph make run
+```
+
+Graph mode answers from graph-assembled context; it does not map back to
+discrete FAR sections, so its citation panel is intentionally sparse.
+
+### Latency notes
+
+The chatbot is CPU-bound; generation dominates the 10–60 s/response range.
+
+- **Warm start:** models + retrieval engine are loaded at server startup (in
+  `asgi.py`), so the first request no longer pays the 15–30 s cold start. Set
+  `RAG_NO_WARM=1` to opt out.
+- **Answer cache:** `ANSWER_CACHE=true` replays repeated questions instantly
+  from `data/cache.db` (survives restarts).
+- **Tunable knobs:** lower `MAX_NEW_TOKENS` and `RERANK_TOP_N` to cut generation
+  time; the reranker shrinks the prompt to the most relevant chunks, which also
+  helps prefill.
+- **Further wins (not enabled by default):** pin ONNX intra-op threads to your
+  physical core count; batch SSE token flushes; add an in-process LRU cache for
+  repeat-query embeddings.
+
+> **Note on the committed index:** the app reads from a gitignored runtime copy
+> (`data/chroma_runtime/`) so query-time WAL checkpoints never dirty the
+> LFS-tracked `data/chroma/`. After rebuilding the index, delete
+> `data/chroma_runtime/` so the fresh copy is picked up.
 
 ### Optional — Remote ChromaDB server (advanced / scaling)
 

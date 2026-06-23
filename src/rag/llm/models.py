@@ -29,7 +29,7 @@ def init_models():
     # ONNX Phi-4 LLM
     llm = Phi4OnnxLLM(
         model_dir=RagConfig.PHI4_MODEL_DIR,
-        max_new_tokens=128,
+        max_new_tokens=RagConfig.MAX_NEW_TOKENS,
         temperature=0.1,
         top_p=0.9,
     )

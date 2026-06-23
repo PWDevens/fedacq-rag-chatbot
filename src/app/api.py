@@ -7,6 +7,10 @@ Routes:
                       Token events: "data: <token text>\\n\\n"
                       Citation event (final): "data: {"citations": [...]}\n\n"
   GET  /health     - Returns {"status": "ok"} for liveness checks.
+
+Retrieval strategy is selected by RagConfig.RAG_MODE (naive | hybrid | graph)
+via the engine factory; all modes share this single generation + citation path.
+A persistent exact-match answer cache replays repeated questions instantly.
 """
 
 import json
@@ -14,6 +18,8 @@ import logging
 import threading
 
 from flask import Blueprint, request, Response
+
+from rag import cache
 
 logger = logging.getLogger(__name__)
 
@@ -24,24 +30,37 @@ api_bp = Blueprint(
     static_url_path="/static",
 )
 
-_query_engine_instance = None
-_query_engine_lock = threading.Lock()
+_engine_instance = None
+_engine_lock = threading.Lock()
 
 _MAX_QUESTION_LENGTH = 2000
 
+_NO_CONTEXT = "No relevant context retrieved."
 
-def get_query_engine():
+
+def get_engine():
     """
-    Return the shared retriever, initializing it on first call.
-    Thread-safe: uses a lock to prevent double-initialization under concurrency.
+    Return the shared RAG engine for the active mode, initializing on first call.
+    Thread-safe: a lock prevents double-initialization under concurrency.
     """
-    global _query_engine_instance
-    if _query_engine_instance is None:
-        with _query_engine_lock:
-            if _query_engine_instance is None:
-                from rag.retrieval.query_engine import load_query_engine
-                _query_engine_instance = load_query_engine()
-    return _query_engine_instance
+    global _engine_instance
+    if _engine_instance is None:
+        with _engine_lock:
+            if _engine_instance is None:
+                from rag.retrieval.factory import get_engine as build_engine
+                _engine_instance = build_engine()
+    return _engine_instance
+
+
+def warm_start():
+    """
+    Eagerly load the LLM/embedder and build the retrieval engine so the first
+    request doesn't pay the cold-start cost. Best-effort; callers should not let
+    a failure here prevent the server from starting.
+    """
+    from rag.llm.models import init_models
+    init_models()
+    get_engine()
 
 
 def yield_error_event(msg: str):
@@ -85,12 +104,25 @@ def chat_stream():
                 mimetype="text/event-stream",
             )
 
+        # Fast path: exact-match answer cache (survives restarts).
+        cached = cache.get(question)
+        if cached is not None:
+            logger.info("[chat_stream] Cache hit — replaying stored answer")
+
+            def replay():
+                answer = cached.get("answer") or ""
+                if answer:
+                    yield f"data: {answer}\n\n"
+                yield f"data: {json.dumps({'citations': cached.get('citations', [])})}\n\n"
+
+            return Response(replay(), mimetype="text/event-stream")
+
         try:
-            logger.info("[chat_stream] Loading query engine...")
-            retriever = get_query_engine()
-            logger.info("[chat_stream] Query engine loaded successfully")
+            logger.info("[chat_stream] Loading RAG engine...")
+            engine = get_engine()
+            logger.info("[chat_stream] RAG engine ready")
         except Exception as e:
-            logger.error("[chat_stream] Failed to load query engine: %s", e, exc_info=True)
+            logger.error("[chat_stream] Failed to load RAG engine: %s", e, exc_info=True)
             return Response(
                 yield_error_event("Could not initialize the retrieval engine. Please try again later."),
                 mimetype="text/event-stream",
@@ -113,32 +145,11 @@ def chat_stream():
         def generate():
             try:
                 logger.info("[generate] Retrieving context for question...")
-                source_nodes = retriever.retrieve(question)
+                context_str, cites = engine.retrieve_context(question)
 
-                if not source_nodes:
+                if context_str == _NO_CONTEXT:
                     yield "data: No relevant regulations found. Try rephrasing your question.\n\n"
                     return
-
-                context_chunks = []
-                cites = []
-                for i, source_node in enumerate(source_nodes, start=1):
-                    context_chunks.append(source_node.text)
-                    meta = source_node.metadata or {}
-                    cites.append(
-                        {
-                            "index": i,
-                            "regulation": meta.get("regulation"),
-                            "part": meta.get("part"),
-                            "section": meta.get("section"),
-                            "source_path": meta.get("source_path"),
-                        }
-                    )
-
-                context_str = (
-                    "\n\n".join(context_chunks)
-                    if context_chunks
-                    else "No relevant context retrieved."
-                )
 
                 full_prompt = (
                     f"{system_prompt}\n\n"
@@ -148,11 +159,20 @@ def chat_stream():
                 )
 
                 logger.info("[generate] Starting ONNX streaming...")
+                pieces = []
                 for token in llm.stream_complete(full_prompt):
                     if token:
+                        pieces.append(str(token))
                         yield f"data: {token!s}\n\n"
 
                 yield f"data: {json.dumps({'citations': cites})}\n\n"
+
+                # Cache the whitespace-normalized answer for instant replay. The
+                # frontend concatenates newline-free token frames, so normalizing
+                # whitespace keeps the replay protocol-safe and visually close.
+                answer = " ".join("".join(pieces).split())
+                if answer:
+                    cache.put(question, answer, cites)
 
             except Exception as e:
                 logger.error("[generate] Error during generation: %s", e, exc_info=True)

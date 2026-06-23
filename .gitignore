@@ -68,6 +68,19 @@ data/chroma/*.wal
 data/chroma/*.shm
 data/chroma/*.lock
 
+# Writable runtime copy of the committed Chroma index. The app reads from this
+# copy so query-time WAL checkpoints never dirty the LFS-tracked data/chroma.
+data/chroma_runtime/
+
+# Persistent exact-match answer cache (per-machine; not committed).
+data/cache.db
+data/cache.db-wal
+data/cache.db-shm
+
+# GraphRAG (LightRAG) artifacts — built offline per-machine via
+# `python -m scripts.build_graph` (needs the local Phi-4 model). Not committed.
+data/lightrag/
+
 # Reports and Test Results
 .coverage
 .pipeline/**

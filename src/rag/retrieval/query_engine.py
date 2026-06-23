@@ -20,7 +20,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from rag.config import RagConfig
 
 
-def load_query_engine(chroma_path=None, collection="far_dfars_chroma"):
+def load_query_engine(chroma_path=None, collection="far_dfars_chroma", top_k=None):
     """
     Load the ChromaDB-backed retriever for the FAR/DFARS index.
 
@@ -28,9 +28,11 @@ def load_query_engine(chroma_path=None, collection="far_dfars_chroma"):
         chroma_path (str | None): Override for the on-disk ChromaDB directory.
             Defaults to RagConfig.CHROMA_PATH. Ignored when CHROMA_HOST is set.
         collection (str): Name of the ChromaDB collection to load.
+        top_k (int | None): similarity_top_k for the retriever. Defaults to
+            RagConfig.RETRIEVAL_TOP_K (env-tunable).
 
     Returns:
-        llama_index retriever: Configured with similarity_top_k=8.
+        llama_index retriever: Configured with the requested similarity_top_k.
 
     Raises:
         RuntimeError: If the collection is missing (index not built yet) or
@@ -82,4 +84,5 @@ def load_query_engine(chroma_path=None, collection="far_dfars_chroma"):
         embed_model=embed_model,
     )
 
-    return index.as_retriever(similarity_top_k=8)
+    effective_top_k = top_k if top_k is not None else RagConfig.RETRIEVAL_TOP_K
+    return index.as_retriever(similarity_top_k=effective_top_k)
