@@ -7,6 +7,17 @@ Beyond a baseline (naive) pipeline, it implements **selectable advanced retrieva
 
 ---
 
+## Versions
+
+This project is developed as a progression — each tag is a browsable snapshot:
+
+| Version | Summary |
+|---|---|
+| [`v0.1-naive-baseline`](https://github.com/PWDevens/fedacq-rag-chatbot/tree/v0.1-naive-baseline) | Naive RAG baseline — dense vector retrieval over ChromaDB + Phi‑4‑mini‑onnx. |
+| [`v0.2-multimode`](https://github.com/PWDevens/fedacq-rag-chatbot/tree/v0.2-multimode) | Selectable `RAG_MODE` (naive / hybrid / graph), cross‑encoder reranker, persistent answer cache, and CPU latency wins. **(current `main`)** |
+
+---
+
 ## Background
 
 Federal contracting regulations are complex, distributed across thousands of pages of FAR/DFARS text, and updated frequently. Professionals need fast, reliable, context‑aware answers to support:
