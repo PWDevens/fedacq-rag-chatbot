@@ -181,12 +181,13 @@ fedacq-rag-chatbot/
 │   │
 │   └── scripts/
 │       ├── build_index.py       # build the ChromaDB vector index
-│       └── build_graph.py       # build the LightRAG knowledge graph (offline)
+│       ├── build_graph.py       # build the LightRAG graph (CPU/API extraction)
+│       └── build_graph_gpu.py   # build the LightRAG graph (GPU extraction)
 │
 ├── data/
 │   ├── chroma/          # Persistent ChromaDB index (Git LFS, committed)
 │   ├── chroma_runtime/  # Writable runtime copy of the index (gitignored)
-│   ├── lightrag/        # GraphRAG artifacts, built on demand (gitignored)
+│   ├── lightrag/        # GraphRAG knowledge graph (prebuilt FAR Part 15, committed)
 │   ├── cache.db         # Answer cache (gitignored)
 │   └── regs/            # FAR/DFARS cloned repositories
 │
@@ -411,43 +412,47 @@ Set `RAG_MODE` in your environment (or `docker/local.env`) and restart.
 |---|---|---|
 | `naive` | Dense vector search over Chroma (the baseline). | Cheapest — **supported** |
 | `hybrid` | Dense **+** BM25 (`rank-bm25`) fused with Reciprocal Rank Fusion. Catches exact-term matches (clause numbers, defined terms) that pure embeddings miss. | + a few ms (BM25 is pure CPU) — **supported** |
-| `graph` | **GraphRAG via LightRAG** — retrieves over a prebuilt knowledge graph of entities/relations (dual-level local+global). Requires an offline build first. | **⚠️ Experimental / deferred** — see below |
+| `graph` | **GraphRAG via LightRAG** — retrieves over a knowledge graph of entities/relations (dual-level local+global). A prebuilt FAR Part 15 graph is committed. | **Supported**; heavier per query — see below |
 
-> **⚠️ Graph mode is experimental and currently deferred.** Building the
-> knowledge graph runs LLM entity/relation extraction over the corpus, which is
-> **not viable on CPU** with Phi‑4‑mini (a 3‑document build ran ~22 min without
-> completing a single extraction). The runtime code path is implemented and
-> safe to leave installed, but the **offline build requires a GPU** (e.g. an
-> ephemeral RunPod pod, or `GRAPH_BUILD_LLM` pointed at a hosted model). The
-> supported, CPU‑ready modes are **`naive`** and **`hybrid`**.
+> **Graph mode is validated end-to-end.** A prebuilt knowledge graph for FAR
+> Part 15 (50 chunks → entities + relations) is committed under `data/lightrag/`,
+> so `RAG_MODE=graph` works out of the box. **Building** the graph runs LLM
+> entity/relation extraction, which is impractical on CPU (a 3‑doc CPU build ran
+> ~22 min without finishing a single extraction) — so the build is
+> **GPU-accelerated** (see runbook below); the same workload completes in ~30 min
+> on an RTX A5000. At runtime, graph queries add a keyword‑extraction + generation
+> step, so they are heavier than `naive`/`hybrid` on CPU.
 
 The reranker (`RERANK=true`) applies to `naive` and `hybrid`: it pulls a larger
 candidate pool (`RETRIEVAL_TOP_K`) and re-scores it with a cross-encoder down to
 `RERANK_TOP_N`, improving both the injected context and the citations.
 
-**Graph mode setup** (one-time, offline — **GPU strongly recommended**):
+**Run graph mode** (the FAR Part 15 graph is already committed):
 
 ```bash
-# 1. Install the optional graph dependencies (kept out of the core install).
-pip install -r requirements_graph.txt        # or: pip install -e ".[graph]"
-
-# 2. Build a knowledge graph from a subset of the committed index.
-#    NOTE: extraction on CPU with Phi-4-mini is impractical (see warning above).
-#    Run this on a GPU host, or set GRAPH_BUILD_LLM to a hosted model.
-GRAPH_BUILD_MAX_DOCS=40 python -m scripts.build_graph
-# Optional: better extraction quality with an API model (needs OPENAI_API_KEY):
-# GRAPH_BUILD_LLM=gpt-4o-mini python -m scripts.build_graph
-
-# 3. Run with graph retrieval.
+pip install -r requirements_graph.txt   # or: pip install -e ".[graph]"
 RAG_MODE=graph make run
 ```
+
+**Rebuilding / extending the graph** (only needed to change it). The build is
+GPU-accelerated — run it on a GPU host (e.g. an ephemeral RunPod pod):
+
+```bash
+# On the GPU host, repo root, after installing core + graph deps:
+pip install transformers accelerate
+GRAPH_BUILD_PART=15 GRAPH_BUILD_MAX_DOCS=50 python -m scripts.build_graph_gpu
+```
+
+`scripts/build_graph_gpu.py` extracts entities/relations with Phi‑4‑mini on CUDA
+and writes the graph to `data/lightrag/`. The CPU-only `scripts/build_graph.py`
+remains for API-model builds via `GRAPH_BUILD_LLM` (with `OPENAI_API_KEY`).
 
 > Graph dependencies (LightRAG + its tree) are isolated in
 > `requirements_graph.txt` / `requirements_graph.lock` so the core install (used
 > by `naive`, `hybrid`, and the reranker) stays lean.
 
-Graph mode answers from graph-assembled context; it does not map back to
-discrete FAR sections, so its citation panel is intentionally sparse.
+Graph mode answers from graph-assembled context (entities/relations); it does
+not map back to discrete FAR sections, so its citation panel is sparse by design.
 
 ### Latency notes
 

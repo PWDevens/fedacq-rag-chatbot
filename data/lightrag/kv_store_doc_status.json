@@ -1,0 +1,1302 @@
+{
+  "doc-4203a6dfab9722fa7f215d8b09e31d94": {
+    "status": "processed",
+    "content_summary": "15.202  Advisory multi-step process. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            The agency may publish a presolicitation notice (see  5.204 ) that provides a general description of ...",
+    "content_length": 1881,
+    "created_at": "2026-06-23T10:31:43.547062+00:00",
+    "updated_at": "2026-06-23T10:33:38.890315+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "4203a6dfab9722fa7f215d8b09e31d94",
+    "metadata": {
+      "parse_start_time": 1782210703,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210703,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782210703,
+      "process_end_time": 1782210818,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-4203a6dfab9722fa7f215d8b09e31d94-chunk-000"
+    ]
+  },
+  "doc-8307fa18b297b3e4ece0b76bb0b726f3": {
+    "status": "processed",
+    "content_summary": "15.303  Responsibilities. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Agency heads are responsible for source selection. The contracting officer is designated as the source selection...",
+    "content_length": 3081,
+    "created_at": "2026-06-23T10:31:43.547199+00:00",
+    "updated_at": "2026-06-23T10:34:33.933540+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "8307fa18b297b3e4ece0b76bb0b726f3",
+    "metadata": {
+      "parse_start_time": 1782210703,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210703,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782210703,
+      "process_end_time": 1782210873,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ]
+  },
+  "doc-bbf1cc688706dd430bfe505423cb9745": {
+    "status": "processed",
+    "content_summary": "15.101-1  Tradeoff process. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            A tradeoff process is appropriate when it may be in the best interest of the Government to consider award to o...",
+    "content_length": 1626,
+    "created_at": "2026-06-23T10:31:43.547000+00:00",
+    "updated_at": "2026-06-23T10:33:39.659291+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "bbf1cc688706dd430bfe505423cb9745",
+    "metadata": {
+      "parse_start_time": 1782210703,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210703,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782210703,
+      "process_end_time": 1782210819,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-bbf1cc688706dd430bfe505423cb9745-chunk-000"
+    ]
+  },
+  "doc-fa176fbf86c661d571c76c0a78e7229f": {
+    "status": "processed",
+    "content_summary": "The currency and relevance of the information, source of the information, context of the data, and general trends in contractor’s performance shall be considered. This comparative assessment of past performance information is separate from the respon...",
+    "content_length": 3229,
+    "created_at": "2026-06-23T10:31:43.547228+00:00",
+    "updated_at": "2026-06-23T10:34:33.543954+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "fa176fbf86c661d571c76c0a78e7229f",
+    "metadata": {
+      "parse_start_time": 1782210703,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210703,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782210819,
+      "process_end_time": 1782210873,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-fa176fbf86c661d571c76c0a78e7229f-chunk-000"
+    ]
+  },
+  "doc-456bc0aa9d9c468eb1a793f3f4dea078": {
+    "status": "processed",
+    "content_summary": "15.302  Source selection objective. \n       \n          The objective of source selection is to select the proposal that represents the best value.",
+    "content_length": 146,
+    "created_at": "2026-06-23T10:31:43.547194+00:00",
+    "updated_at": "2026-06-23T10:34:34.152319+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "456bc0aa9d9c468eb1a793f3f4dea078",
+    "metadata": {
+      "parse_start_time": 1782210703,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210703,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782210869,
+      "process_end_time": 1782210874,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-456bc0aa9d9c468eb1a793f3f4dea078-chunk-000"
+    ]
+  },
+  "doc-bede8af7c1fa0fd5550eb6445c784a43": {
+    "status": "processed",
+    "content_summary": "(B) \n                                    \n\t\t\t\t\t\t\t\t\t\t\t\t                        If the contracting officer chooses not to include price or cost as an evaluation factor for the contract award, in accordance with paragraph (c)(1)(ii)(A) of this section, ...",
+    "content_length": 2875,
+    "created_at": "2026-06-23T10:31:43.547210+00:00",
+    "updated_at": "2026-06-23T10:37:02.282439+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "bede8af7c1fa0fd5550eb6445c784a43",
+    "metadata": {
+      "parse_start_time": 1782210703,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210704,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782210873,
+      "process_end_time": 1782211022,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-bede8af7c1fa0fd5550eb6445c784a43-chunk-000"
+    ]
+  },
+  "doc-e909bee63b73d9c94ea656edf17704ac": {
+    "status": "processed",
+    "content_summary": "15.208  Submission, modification, revision, and withdrawal of proposals. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Offerors are responsible for submitting proposals, and any revisi...",
+    "content_length": 3121,
+    "created_at": "2026-06-23T10:31:43.547152+00:00",
+    "updated_at": "2026-06-23T10:37:01.836037+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "e909bee63b73d9c94ea656edf17704ac",
+    "metadata": {
+      "parse_start_time": 1782210703,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210729,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782210874,
+      "process_end_time": 1782211021,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-e909bee63b73d9c94ea656edf17704ac-chunk-000"
+    ]
+  },
+  "doc-a5bfbf0428323ec475b2cd479e56717f": {
+    "status": "processed",
+    "content_summary": "(d) \n                  \n\t\t\t\t\t\t            Contracting officers may issue RFPs and/or authorize receipt of proposals, modifications, or revisions by facsimile. \n                \n                   \n                      \n                         (1) \n...",
+    "content_length": 2138,
+    "created_at": "2026-06-23T10:31:43.547073+00:00",
+    "updated_at": "2026-06-23T10:37:55.158356+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "a5bfbf0428323ec475b2cd479e56717f",
+    "metadata": {
+      "parse_start_time": 1782210703,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210767,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782210924,
+      "process_end_time": 1782211075,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-a5bfbf0428323ec475b2cd479e56717f-chunk-000"
+    ]
+  },
+  "doc-f117e6360ccb012cb010224c7aa70f17": {
+    "status": "processed",
+    "content_summary": "If the joint venture does not demonstrate past performance for award, the contracting officer shall consider the past performance of each party to the joint venture.\n                            \n                         \n                      \n      ...",
+    "content_length": 2337,
+    "created_at": "2026-06-23T10:31:43.547233+00:00",
+    "updated_at": "2026-06-23T10:38:50.786272+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "f117e6360ccb012cb010224c7aa70f17",
+    "metadata": {
+      "parse_start_time": 1782210703,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210767,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211022,
+      "process_end_time": 1782211130,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-f117e6360ccb012cb010224c7aa70f17-chunk-000"
+    ]
+  },
+  "doc-4753a1aa202f5509eaf2de32e5e82f8c": {
+    "status": "processed",
+    "content_summary": "15.300  Scope of subpart. \n       \n          This subpart prescribes policies and procedures for selection of a source or sources in competitive negotiated acquisitions.",
+    "content_length": 169,
+    "created_at": "2026-06-23T10:31:43.547184+00:00",
+    "updated_at": "2026-06-23T10:38:26.262966+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "4753a1aa202f5509eaf2de32e5e82f8c",
+    "metadata": {
+      "parse_start_time": 1782210703,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210791,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211071,
+      "process_end_time": 1782211106,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-4753a1aa202f5509eaf2de32e5e82f8c-chunk-000"
+    ]
+  },
+  "doc-3c8658f6ff895cbdf8dd72df8a08f90f": {
+    "status": "processed",
+    "content_summary": "15.206  Amending the solicitation. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            When, either before or after receipt of proposals, the Government changes its requirements or terms and...",
+    "content_length": 3241,
+    "created_at": "2026-06-23T10:31:43.547135+00:00",
+    "updated_at": "2026-06-23T10:40:50.441923+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "3c8658f6ff895cbdf8dd72df8a08f90f",
+    "metadata": {
+      "parse_start_time": 1782210729,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210818,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211075,
+      "process_end_time": 1782211250,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-3c8658f6ff895cbdf8dd72df8a08f90f-chunk-000"
+    ]
+  },
+  "doc-7fdb7d26d3fe2133b42da0e45161f159": {
+    "status": "processed",
+    "content_summary": "15.204-2  Part I-The Schedule. \n       \n          The contracting officer shall prepare the contract Schedule as follows: \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Section A, Solicitation/...",
+    "content_length": 3644,
+    "created_at": "2026-06-23T10:31:43.547101+00:00",
+    "updated_at": "2026-06-23T10:39:59.881879+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "7fdb7d26d3fe2133b42da0e45161f159",
+    "metadata": {
+      "parse_start_time": 1782210729,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210818,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211106,
+      "process_end_time": 1782211199,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-7fdb7d26d3fe2133b42da0e45161f159-chunk-000"
+    ]
+  },
+  "doc-db49040870203ca440941cb0a7037ccf": {
+    "status": "processed",
+    "content_summary": "15.102  Oral presentations. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Oral presentations by offerors as requested by the Government may substitute for, or augment, written informat...",
+    "content_length": 3027,
+    "created_at": "2026-06-23T10:31:43.547028+00:00",
+    "updated_at": "2026-06-23T10:42:30.734083+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "db49040870203ca440941cb0a7037ccf",
+    "metadata": {
+      "parse_start_time": 1782210767,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210819,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211156,
+      "process_end_time": 1782211350,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-db49040870203ca440941cb0a7037ccf-chunk-000"
+    ]
+  },
+  "doc-cfcf172eeeeba354449b6cf11d6acc94": {
+    "status": "processed",
+    "content_summary": "Some techniques to promote early exchanges of information are- \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                Industry or small business conferences; \n      ...",
+    "content_length": 3259,
+    "created_at": "2026-06-23T10:31:43.547051+00:00",
+    "updated_at": "2026-06-23T10:41:40.856763+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "cfcf172eeeeba354449b6cf11d6acc94",
+    "metadata": {
+      "parse_start_time": 1782210791,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210869,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211200,
+      "process_end_time": 1782211300,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-cfcf172eeeeba354449b6cf11d6acc94-chunk-000"
+    ]
+  },
+  "doc-d923f3cb85ebadc88214aedf9a6c0e77": {
+    "status": "processed",
+    "content_summary": "(This includes incidental deliverables such as manuals and reports.) \n             \n             \n                \n                   (c) \n                   Section C, Description/specifications/statement of work . Include any description or specifi...",
+    "content_length": 1800,
+    "created_at": "2026-06-23T10:31:43.547107+00:00",
+    "updated_at": "2026-06-23T10:44:10.526033+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "d923f3cb85ebadc88214aedf9a6c0e77",
+    "metadata": {
+      "parse_start_time": 1782210791,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210873,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211250,
+      "process_end_time": 1782211450,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-d923f3cb85ebadc88214aedf9a6c0e77-chunk-000"
+    ]
+  },
+  "doc-9ab76433eb7f55122847e849d623b22a": {
+    "status": "processed",
+    "content_summary": "15.101  Best value continuum. \n       \n          An agency can obtain best value in negotiated acquisitions by using any one or a combination of source selection approaches. In different types of acquisitions, the relative importance of cost or price...",
+    "content_length": 664,
+    "created_at": "2026-06-23T10:31:43.546994+00:00",
+    "updated_at": "2026-06-23T10:43:20.224824+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "9ab76433eb7f55122847e849d623b22a",
+    "metadata": {
+      "parse_start_time": 1782210818,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210874,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211301,
+      "process_end_time": 1782211400,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-9ab76433eb7f55122847e849d623b22a-chunk-000"
+    ]
+  },
+  "doc-6c6792d5281c991e2cc7c8ab64ba40e4": {
+    "status": "processed",
+    "content_summary": "15.101-3  \tTiered evaluation of small business offers. \n       \n          An agency shall not create a tiered (or \"cascading\") evaluation of offers, as described in  13 CFR 125.2 , for multiple-award contracts unless an agency has statutory authority...",
+    "content_length": 251,
+    "created_at": "2026-06-23T10:31:43.547022+00:00",
+    "updated_at": "2026-06-23T10:44:10.526210+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "6c6792d5281c991e2cc7c8ab64ba40e4",
+    "metadata": {
+      "parse_start_time": 1782210818,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782210899,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211351,
+      "process_end_time": 1782211450,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-6c6792d5281c991e2cc7c8ab64ba40e4-chunk-000"
+    ]
+  },
+  "doc-937a249dbf51cd8d0774543de6ad6bcb": {
+    "status": "processed",
+    "content_summary": "15.304  Evaluation factors and significant subfactors. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            The award decision is based on evaluation factors and significant subfactors that a...",
+    "content_length": 3459,
+    "created_at": "2026-06-23T10:31:43.547204+00:00",
+    "updated_at": "2026-06-23T10:45:49.343559+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "937a249dbf51cd8d0774543de6ad6bcb",
+    "metadata": {
+      "parse_start_time": 1782210818,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211022,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211400,
+      "process_end_time": 1782211549,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-937a249dbf51cd8d0774543de6ad6bcb-chunk-000"
+    ]
+  },
+  "doc-2942be15ad724bce0a8100b9a92763a0": {
+    "status": "processed",
+    "content_summary": "15.306  Exchanges with offerors\nafter receipt of proposals. \n       \n          \n             \n                \n                   (a)  Clarifications and award without\ndiscussions. \n                \n                   \n                      \n        ...",
+    "content_length": 2299,
+    "created_at": "2026-06-23T10:31:43.547239+00:00",
+    "updated_at": "2026-06-23T10:45:48.502559+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "2942be15ad724bce0a8100b9a92763a0",
+    "metadata": {
+      "parse_start_time": 1782210818,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211071,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211451,
+      "process_end_time": 1782211548,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-2942be15ad724bce0a8100b9a92763a0-chunk-000"
+    ]
+  },
+  "doc-97627481b1b459ea6a4e425cc66241ea": {
+    "status": "processed",
+    "content_summary": "637(d)(4)(G)(ii) ). \n                         \n                         \n                            \n                               (iii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Past performance need not be evaluated if the con...",
+    "content_length": 2654,
+    "created_at": "2026-06-23T10:31:43.547215+00:00",
+    "updated_at": "2026-06-23T10:45:48.984770+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "97627481b1b459ea6a4e425cc66241ea",
+    "metadata": {
+      "parse_start_time": 1782210818,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211075,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211451,
+      "process_end_time": 1782211548,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-97627481b1b459ea6a4e425cc66241ea-chunk-000"
+    ]
+  },
+  "doc-f02b760cf056bee52765add5ae1226d1": {
+    "status": "processed",
+    "content_summary": "15.204-1  Uniform contract format. \n       \n          \n             \n                \n                   (a)  Contracting officers shall prepare\nsolicitations and resulting contracts using the uniform contract\nformat outlined in Table 15-1 of this su...",
+    "content_length": 3721,
+    "created_at": "2026-06-23T10:31:43.547095+00:00",
+    "updated_at": "2026-06-23T10:48:39.681797+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "f02b760cf056bee52765add5ae1226d1",
+    "metadata": {
+      "parse_start_time": 1782210819,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211106,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211549,
+      "process_end_time": 1782211719,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-f02b760cf056bee52765add5ae1226d1-chunk-000"
+    ]
+  },
+  "doc-fdcfb8e97b2270006b5fc85a094b224c": {
+    "status": "processed",
+    "content_summary": "15.002  Types of negotiated acquisition. \n       \n          \n             \n                \n                   (a) \n                   Sole source acquisitions.  When contracting in a sole source environment, the request for proposals (RFP) should be...",
+    "content_length": 903,
+    "created_at": "2026-06-23T10:31:43.546981+00:00",
+    "updated_at": "2026-06-23T10:48:15.475902+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "fdcfb8e97b2270006b5fc85a094b224c",
+    "metadata": {
+      "parse_start_time": 1782210819,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211156,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211549,
+      "process_end_time": 1782211695,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-fdcfb8e97b2270006b5fc85a094b224c-chunk-000"
+    ]
+  },
+  "doc-b1ecc7f5982b9a56a22954d37209b4cc": {
+    "status": "processed",
+    "content_summary": "(e) \n                  \n\t\t\t\t\t\t            Letter RFPs may be used in sole source acquisitions and other appropriate circumstances. Use of a letter RFP does not relieve the contracting officer from complying with other FAR requirements. Letter RFPs sh...",
+    "content_length": 2735,
+    "created_at": "2026-06-23T10:31:43.547078+00:00",
+    "updated_at": "2026-06-23T10:48:15.014862+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "b1ecc7f5982b9a56a22954d37209b4cc",
+    "metadata": {
+      "parse_start_time": 1782210819,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211200,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211598,
+      "process_end_time": 1782211695,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-b1ecc7f5982b9a56a22954d37209b4cc-chunk-000"
+    ]
+  },
+  "doc-216ef3624588c4d8ba2f0a7d927a0c70": {
+    "status": "processed",
+    "content_summary": "15.204-4  Part III-List of Documents, Exhibits, and Other Attachments. \n       \n          \n             Section J, List of attachments . The contracting officer shall list the title, date, and number of pages for each attached document, exhibit, and ...",
+    "content_length": 347,
+    "created_at": "2026-06-23T10:31:43.547118+00:00",
+    "updated_at": "2026-06-23T10:49:57.353017+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "216ef3624588c4d8ba2f0a7d927a0c70",
+    "metadata": {
+      "parse_start_time": 1782210819,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211250,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211695,
+      "process_end_time": 1782211797,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-216ef3624588c4d8ba2f0a7d927a0c70-chunk-000"
+    ]
+  },
+  "doc-a9b24d8d9d1fbed4b3fcbf79bee08356": {
+    "status": "processed",
+    "content_summary": "15.000  Scope of part. \n       \n          This part prescribes policies and procedures governing competitive and noncompetitive negotiated acquisitions. A contract awarded using other than sealed bidding procedures is a negotiated contract (see  14.1...",
+    "content_length": 255,
+    "created_at": "2026-06-23T10:31:43.546944+00:00",
+    "updated_at": "2026-06-23T10:49:57.077124+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "a9b24d8d9d1fbed4b3fcbf79bee08356",
+    "metadata": {
+      "parse_start_time": 1782210819,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211301,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211719,
+      "process_end_time": 1782211797,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-a9b24d8d9d1fbed4b3fcbf79bee08356-chunk-000"
+    ]
+  },
+  "doc-1e580d532bb8459e87eef47da737bf4d": {
+    "status": "processed",
+    "content_summary": "15.301  [Reserved]",
+    "content_length": 18,
+    "created_at": "2026-06-23T10:31:43.547189+00:00",
+    "updated_at": "2026-06-23T10:49:56.714908+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "1e580d532bb8459e87eef47da737bf4d",
+    "metadata": {
+      "parse_start_time": 1782210843,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211351,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211768,
+      "process_end_time": 1782211796,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-1e580d532bb8459e87eef47da737bf4d-chunk-000"
+    ]
+  },
+  "doc-6eca0bd458a329d90a798631371e391f": {
+    "status": "processed",
+    "content_summary": "15.201  Exchanges with industry before receipt of proposals. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Exchanges of information among all interested parties, from the earliest iden...",
+    "content_length": 2011,
+    "created_at": "2026-06-23T10:31:43.547045+00:00",
+    "updated_at": "2026-06-23T10:52:26.813223+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "6eca0bd458a329d90a798631371e391f",
+    "metadata": {
+      "parse_start_time": 1782210843,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211400,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211797,
+      "process_end_time": 1782211946,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-6eca0bd458a329d90a798631371e391f-chunk-000"
+    ]
+  },
+  "doc-a4fb44a50472ca98bb40f038cdaffc48": {
+    "status": "processed",
+    "content_summary": "15.101-2  Lowest price technically\nacceptable source selection process. \n       \n          \n             \n                \n                   (a)  The lowest price technically acceptable\nsource selection process is appropriate when best value is expe...",
+    "content_length": 2328,
+    "created_at": "2026-06-23T10:31:43.547005+00:00",
+    "updated_at": "2026-06-23T10:54:55.488381+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "a4fb44a50472ca98bb40f038cdaffc48",
+    "metadata": {
+      "parse_start_time": 1782210869,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211450,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211822,
+      "process_end_time": 1782212095,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ]
+  },
+  "doc-57fca498e8ef8f0c8e2675ed4ea878f1": {
+    "status": "processed",
+    "content_summary": "Such communications shall address adverse past performance\ninformation to which an offeror has not had a prior opportunity\nto respond; and \n                         \n                         \n                            \n                             ...",
+    "content_length": 2743,
+    "created_at": "2026-06-23T10:31:43.547244+00:00",
+    "updated_at": "2026-06-23T10:53:16.252142+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "57fca498e8ef8f0c8e2675ed4ea878f1",
+    "metadata": {
+      "parse_start_time": 1782210869,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211451,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211847,
+      "process_end_time": 1782211996,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-57fca498e8ef8f0c8e2675ed4ea878f1-chunk-000"
+    ]
+  },
+  "doc-ce6df67b501cc65b8bf112bed214d0a5": {
+    "status": "processed",
+    "content_summary": "15.001  Definitions. \n       \n          As used in this part- \n          \n             Deficiency  is a material failure of a proposal to meet a Government requirement or a combination of significant weaknesses in a proposal that increases the risk o...",
+    "content_length": 981,
+    "created_at": "2026-06-23T10:31:43.546973+00:00",
+    "updated_at": "2026-06-23T10:54:06.235439+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "ce6df67b501cc65b8bf112bed214d0a5",
+    "metadata": {
+      "parse_start_time": 1782210869,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211548,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211947,
+      "process_end_time": 1782212046,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-ce6df67b501cc65b8bf112bed214d0a5-chunk-000"
+    ]
+  },
+  "doc-f0d9484fb4b52204300a0ef443159763": {
+    "status": "processed",
+    "content_summary": "(c) \n                  Except for DoD, in accordance\nwith section 880 of the John S. McCain National Defense Authorization\nAct for Fiscal Year 2019 (Pub. L. 115-232,  41 U.S.C. 3701  Note),\nthe lowest price technically acceptable source selection pro...",
+    "content_length": 2472,
+    "created_at": "2026-06-23T10:31:43.547011+00:00",
+    "updated_at": "2026-06-23T10:55:03.061211+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "f0d9484fb4b52204300a0ef443159763",
+    "metadata": {
+      "parse_start_time": 1782210869,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211549,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782211996,
+      "process_end_time": 1782212103,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-f0d9484fb4b52204300a0ef443159763-chunk-000"
+    ]
+  },
+  "doc-06db059943ebc243f385e13bac5ffcda": {
+    "status": "processed",
+    "content_summary": "15.207  Handling proposals and information. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Upon receipt at the location specified in the solicitation, proposals and information received...",
+    "content_length": 1679,
+    "created_at": "2026-06-23T10:31:43.547146+00:00",
+    "updated_at": "2026-06-23T10:55:03.560662+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "06db059943ebc243f385e13bac5ffcda",
+    "metadata": {
+      "parse_start_time": 1782210870,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211573,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212046,
+      "process_end_time": 1782212103,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-06db059943ebc243f385e13bac5ffcda-chunk-000"
+    ]
+  },
+  "doc-88d20415515262cde147c085a56a9f19": {
+    "status": "processed",
+    "content_summary": "(h) \n                  \n\t\t\t\t\t\t            If available, the following must be included in the contracting office files for each late proposal, modification, revision, or withdrawal: \n                \n                   \n                      \n       ...",
+    "content_length": 794,
+    "created_at": "2026-06-23T10:31:43.547163+00:00",
+    "updated_at": "2026-06-23T10:55:03.537247+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "88d20415515262cde147c085a56a9f19",
+    "metadata": {
+      "parse_start_time": 1782210870,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211695,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212096,
+      "process_end_time": 1782212103,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-88d20415515262cde147c085a56a9f19-chunk-000"
+    ]
+  },
+  "doc-d0e81e14b1d5c58f5e884601742ee78e": {
+    "status": "processed",
+    "content_summary": "(3) \n                        \n\t\t\t\t\t\t\t\t                Amendment number and date. \n                   \n                   \n                      \n                         (4) \n                        \n\t\t\t\t\t\t\t\t                Number of pages. \n        ...",
+    "content_length": 861,
+    "created_at": "2026-06-23T10:31:43.547140+00:00",
+    "updated_at": "2026-06-23T10:58:27.039719+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "d0e81e14b1d5c58f5e884601742ee78e",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211719,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212103,
+      "process_end_time": 1782212307,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-d0e81e14b1d5c58f5e884601742ee78e-chunk-000"
+    ]
+  },
+  "doc-076085acfc2a1f690986be1ddabd637e": {
+    "status": "processed",
+    "content_summary": "15.100  Scope of subpart. \n       \n          This subpart describes some of the acquisition processes and techniques that may be used to design competitive acquisition strategies suitable for the specific circumstances of the acquisition.",
+    "content_length": 238,
+    "created_at": "2026-06-23T10:31:43.546988+00:00",
+    "updated_at": "2026-06-23T10:56:47.025633+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "076085acfc2a1f690986be1ddabd637e",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211744,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212128,
+      "process_end_time": 1782212207,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-076085acfc2a1f690986be1ddabd637e-chunk-000"
+    ]
+  },
+  "doc-8d0d7e22b7e4569d562e86ab0038c0aa": {
+    "status": "processed",
+    "content_summary": "(d) \n                  \n\t\t\t\t\t\t            When oral presentations are required, the solicitation shall provide offerors with sufficient information to prepare them. Accordingly, the solicitation may describe- \n                \n                   \n   ...",
+    "content_length": 3005,
+    "created_at": "2026-06-23T10:31:43.547034+00:00",
+    "updated_at": "2026-06-23T10:56:46.590947+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "8d0d7e22b7e4569d562e86ab0038c0aa",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211797,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212128,
+      "process_end_time": 1782212206,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-8d0d7e22b7e4569d562e86ab0038c0aa-chunk-000"
+    ]
+  },
+  "doc-ad72395f3b32d9bfb15e688edd27ebbe": {
+    "status": "processed",
+    "content_summary": "15.203  Requests for proposals. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Requests for proposals (RFPs) are used in negotiated acquisitions to communicate Government requirements t...",
+    "content_length": 2512,
+    "created_at": "2026-06-23T10:31:43.547068+00:00",
+    "updated_at": "2026-06-23T11:01:35.916301+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "ad72395f3b32d9bfb15e688edd27ebbe",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211797,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212207,
+      "process_end_time": 1782212495,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ]
+  },
+  "doc-33d384a0ddf0919053c9ae9a9edbdbdb": {
+    "status": "processed",
+    "content_summary": "(d) \n                  Except for DoD, in accordance\nwith section 880 of the John S. McCain National Defense Authorization\nAct for Fiscal Year 2019 (Pub. L. 115-232,  41 U.S.C. 3701  Note),\ncontracting officers shall avoid, to the maximum extent prac...",
+    "content_length": 1302,
+    "created_at": "2026-06-23T10:31:43.547017+00:00",
+    "updated_at": "2026-06-23T10:58:27.471463+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "33d384a0ddf0919053c9ae9a9edbdbdb",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211847,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212207,
+      "process_end_time": 1782212307,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-33d384a0ddf0919053c9ae9a9edbdbdb-chunk-000"
+    ]
+  },
+  "doc-d28d046bbb51ec4e991d5bf7955ef8e4": {
+    "status": "processed",
+    "content_summary": "When specific information about a proposed acquisition that would be necessary for the preparation of proposals is disclosed to one or more potential offerors, that information must be made available to the public as soon as practicable, but no later...",
+    "content_length": 748,
+    "created_at": "2026-06-23T10:31:43.547057+00:00",
+    "updated_at": "2026-06-23T11:00:46.231682+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "d28d046bbb51ec4e991d5bf7955ef8e4",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211947,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212307,
+      "process_end_time": 1782212446,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-d28d046bbb51ec4e991d5bf7955ef8e4-chunk-000"
+    ]
+  },
+  "doc-bfaf5fa963d7b4ec9ddc0f6cfb58b5f3": {
+    "status": "processed",
+    "content_summary": "15.204-5  Part IV-Representations\tand Instructions. \n       \n          The contracting officer shall prepare the representations\tand instructions as follows: \n          \n             \n                \n                   (a) \n                   Sectio...",
+    "content_length": 2374,
+    "created_at": "2026-06-23T10:31:43.547124+00:00",
+    "updated_at": "2026-06-23T11:00:06.631756+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "bfaf5fa963d7b4ec9ddc0f6cfb58b5f3",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782211996,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212357,
+      "process_end_time": 1782212406,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-bfaf5fa963d7b4ec9ddc0f6cfb58b5f3-chunk-000"
+    ]
+  },
+  "doc-93a17c8eba2cbb981d3d10637009c3c6": {
+    "status": "processed",
+    "content_summary": "(ii) \n                            \n                            \n                               \n                                  \n                                     (A)  In\nthe case of a bilateral contract modification that will use funds\nappropri...",
+    "content_length": 2776,
+    "created_at": "2026-06-23T10:31:43.547173+00:00",
+    "updated_at": "2026-06-23T11:02:25.561307+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "93a17c8eba2cbb981d3d10637009c3c6",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782212046,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212407,
+      "process_end_time": 1782212545,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-93a17c8eba2cbb981d3d10637009c3c6-chunk-000"
+    ]
+  },
+  "doc-8bde526d740647c3ddc8291d22a33f05": {
+    "status": "processed",
+    "content_summary": "15.210  Forms. \n       \n          Prescribed forms are not required to prepare solicitations described in this part. The following forms may be used at the discretion of the contracting officer: \n          \n             \n                \n            ...",
+    "content_length": 881,
+    "created_at": "2026-06-23T10:31:43.547178+00:00",
+    "updated_at": "2026-06-23T11:03:16.108488+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "8bde526d740647c3ddc8291d22a33f05",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782212096,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212446,
+      "process_end_time": 1782212596,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-8bde526d740647c3ddc8291d22a33f05-chunk-000"
+    ]
+  },
+  "doc-77b91b3d906011b7b7a6798e52071431": {
+    "status": "processed",
+    "content_summary": "15.205  Issuing solicitations. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            The contracting officer shall issue solicitations to potential sources in accordance with the policies and ...",
+    "content_length": 503,
+    "created_at": "2026-06-23T10:31:43.547129+00:00",
+    "updated_at": "2026-06-23T11:03:16.586464+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "77b91b3d906011b7b7a6798e52071431",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782212103,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212496,
+      "process_end_time": 1782212596,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-77b91b3d906011b7b7a6798e52071431-chunk-000"
+    ]
+  },
+  "doc-2fa0e01f3c701431b77772650d4acebf": {
+    "status": "processed",
+    "content_summary": "(c) \n                  \n\t\t\t\t\t\t            Acceptable evidence to establish the time of receipt at the Government installation includes the time/date stamp of that installation on the proposal wrapper, other documentary evidence of receipt maintained ...",
+    "content_length": 2836,
+    "created_at": "2026-06-23T10:31:43.547157+00:00",
+    "updated_at": "2026-06-23T11:04:58.383264+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "2fa0e01f3c701431b77772650d4acebf",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782212128,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212546,
+      "process_end_time": 1782212698,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-2fa0e01f3c701431b77772650d4acebf-chunk-000"
+    ]
+  },
+  "doc-6ea357fd59c34d4f9c7984ccfcb4ad4c": {
+    "status": "processed",
+    "content_summary": "15.305  Proposal evaluation. \n       \n          \n             \n                \n                   (a) \n                  \n                  \n\t\t\t\t\t\t            Proposal evaluation is an assessment of the proposal and the offeror’s ability to perform ...",
+    "content_length": 2748,
+    "created_at": "2026-06-23T10:31:43.547222+00:00",
+    "updated_at": "2026-06-23T11:06:31.514950+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "6ea357fd59c34d4f9c7984ccfcb4ad4c",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782212128,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212596,
+      "process_end_time": 1782212791,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-6ea357fd59c34d4f9c7984ccfcb4ad4c-chunk-000"
+    ]
+  },
+  "doc-6ae6d47769fd34a62f4cf09ae269a220": {
+    "status": "processed",
+    "content_summary": "15.204-3  Part II-Contract Clauses. \n       \n          \n             Section I, Contract clauses.  The contracting officer shall include in this section the clauses required by law or by this regulation and any additional clauses expected to be inclu...",
+    "content_length": 442,
+    "created_at": "2026-06-23T10:31:43.547112+00:00",
+    "updated_at": "2026-06-23T11:05:49.251058+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "6ae6d47769fd34a62f4cf09ae269a220",
+    "metadata": {
+      "parse_start_time": 1782210873,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782212207,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212622,
+      "process_end_time": 1782212749,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-6ae6d47769fd34a62f4cf09ae269a220-chunk-000"
+    ]
+  },
+  "doc-193503af41167f76de9849b9ca392342": {
+    "status": "processed",
+    "content_summary": "15.209  Solicitation provisions\nand contract clauses. \n       \n          When contracting by negotiation- \n          \n             \n                \n                   (a)  The\ncontracting officer shall insert the provision at  52.215-1 , Instruction...",
+    "content_length": 2990,
+    "created_at": "2026-06-23T10:31:43.547168+00:00",
+    "updated_at": "2026-06-23T11:06:31.514631+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "193503af41167f76de9849b9ca392342",
+    "metadata": {
+      "parse_start_time": 1782210874,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782212207,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212698,
+      "process_end_time": 1782212791,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-193503af41167f76de9849b9ca392342-chunk-000"
+    ]
+  },
+  "doc-51dd4419f8420be899aa1a6af7826e32": {
+    "status": "processed",
+    "content_summary": "15.204  Contract format. \n       \n          The use of a uniform contract format facilitates preparation of the solicitation and contract as well as reference to, and use of, those documents by offerors, contractors, and contract administrators. The ...",
+    "content_length": 1181,
+    "created_at": "2026-06-23T10:31:43.547090+00:00",
+    "updated_at": "2026-06-23T11:07:33.492774+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "51dd4419f8420be899aa1a6af7826e32",
+    "metadata": {
+      "parse_start_time": 1782210874,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782212307,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212773,
+      "process_end_time": 1782212853,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-51dd4419f8420be899aa1a6af7826e32-chunk-000"
+    ]
+  },
+  "doc-ac3dcb73a7193adcc4f4e72c97a201d8": {
+    "status": "processed",
+    "content_summary": "Use of an oral RFP does not relieve the contracting officer from complying with other FAR requirements. \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                The co...",
+    "content_length": 1598,
+    "created_at": "2026-06-23T10:31:43.547084+00:00",
+    "updated_at": "2026-06-23T11:07:33.214945+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "ac3dcb73a7193adcc4f4e72c97a201d8",
+    "metadata": {
+      "parse_start_time": 1782210874,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782212357,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212791,
+      "process_end_time": 1782212853,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-ac3dcb73a7193adcc4f4e72c97a201d8-chunk-000"
+    ]
+  },
+  "doc-859c00130231655660af8c75765a03af": {
+    "status": "processed",
+    "content_summary": "15.200  Scope of subpart. \n       \n          This subpart prescribes policies and procedures for- \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Exchanging information with industry prior to re...",
+    "content_length": 613,
+    "created_at": "2026-06-23T10:31:43.547040+00:00",
+    "updated_at": "2026-06-23T11:07:32.729720+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260623_103143_47da2dfa",
+    "content_hash": "859c00130231655660af8c75765a03af",
+    "metadata": {
+      "parse_start_time": 1782210874,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1782212406,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1782212791,
+      "process_end_time": 1782212852,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-859c00130231655660af8c75765a03af-chunk-000"
+    ]
+  }
+}

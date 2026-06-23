@@ -1,0 +1,1532 @@
+{
+  "Advisory multi-step process<SEP>Agency": {
+    "chunk_ids": [
+      "doc-4203a6dfab9722fa7f215d8b09e31d94-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210818,
+    "update_time": 1782210818,
+    "_id": "Advisory multi-step process<SEP>Agency"
+  },
+  "Agency heads<SEP>Contracting officer": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210818,
+    "update_time": 1782210818,
+    "_id": "Agency heads<SEP>Contracting officer"
+  },
+  "Government<SEP>Tradeoff process": {
+    "chunk_ids": [
+      "doc-bbf1cc688706dd430bfe505423cb9745-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210818,
+    "update_time": 1782210818,
+    "_id": "Government<SEP>Tradeoff process"
+  },
+  "Contracting officer<SEP>Inquiry focal point": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210818,
+    "update_time": 1782210818,
+    "_id": "Contracting officer<SEP>Inquiry focal point"
+  },
+  "Agency heads<SEP>Evaluation team": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210818,
+    "update_time": 1782210818,
+    "_id": "Agency heads<SEP>Evaluation team"
+  },
+  "Evaluation factors<SEP>Tradeoff process": {
+    "chunk_ids": [
+      "doc-bbf1cc688706dd430bfe505423cb9745-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210818,
+    "update_time": 1782210818,
+    "_id": "Evaluation factors<SEP>Tradeoff process"
+  },
+  "Contracting officer<SEP>Proposal exchanges": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210819,
+    "update_time": 1782210819,
+    "_id": "Contracting officer<SEP>Proposal exchanges"
+  },
+  "Agency heads<SEP>Source selection strategy": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210819,
+    "update_time": 1782210819,
+    "_id": "Agency heads<SEP>Source selection strategy"
+  },
+  "Contract award<SEP>Contracting officer": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210819,
+    "update_time": 1782210819,
+    "_id": "Contract award<SEP>Contracting officer"
+  },
+  "Agency heads<SEP>Solicitation requirements": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210843,
+    "update_time": 1782210843,
+    "_id": "Agency heads<SEP>Solicitation requirements"
+  },
+  "Contracting officer<SEP>Solicitation": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210869,
+    "update_time": 1782210869,
+    "_id": "Contracting officer<SEP>Solicitation"
+  },
+  "Agency heads<SEP>Evaluation factors": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210869,
+    "update_time": 1782210869,
+    "_id": "Agency heads<SEP>Evaluation factors"
+  },
+  "15.303<SEP>Data": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210869,
+    "update_time": 1782210869,
+    "_id": "15.303<SEP>Data"
+  },
+  "Contracting officer<SEP>Offerors": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210870,
+    "update_time": 1782210870,
+    "_id": "Contracting officer<SEP>Offerors"
+  },
+  "Advisory boards<SEP>Agency heads": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210873,
+    "update_time": 1782210873,
+    "_id": "Advisory boards<SEP>Agency heads"
+  },
+  "15.303<SEP>Responsibilities": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210873,
+    "update_time": 1782210873,
+    "_id": "15.303<SEP>Responsibilities"
+  },
+  "Contract(s)<SEP>Contracting officer": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210873,
+    "update_time": 1782210873,
+    "_id": "Contract(s)<SEP>Contracting officer"
+  },
+  "Agency heads<SEP>Best value source": {
+    "chunk_ids": [
+      "doc-8307fa18b297b3e4ece0b76bb0b726f3-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210873,
+    "update_time": 1782210873,
+    "_id": "Agency heads<SEP>Best value source"
+  },
+  "Proposal<SEP>Source selection objective": {
+    "chunk_ids": [
+      "doc-456bc0aa9d9c468eb1a793f3f4dea078-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782210873,
+    "update_time": 1782210873,
+    "_id": "Proposal<SEP>Source selection objective"
+  },
+  "Contracting Officer<SEP>Price or Cost": {
+    "chunk_ids": [
+      "doc-bede8af7c1fa0fd5550eb6445c784a43-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Contracting Officer<SEP>Price or Cost"
+  },
+  "Non-Cost Evaluation Factors<SEP>Quality of Product or Service": {
+    "chunk_ids": [
+      "doc-bede8af7c1fa0fd5550eb6445c784a43-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Non-Cost Evaluation Factors<SEP>Quality of Product or Service"
+  },
+  "Past Performance<SEP>Source Selection": {
+    "chunk_ids": [
+      "doc-bede8af7c1fa0fd5550eb6445c784a43-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Past Performance<SEP>Source Selection"
+  },
+  "Small Business Participation<SEP>Solicitations": {
+    "chunk_ids": [
+      "doc-bede8af7c1fa0fd5550eb6445c784a43-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Small Business Participation<SEP>Solicitations"
+  },
+  "Offerors<SEP>Submission, modification, revision, and withdrawal of proposals": {
+    "chunk_ids": [
+      "doc-e909bee63b73d9c94ea656edf17704ac-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Offerors<SEP>Submission, modification, revision, and withdrawal of proposals"
+  },
+  "Contracting Officer<SEP>Multiple-Award Contracts": {
+    "chunk_ids": [
+      "doc-bede8af7c1fa0fd5550eb6445c784a43-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Contracting Officer<SEP>Multiple-Award Contracts"
+  },
+  "Past Performance<SEP>Solicitations": {
+    "chunk_ids": [
+      "doc-bede8af7c1fa0fd5550eb6445c784a43-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Past Performance<SEP>Solicitations"
+  },
+  "Contracting officers<SEP>RFPs": {
+    "chunk_ids": [
+      "doc-a5bfbf0428323ec475b2cd479e56717f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Contracting officers<SEP>RFPs"
+  },
+  "Content<SEP>Letter RFPs": {
+    "chunk_ids": [
+      "doc-a5bfbf0428323ec475b2cd479e56717f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Content<SEP>Letter RFPs"
+  },
+  "Government office<SEP>Submission, modification, revision, and withdrawal of proposals": {
+    "chunk_ids": [
+      "doc-e909bee63b73d9c94ea656edf17704ac-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Government office<SEP>Submission, modification, revision, and withdrawal of proposals"
+  },
+  "Contracting Officer<SEP>Small Business Participation": {
+    "chunk_ids": [
+      "doc-bede8af7c1fa0fd5550eb6445c784a43-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Contracting Officer<SEP>Small Business Participation"
+  },
+  "Contracting officers<SEP>Facsimile": {
+    "chunk_ids": [
+      "doc-a5bfbf0428323ec475b2cd479e56717f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Contracting officers<SEP>Facsimile"
+  },
+  "Compliance<SEP>Letter RFPs": {
+    "chunk_ids": [
+      "doc-a5bfbf0428323ec475b2cd479e56717f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Compliance<SEP>Letter RFPs"
+  },
+  "Past Performance<SEP>Small Business Participation": {
+    "chunk_ids": [
+      "doc-bede8af7c1fa0fd5550eb6445c784a43-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "Past Performance<SEP>Small Business Participation"
+  },
+  "Circumstances<SEP>Letter RFPs": {
+    "chunk_ids": [
+      "doc-a5bfbf0428323ec475b2cd479e56717f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211022,
+    "update_time": 1782211022,
+    "_id": "Circumstances<SEP>Letter RFPs"
+  },
+  "Letter RFPs<SEP>RFPs": {
+    "chunk_ids": [
+      "doc-a5bfbf0428323ec475b2cd479e56717f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211071,
+    "update_time": 1782211071,
+    "_id": "Letter RFPs<SEP>RFPs"
+  },
+  "contracting officer<SEP>joint venture": {
+    "chunk_ids": [
+      "doc-f117e6360ccb012cb010224c7aa70f17-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211075,
+    "update_time": 1782211075,
+    "_id": "contracting officer<SEP>joint venture"
+  },
+  "proposals<SEP>source selection authority": {
+    "chunk_ids": [
+      "doc-f117e6360ccb012cb010224c7aa70f17-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211075,
+    "update_time": 1782211075,
+    "_id": "proposals<SEP>source selection authority"
+  },
+  "This subpart<SEP>prescribes policies and procedures": {
+    "chunk_ids": [
+      "doc-4753a1aa202f5509eaf2de32e5e82f8c-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211075,
+    "update_time": 1782211075,
+    "_id": "This subpart<SEP>prescribes policies and procedures"
+  },
+  "joint venture<SEP>offeror": {
+    "chunk_ids": [
+      "doc-f117e6360ccb012cb010224c7aa70f17-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211091,
+    "update_time": 1782211091,
+    "_id": "joint venture<SEP>offeror"
+  },
+  "source selection authority<SEP>support contractor personnel": {
+    "chunk_ids": [
+      "doc-f117e6360ccb012cb010224c7aa70f17-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211106,
+    "update_time": 1782211106,
+    "_id": "source selection authority<SEP>support contractor personnel"
+  },
+  "joint venture<SEP>small business concern": {
+    "chunk_ids": [
+      "doc-f117e6360ccb012cb010224c7aa70f17-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211106,
+    "update_time": 1782211106,
+    "_id": "joint venture<SEP>small business concern"
+  },
+  "Amending the solicitation<SEP>Government": {
+    "chunk_ids": [
+      "doc-3c8658f6ff895cbdf8dd72df8a08f90f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211106,
+    "update_time": 1782211106,
+    "_id": "Amending the solicitation<SEP>Government"
+  },
+  "Amending the solicitation<SEP>Contracting officer": {
+    "chunk_ids": [
+      "doc-3c8658f6ff895cbdf8dd72df8a08f90f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211156,
+    "update_time": 1782211156,
+    "_id": "Amending the solicitation<SEP>Contracting officer"
+  },
+  "All parties receiving the solicitation<SEP>Amending the solicitation": {
+    "chunk_ids": [
+      "doc-3c8658f6ff895cbdf8dd72df8a08f90f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211199,
+    "update_time": 1782211199,
+    "_id": "All parties receiving the solicitation<SEP>Amending the solicitation"
+  },
+  "All offerors that have not been eliminated from the competition<SEP>Amending the solicitation": {
+    "chunk_ids": [
+      "doc-3c8658f6ff895cbdf8dd72df8a08f90f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211200,
+    "update_time": 1782211200,
+    "_id": "All offerors that have not been eliminated from the competition<SEP>Amending the solicitation"
+  },
+  "Offerors<SEP>Oral presentations": {
+    "chunk_ids": [
+      "doc-db49040870203ca440941cb0a7037ccf-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211200,
+    "update_time": 1782211200,
+    "_id": "Offerors<SEP>Oral presentations"
+  },
+  "Amending the solicitation<SEP>Issuing activity": {
+    "chunk_ids": [
+      "doc-3c8658f6ff895cbdf8dd72df8a08f90f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211250,
+    "update_time": 1782211250,
+    "_id": "Amending the solicitation<SEP>Issuing activity"
+  },
+  "Government<SEP>Oral presentations": {
+    "chunk_ids": [
+      "doc-db49040870203ca440941cb0a7037ccf-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211250,
+    "update_time": 1782211250,
+    "_id": "Government<SEP>Oral presentations"
+  },
+  "Information<SEP>Oral presentations": {
+    "chunk_ids": [
+      "doc-db49040870203ca440941cb0a7037ccf-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211250,
+    "update_time": 1782211250,
+    "_id": "Information<SEP>Oral presentations"
+  },
+  "Contracting officers<SEP>Oral presentations": {
+    "chunk_ids": [
+      "doc-db49040870203ca440941cb0a7037ccf-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211275,
+    "update_time": 1782211275,
+    "_id": "Contracting officers<SEP>Oral presentations"
+  },
+  "Oral presentations<SEP>Solicitation": {
+    "chunk_ids": [
+      "doc-db49040870203ca440941cb0a7037ccf-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211301,
+    "update_time": 1782211301,
+    "_id": "Oral presentations<SEP>Solicitation"
+  },
+  "Incidental deliverables<SEP>Section C": {
+    "chunk_ids": [
+      "doc-d923f3cb85ebadc88214aedf9a6c0e77-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211350,
+    "update_time": 1782211350,
+    "_id": "Incidental deliverables<SEP>Section C"
+  },
+  "Other<SEP>Section C": {
+    "chunk_ids": [
+      "doc-d923f3cb85ebadc88214aedf9a6c0e77-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211350,
+    "update_time": 1782211350,
+    "_id": "Other<SEP>Section C"
+  },
+  "Incidental deliverables<SEP>Section D": {
+    "chunk_ids": [
+      "doc-d923f3cb85ebadc88214aedf9a6c0e77-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211350,
+    "update_time": 1782211350,
+    "_id": "Incidental deliverables<SEP>Section D"
+  },
+  "Best value continuum<SEP>Source selection approaches": {
+    "chunk_ids": [
+      "doc-9ab76433eb7f55122847e849d623b22a-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211351,
+    "update_time": 1782211351,
+    "_id": "Best value continuum<SEP>Source selection approaches"
+  },
+  "Incidental deliverables<SEP>Section E": {
+    "chunk_ids": [
+      "doc-d923f3cb85ebadc88214aedf9a6c0e77-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211351,
+    "update_time": 1782211351,
+    "_id": "Incidental deliverables<SEP>Section E"
+  },
+  "Incidental deliverables<SEP>Section F": {
+    "chunk_ids": [
+      "doc-d923f3cb85ebadc88214aedf9a6c0e77-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211400,
+    "update_time": 1782211400,
+    "_id": "Incidental deliverables<SEP>Section F"
+  },
+  "Incidental deliverables<SEP>Section G": {
+    "chunk_ids": [
+      "doc-d923f3cb85ebadc88214aedf9a6c0e77-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211400,
+    "update_time": 1782211400,
+    "_id": "Incidental deliverables<SEP>Section G"
+  },
+  "Multiple-award contracts<SEP>Tiered evaluation of small business offers": {
+    "chunk_ids": [
+      "doc-6c6792d5281c991e2cc7c8ab64ba40e4-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211400,
+    "update_time": 1782211400,
+    "_id": "Multiple-award contracts<SEP>Tiered evaluation of small business offers"
+  },
+  "Incidental deliverables<SEP>Section H": {
+    "chunk_ids": [
+      "doc-d923f3cb85ebadc88214aedf9a6c0e77-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211450,
+    "update_time": 1782211450,
+    "_id": "Incidental deliverables<SEP>Section H"
+  },
+  "13 CFR 125.2<SEP>Tiered evaluation of small business offers": {
+    "chunk_ids": [
+      "doc-6c6792d5281c991e2cc7c8ab64ba40e4-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211450,
+    "update_time": 1782211450,
+    "_id": "13 CFR 125.2<SEP>Tiered evaluation of small business offers"
+  },
+  "Award decision<SEP>Evaluation factors and significant subfactors": {
+    "chunk_ids": [
+      "doc-937a249dbf51cd8d0774543de6ad6bcb-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211450,
+    "update_time": 1782211450,
+    "_id": "Award decision<SEP>Evaluation factors and significant subfactors"
+  },
+  "Price or cost to the Government<SEP>Solicitation": {
+    "chunk_ids": [
+      "doc-937a249dbf51cd8d0774543de6ad6bcb-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211450,
+    "update_time": 1782211450,
+    "_id": "Price or cost to the Government<SEP>Solicitation"
+  },
+  "Agency acquisition officials<SEP>Evaluation factors and significant subfactors": {
+    "chunk_ids": [
+      "doc-937a249dbf51cd8d0774543de6ad6bcb-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211451,
+    "update_time": 1782211451,
+    "_id": "Agency acquisition officials<SEP>Evaluation factors and significant subfactors"
+  },
+  "Multiple-award contracts<SEP>Price or cost to the Government": {
+    "chunk_ids": [
+      "doc-937a249dbf51cd8d0774543de6ad6bcb-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211451,
+    "update_time": 1782211451,
+    "_id": "Multiple-award contracts<SEP>Price or cost to the Government"
+  },
+  "Price or cost to the Government<SEP>Qualifying offerors": {
+    "chunk_ids": [
+      "doc-937a249dbf51cd8d0774543de6ad6bcb-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211548,
+    "update_time": 1782211548,
+    "_id": "Price or cost to the Government<SEP>Qualifying offerors"
+  },
+  "Price or cost to the Government<SEP>Simplified acquisition threshold": {
+    "chunk_ids": [
+      "doc-937a249dbf51cd8d0774543de6ad6bcb-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211548,
+    "update_time": 1782211548,
+    "_id": "Price or cost to the Government<SEP>Simplified acquisition threshold"
+  },
+  "15.306<SEP>Communications with offerors before establishment of the competitive range": {
+    "chunk_ids": [
+      "doc-2942be15ad724bce0a8100b9a92763a0-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211548,
+    "update_time": 1782211548,
+    "_id": "15.306<SEP>Communications with offerors before establishment of the competitive range"
+  },
+  "41 U.S.C. 3306(b)(1)<SEP>Relationship": {
+    "chunk_ids": [
+      "doc-97627481b1b459ea6a4e425cc66241ea-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211548,
+    "update_time": 1782211548,
+    "_id": "41 U.S.C. 3306(b)(1)<SEP>Relationship"
+  },
+  "Evaluation factors and significant subfactors<SEP>Price or cost to the Government": {
+    "chunk_ids": [
+      "doc-937a249dbf51cd8d0774543de6ad6bcb-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211548,
+    "update_time": 1782211548,
+    "_id": "Evaluation factors and significant subfactors<SEP>Price or cost to the Government"
+  },
+  "Contracting officers<SEP>Uniform contract format": {
+    "chunk_ids": [
+      "doc-f02b760cf056bee52765add5ae1226d1-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211695,
+    "update_time": 1782211695,
+    "_id": "Contracting officers<SEP>Uniform contract format"
+  },
+  "Sole source acquisitions<SEP>Types of negotiated acquisition": {
+    "chunk_ids": [
+      "doc-fdcfb8e97b2270006b5fc85a094b224c-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211695,
+    "update_time": 1782211695,
+    "_id": "Sole source acquisitions<SEP>Types of negotiated acquisition"
+  },
+  "Solicitations<SEP>Uniform contract format": {
+    "chunk_ids": [
+      "doc-f02b760cf056bee52765add5ae1226d1-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211695,
+    "update_time": 1782211695,
+    "_id": "Solicitations<SEP>Uniform contract format"
+  },
+  "List of attachments<SEP>Section J": {
+    "chunk_ids": [
+      "doc-216ef3624588c4d8ba2f0a7d927a0c70-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211794,
+    "update_time": 1782211794,
+    "_id": "List of attachments<SEP>Section J"
+  },
+  "Part<SEP>Sealed Bidding": {
+    "chunk_ids": [
+      "doc-a9b24d8d9d1fbed4b3fcbf79bee08356-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211794,
+    "update_time": 1782211794,
+    "_id": "Part<SEP>Sealed Bidding"
+  },
+  "15.301<SEP>Data": {
+    "chunk_ids": [
+      "doc-1e580d532bb8459e87eef47da737bf4d-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211794,
+    "update_time": 1782211794,
+    "_id": "15.301<SEP>Data"
+  },
+  "Contracting officer<SEP>List of attachments": {
+    "chunk_ids": [
+      "doc-216ef3624588c4d8ba2f0a7d927a0c70-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211794,
+    "update_time": 1782211794,
+    "_id": "Contracting officer<SEP>List of attachments"
+  },
+  "Negotiated Contract<SEP>Part": {
+    "chunk_ids": [
+      "doc-a9b24d8d9d1fbed4b3fcbf79bee08356-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211794,
+    "update_time": 1782211794,
+    "_id": "Negotiated Contract<SEP>Part"
+  },
+  "Contracting officer<SEP>Section J": {
+    "chunk_ids": [
+      "doc-216ef3624588c4d8ba2f0a7d927a0c70-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211794,
+    "update_time": 1782211794,
+    "_id": "Contracting officer<SEP>Section J"
+  },
+  "Exchanges with industry before receipt of proposals<SEP>Interests": {
+    "chunk_ids": [
+      "doc-6eca0bd458a329d90a798631371e391f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211946,
+    "update_time": 1782211946,
+    "_id": "Exchanges with industry before receipt of proposals<SEP>Interests"
+  },
+  "Agencies<SEP>Program manager": {
+    "chunk_ids": [
+      "doc-6eca0bd458a329d90a798631371e391f-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211946,
+    "update_time": 1782211946,
+    "_id": "Agencies<SEP>Program manager"
+  },
+  "15.101-2<SEP>Lowest price technically acceptable source selection process": {
+    "chunk_ids": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211946,
+    "update_time": 1782211946,
+    "_id": "15.101-2<SEP>Lowest price technically acceptable source selection process"
+  },
+  "Adverse Past Performance Information<SEP>Competitive Range": {
+    "chunk_ids": [
+      "doc-57fca498e8ef8f0c8e2675ed4ea878f1-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211946,
+    "update_time": 1782211946,
+    "_id": "Adverse Past Performance Information<SEP>Competitive Range"
+  },
+  "Evaluation factors and significant subfactors<SEP>Lowest price technically acceptable source selection process": {
+    "chunk_ids": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211946,
+    "update_time": 1782211946,
+    "_id": "Evaluation factors and significant subfactors<SEP>Lowest price technically acceptable source selection process"
+  },
+  "Agencies<SEP>Competitive Range": {
+    "chunk_ids": [
+      "doc-57fca498e8ef8f0c8e2675ed4ea878f1-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211947,
+    "update_time": 1782211947,
+    "_id": "Agencies<SEP>Competitive Range"
+  },
+  "Adverse Past Performance Information<SEP>Offeror": {
+    "chunk_ids": [
+      "doc-57fca498e8ef8f0c8e2675ed4ea878f1-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211947,
+    "update_time": 1782211947,
+    "_id": "Adverse Past Performance Information<SEP>Offeror"
+  },
+  "Lowest price technically acceptable source selection process<SEP>Solicitation": {
+    "chunk_ids": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211971,
+    "update_time": 1782211971,
+    "_id": "Lowest price technically acceptable source selection process<SEP>Solicitation"
+  },
+  "Adverse Past Performance Information<SEP>Proposal Deficiencies, Material Omissions, Technical or Cost Elements": {
+    "chunk_ids": [
+      "doc-57fca498e8ef8f0c8e2675ed4ea878f1-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Adverse Past Performance Information<SEP>Proposal Deficiencies, Material Omissions, Technical or Cost Elements"
+  },
+  "Competitive Range<SEP>Contracting Officer": {
+    "chunk_ids": [
+      "doc-57fca498e8ef8f0c8e2675ed4ea878f1-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Competitive Range<SEP>Contracting Officer"
+  },
+  "Contracting officer<SEP>Lowest price technically acceptable source selection process": {
+    "chunk_ids": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Contracting officer<SEP>Lowest price technically acceptable source selection process"
+  },
+  "Adverse Past Performance Information<SEP>Proposal Interpretation": {
+    "chunk_ids": [
+      "doc-57fca498e8ef8f0c8e2675ed4ea878f1-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Adverse Past Performance Information<SEP>Proposal Interpretation"
+  },
+  "Competitive Range<SEP>Efficiency Purposes": {
+    "chunk_ids": [
+      "doc-57fca498e8ef8f0c8e2675ed4ea878f1-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Competitive Range<SEP>Efficiency Purposes"
+  },
+  "Deficiency<SEP>Proposal modification": {
+    "chunk_ids": [
+      "doc-ce6df67b501cc65b8bf112bed214d0a5-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Deficiency<SEP>Proposal modification"
+  },
+  "Proposal revision<SEP>Weakness": {
+    "chunk_ids": [
+      "doc-ce6df67b501cc65b8bf112bed214d0a5-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Proposal revision<SEP>Weakness"
+  },
+  "Significant weakness<SEP>increases": {
+    "chunk_ids": [
+      "doc-ce6df67b501cc65b8bf112bed214d0a5-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Significant weakness<SEP>increases"
+  },
+  "Lowest price technically acceptable source selection process<SEP>Past performance": {
+    "chunk_ids": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Lowest price technically acceptable source selection process<SEP>Past performance"
+  },
+  "Adverse Past Performance Information<SEP>Proposal Revision": {
+    "chunk_ids": [
+      "doc-57fca498e8ef8f0c8e2675ed4ea878f1-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Adverse Past Performance Information<SEP>Proposal Revision"
+  },
+  "Deficiency<SEP>Proposal revision": {
+    "chunk_ids": [
+      "doc-ce6df67b501cc65b8bf112bed214d0a5-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Deficiency<SEP>Proposal revision"
+  },
+  "Weakness<SEP>increases": {
+    "chunk_ids": [
+      "doc-ce6df67b501cc65b8bf112bed214d0a5-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Weakness<SEP>increases"
+  },
+  "Lowest price technically acceptable source selection process<SEP>Small Business Administration": {
+    "chunk_ids": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Lowest price technically acceptable source selection process<SEP>Small Business Administration"
+  },
+  "Proposal modification<SEP>Weakness": {
+    "chunk_ids": [
+      "doc-ce6df67b501cc65b8bf112bed214d0a5-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Proposal modification<SEP>Weakness"
+  },
+  "Lowest price technically acceptable source selection process<SEP>Tradeoffs": {
+    "chunk_ids": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "Lowest price technically acceptable source selection process<SEP>Tradeoffs"
+  },
+  "Lowest price technically acceptable source selection process<SEP>Proposals": {
+    "chunk_ids": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212046,
+    "update_time": 1782212046,
+    "_id": "Lowest price technically acceptable source selection process<SEP>Proposals"
+  },
+  "Exchanges<SEP>Lowest price technically acceptable source selection process": {
+    "chunk_ids": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212046,
+    "update_time": 1782212046,
+    "_id": "Exchanges<SEP>Lowest price technically acceptable source selection process"
+  },
+  "John S. McCain National Defense Authorization Act for Fiscal Year 2019<SEP>Lowest price technically acceptable source selection process": {
+    "chunk_ids": [
+      "doc-a4fb44a50472ca98bb40f038cdaffc48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212095,
+    "update_time": 1782212095,
+    "_id": "John S. McCain National Defense Authorization Act for Fiscal Year 2019<SEP>Lowest price technically acceptable source selection process"
+  },
+  "Handling proposals and information<SEP>Solicitation": {
+    "chunk_ids": [
+      "doc-06db059943ebc243f385e13bac5ffcda-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212095,
+    "update_time": 1782212095,
+    "_id": "Handling proposals and information<SEP>Solicitation"
+  },
+  "41 U.S.C. 3701<SEP>John S. McCain National Defense Authorization Act for Fiscal Year 2019": {
+    "chunk_ids": [
+      "doc-f0d9484fb4b52204300a0ef443159763-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212096,
+    "update_time": 1782212096,
+    "_id": "41 U.S.C. 3701<SEP>John S. McCain National Defense Authorization Act for Fiscal Year 2019"
+  },
+  "Department of Defense<SEP>lowest price technically acceptable source selection process": {
+    "chunk_ids": [
+      "doc-f0d9484fb4b52204300a0ef443159763-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212096,
+    "update_time": 1782212096,
+    "_id": "Department of Defense<SEP>lowest price technically acceptable source selection process"
+  },
+  "Handling proposals and information<SEP>Request for information (RFI)": {
+    "chunk_ids": [
+      "doc-06db059943ebc243f385e13bac5ffcda-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212096,
+    "update_time": 1782212096,
+    "_id": "Handling proposals and information<SEP>Request for information (RFI)"
+  },
+  "John S. McCain National Defense Authorization Act for Fiscal Year 2019<SEP>lowest price technically acceptable source selection process": {
+    "chunk_ids": [
+      "doc-f0d9484fb4b52204300a0ef443159763-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212103,
+    "update_time": 1782212103,
+    "_id": "John S. McCain National Defense Authorization Act for Fiscal Year 2019<SEP>lowest price technically acceptable source selection process"
+  },
+  "Contracting officer<SEP>Handling proposals and information": {
+    "chunk_ids": [
+      "doc-06db059943ebc243f385e13bac5ffcda-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212103,
+    "update_time": 1782212103,
+    "_id": "Contracting officer<SEP>Handling proposals and information"
+  },
+  "41 U.S.C. 3701<SEP>lowest price technically acceptable source selection process": {
+    "chunk_ids": [
+      "doc-f0d9484fb4b52204300a0ef443159763-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212103,
+    "update_time": 1782212103,
+    "_id": "41 U.S.C. 3701<SEP>lowest price technically acceptable source selection process"
+  },
+  "Handling proposals and information<SEP>Offeror": {
+    "chunk_ids": [
+      "doc-06db059943ebc243f385e13bac5ffcda-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212103,
+    "update_time": 1782212103,
+    "_id": "Handling proposals and information<SEP>Offeror"
+  },
+  "Contracting Office<SEP>Late Proposal": {
+    "chunk_ids": [
+      "doc-88d20415515262cde147c085a56a9f19-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212103,
+    "update_time": 1782212103,
+    "_id": "Contracting Office<SEP>Late Proposal"
+  },
+  "Amendment number and date<SEP>Number of pages": {
+    "chunk_ids": [
+      "doc-d0e81e14b1d5c58f5e884601742ee78e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212206,
+    "update_time": 1782212206,
+    "_id": "Amendment number and date<SEP>Number of pages"
+  },
+  "Description of the change being made<SEP>Number of pages": {
+    "chunk_ids": [
+      "doc-d0e81e14b1d5c58f5e884601742ee78e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212206,
+    "update_time": 1782212206,
+    "_id": "Description of the change being made<SEP>Number of pages"
+  },
+  "None<SEP>Subpart": {
+    "chunk_ids": [
+      "doc-076085acfc2a1f690986be1ddabd637e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212206,
+    "update_time": 1782212206,
+    "_id": "None<SEP>Subpart"
+  },
+  "Government point of contact and phone number<SEP>Number of pages": {
+    "chunk_ids": [
+      "doc-d0e81e14b1d5c58f5e884601742ee78e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212206,
+    "update_time": 1782212206,
+    "_id": "Government point of contact and phone number<SEP>Number of pages"
+  },
+  "Number of pages<SEP>Revision to solicitation closing date, if applicable": {
+    "chunk_ids": [
+      "doc-d0e81e14b1d5c58f5e884601742ee78e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212207,
+    "update_time": 1782212207,
+    "_id": "Number of pages<SEP>Revision to solicitation closing date, if applicable"
+  },
+  "Amendment number and date<SEP>Government point of contact and phone number": {
+    "chunk_ids": [
+      "doc-d0e81e14b1d5c58f5e884601742ee78e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212207,
+    "update_time": 1782212207,
+    "_id": "Amendment number and date<SEP>Government point of contact and phone number"
+  },
+  "Amendment number and date<SEP>Revision to solicitation closing date, if applicable": {
+    "chunk_ids": [
+      "doc-d0e81e14b1d5c58f5e884601742ee78e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212282,
+    "update_time": 1782212282,
+    "_id": "Amendment number and date<SEP>Revision to solicitation closing date, if applicable"
+  },
+  "<Afghanistan<SEP>Procurement": {
+    "chunk_ids": [
+      "doc-33d384a0ddf0919053c9ae9a9edbdbdb-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212307,
+    "update_time": 1782212307,
+    "_id": "<Afghanistan<SEP>Procurement"
+  },
+  "OMB Circular A-76<SEP>Requests for Proposals": {
+    "chunk_ids": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212307,
+    "update_time": 1782212307,
+    "_id": "OMB Circular A-76<SEP>Requests for Proposals"
+  },
+  "Electronic Commerce<SEP>Requests for Proposals": {
+    "chunk_ids": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212331,
+    "update_time": 1782212331,
+    "_id": "Electronic Commerce<SEP>Requests for Proposals"
+  },
+  "Facsimile<SEP>Requests for Proposals": {
+    "chunk_ids": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212357,
+    "update_time": 1782212357,
+    "_id": "Facsimile<SEP>Requests for Proposals"
+  },
+  "proposed acquisition<SEP>specific information": {
+    "chunk_ids": [
+      "doc-d28d046bbb51ec4e991d5bf7955ef8e4-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212406,
+    "update_time": 1782212406,
+    "_id": "proposed acquisition<SEP>specific information"
+  },
+  "materials distributed<SEP>presolicitation or preproposal conference": {
+    "chunk_ids": [
+      "doc-d28d046bbb51ec4e991d5bf7955ef8e4-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212406,
+    "update_time": 1782212406,
+    "_id": "materials distributed<SEP>presolicitation or preproposal conference"
+  },
+  "Government<SEP>Requests for Proposals": {
+    "chunk_ids": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212406,
+    "update_time": 1782212406,
+    "_id": "Government<SEP>Requests for Proposals"
+  },
+  "potential offerors<SEP>specific information": {
+    "chunk_ids": [
+      "doc-d28d046bbb51ec4e991d5bf7955ef8e4-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212406,
+    "update_time": 1782212406,
+    "_id": "potential offerors<SEP>specific information"
+  },
+  "Proposals<SEP>Requests for Proposals": {
+    "chunk_ids": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212406,
+    "update_time": 1782212406,
+    "_id": "Proposals<SEP>Requests for Proposals"
+  },
+  "confidential business strategy<SEP>potential offerors": {
+    "chunk_ids": [
+      "doc-d28d046bbb51ec4e991d5bf7955ef8e4-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212407,
+    "update_time": 1782212407,
+    "_id": "confidential business strategy<SEP>potential offerors"
+  },
+  "Contracting Officers<SEP>Requests for Proposals": {
+    "chunk_ids": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212421,
+    "update_time": 1782212421,
+    "_id": "Contracting Officers<SEP>Requests for Proposals"
+  },
+  "potential offerors<SEP>presolicitation or preproposal conference": {
+    "chunk_ids": [
+      "doc-d28d046bbb51ec4e991d5bf7955ef8e4-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212446,
+    "update_time": 1782212446,
+    "_id": "potential offerors<SEP>presolicitation or preproposal conference"
+  },
+  "confidential business strategy<SEP>potential offeror": {
+    "chunk_ids": [
+      "doc-d28d046bbb51ec4e991d5bf7955ef8e4-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212446,
+    "update_time": 1782212446,
+    "_id": "confidential business strategy<SEP>potential offeror"
+  },
+  "Government Requirements<SEP>Requests for Proposals": {
+    "chunk_ids": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212446,
+    "update_time": 1782212446,
+    "_id": "Government Requirements<SEP>Requests for Proposals"
+  },
+  "American Recovery and Reinvestment Act of 2009<SEP>bilateral contract modification": {
+    "chunk_ids": [
+      "doc-93a17c8eba2cbb981d3d10637009c3c6-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212446,
+    "update_time": 1782212446,
+    "_id": "American Recovery and Reinvestment Act of 2009<SEP>bilateral contract modification"
+  },
+  "Requests for Proposals<SEP>Terms and Conditions": {
+    "chunk_ids": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212446,
+    "update_time": 1782212446,
+    "_id": "Requests for Proposals<SEP>Terms and Conditions"
+  },
+  "American Recovery and Reinvestment Act of 2009<SEP>task- or delivery-order contract": {
+    "chunk_ids": [
+      "doc-93a17c8eba2cbb981d3d10637009c3c6-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212470,
+    "update_time": 1782212470,
+    "_id": "American Recovery and Reinvestment Act of 2009<SEP>task- or delivery-order contract"
+  },
+  "Anticipated Terms and Conditions<SEP>Requests for Proposals": {
+    "chunk_ids": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212470,
+    "update_time": 1782212470,
+    "_id": "Anticipated Terms and Conditions<SEP>Requests for Proposals"
+  },
+  "American Recovery and Reinvestment Act of 2009<SEP>cost-reimbursement contracts": {
+    "chunk_ids": [
+      "doc-93a17c8eba2cbb981d3d10637009c3c6-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212495,
+    "update_time": 1782212495,
+    "_id": "American Recovery and Reinvestment Act of 2009<SEP>cost-reimbursement contracts"
+  },
+  "Governments Requirement<SEP>Requests for Proposals": {
+    "chunk_ids": [
+      "doc-ad72395f3b32d9bfb15e688edd27ebbe-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212495,
+    "update_time": 1782212495,
+    "_id": "Governments Requirement<SEP>Requests for Proposals"
+  },
+  "American Recovery and Reinvestment Act of 2009<SEP>Comptroller General": {
+    "chunk_ids": [
+      "doc-93a17c8eba2cbb981d3d10637009c3c6-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212495,
+    "update_time": 1782212495,
+    "_id": "American Recovery and Reinvestment Act of 2009<SEP>Comptroller General"
+  },
+  "Standard Form 30<SEP>Standard Form 33": {
+    "chunk_ids": [
+      "doc-8bde526d740647c3ddc8291d22a33f05-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212495,
+    "update_time": 1782212495,
+    "_id": "Standard Form 30<SEP>Standard Form 33"
+  },
+  "American Recovery and Reinvestment Act of 2009<SEP>solicitation": {
+    "chunk_ids": [
+      "doc-93a17c8eba2cbb981d3d10637009c3c6-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212496,
+    "update_time": 1782212496,
+    "_id": "American Recovery and Reinvestment Act of 2009<SEP>solicitation"
+  },
+  "Optional Form 308<SEP>Standard Form 33": {
+    "chunk_ids": [
+      "doc-8bde526d740647c3ddc8291d22a33f05-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212496,
+    "update_time": 1782212496,
+    "_id": "Optional Form 308<SEP>Standard Form 33"
+  },
+  "Optional Form 17<SEP>Standard Form 33": {
+    "chunk_ids": [
+      "doc-8bde526d740647c3ddc8291d22a33f05-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212545,
+    "update_time": 1782212545,
+    "_id": "Optional Form 17<SEP>Standard Form 33"
+  },
+  "Optional Form 308<SEP>Standard Form 30": {
+    "chunk_ids": [
+      "doc-8bde526d740647c3ddc8291d22a33f05-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212545,
+    "update_time": 1782212545,
+    "_id": "Optional Form 308<SEP>Standard Form 30"
+  },
+  "American Recovery and Reinvestment Act of 2009<SEP>facsimile proposals": {
+    "chunk_ids": [
+      "doc-93a17c8eba2cbb981d3d10637009c3c6-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212545,
+    "update_time": 1782212545,
+    "_id": "American Recovery and Reinvestment Act of 2009<SEP>facsimile proposals"
+  },
+  "Optional Form 17<SEP>Standard Form 30": {
+    "chunk_ids": [
+      "doc-8bde526d740647c3ddc8291d22a33f05-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212545,
+    "update_time": 1782212545,
+    "_id": "Optional Form 17<SEP>Standard Form 30"
+  },
+  "American Recovery and Reinvestment Act of 2009<SEP>solicitations": {
+    "chunk_ids": [
+      "doc-93a17c8eba2cbb981d3d10637009c3c6-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212545,
+    "update_time": 1782212545,
+    "_id": "American Recovery and Reinvestment Act of 2009<SEP>solicitations"
+  },
+  "Contracting Officer<SEP>Master Solicitation": {
+    "chunk_ids": [
+      "doc-77b91b3d906011b7b7a6798e52071431-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212545,
+    "update_time": 1782212545,
+    "_id": "Contracting Officer<SEP>Master Solicitation"
+  },
+  "Optional Form 17<SEP>Optional Form 308": {
+    "chunk_ids": [
+      "doc-8bde526d740647c3ddc8291d22a33f05-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212545,
+    "update_time": 1782212545,
+    "_id": "Optional Form 17<SEP>Optional Form 308"
+  },
+  "Master Solicitation<SEP>Policies and Procedures": {
+    "chunk_ids": [
+      "doc-77b91b3d906011b7b7a6798e52071431-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212545,
+    "update_time": 1782212545,
+    "_id": "Master Solicitation<SEP>Policies and Procedures"
+  },
+  "Optional Form 17<SEP>Standard Form 308": {
+    "chunk_ids": [
+      "doc-8bde526d740647c3ddc8291d22a33f05-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212546,
+    "update_time": 1782212546,
+    "_id": "Optional Form 17<SEP>Standard Form 308"
+  },
+  "Contracting Officer<SEP>Policies and Procedures": {
+    "chunk_ids": [
+      "doc-77b91b3d906011b7b7a6798e52071431-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212546,
+    "update_time": 1782212546,
+    "_id": "Contracting Officer<SEP>Policies and Procedures"
+  },
+  "Acceptable evidence to establish the time of receipt at the Government installation<SEP>Government installation": {
+    "chunk_ids": [
+      "doc-2fa0e01f3c701431b77772650d4acebf-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212648,
+    "update_time": 1782212648,
+    "_id": "Acceptable evidence to establish the time of receipt at the Government installation<SEP>Government installation"
+  },
+  "Cost or price evaluation<SEP>Proposal evaluation": {
+    "chunk_ids": [
+      "doc-6ea357fd59c34d4f9c7984ccfcb4ad4c-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212698,
+    "update_time": 1782212698,
+    "_id": "Cost or price evaluation<SEP>Proposal evaluation"
+  },
+  "Contracting Officer<SEP>Section I": {
+    "chunk_ids": [
+      "doc-6ae6d47769fd34a62f4cf09ae269a220-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212698,
+    "update_time": 1782212698,
+    "_id": "Contracting Officer<SEP>Section I"
+  },
+  "Past performance evaluation<SEP>Proposal evaluation": {
+    "chunk_ids": [
+      "doc-6ea357fd59c34d4f9c7984ccfcb4ad4c-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212723,
+    "update_time": 1782212723,
+    "_id": "Past performance evaluation<SEP>Proposal evaluation"
+  },
+  "Cost or price evaluation<SEP>Past performance evaluation": {
+    "chunk_ids": [
+      "doc-6ea357fd59c34d4f9c7984ccfcb4ad4c-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212749,
+    "update_time": 1782212749,
+    "_id": "Cost or price evaluation<SEP>Past performance evaluation"
+  },
+  "<Construction and Architect-Engineer Contracts<SEP>Uniform Contract Format": {
+    "chunk_ids": [
+      "doc-51dd4419f8420be899aa1a6af7826e32-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212792,
+    "update_time": 1782212792,
+    "_id": "<Construction and Architect-Engineer Contracts<SEP>Uniform Contract Format"
+  },
+  "<Subsistence Contracts<SEP>Uniform Contract Format": {
+    "chunk_ids": [
+      "doc-51dd4419f8420be899aa1a6af7826e32-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212852,
+    "update_time": 1782212852,
+    "_id": "<Subsistence Contracts<SEP>Uniform Contract Format"
+  },
+  "<Contracting Officer<SEP>Contract files supporting oral solicitations": {
+    "chunk_ids": [
+      "doc-ac3dcb73a7193adcc4f4e72c97a201d8-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212852,
+    "update_time": 1782212852,
+    "_id": "<Contracting Officer<SEP>Contract files supporting oral solicitations"
+  },
+  "<Supplies or Services Contracts<SEP>Uniform Contract Format": {
+    "chunk_ids": [
+      "doc-51dd4419f8420be899aa1a6af7826e32-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212852,
+    "update_time": 1782212852,
+    "_id": "<Supplies or Services Contracts<SEP>Uniform Contract Format"
+  },
+  "Exchanging information with industry prior to receipt of proposals<SEP>Preparing and issuing requests for proposals (RFPs) and requests for information (RFIs)": {
+    "chunk_ids": [
+      "doc-859c00130231655660af8c75765a03af-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212852,
+    "update_time": 1782212852,
+    "_id": "Exchanging information with industry prior to receipt of proposals<SEP>Preparing and issuing requests for proposals (RFPs) and requests for information (RFIs)"
+  },
+  "<Contracting Officer<SEP>Information furnished to potential offerors": {
+    "chunk_ids": [
+      "doc-ac3dcb73a7193adcc4f4e72c97a201d8-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212852,
+    "update_time": 1782212852,
+    "_id": "<Contracting Officer<SEP>Information furnished to potential offerors"
+  },
+  "<Letter Requests for Proposals<SEP>Uniform Contract Format": {
+    "chunk_ids": [
+      "doc-51dd4419f8420be899aa1a6af7826e32-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212852,
+    "update_time": 1782212852,
+    "_id": "<Letter Requests for Proposals<SEP>Uniform Contract Format"
+  },
+  "<Contracts Exempted by Agency Head or Designee<SEP>Uniform Contract Format": {
+    "chunk_ids": [
+      "doc-51dd4419f8420be899aa1a6af7826e32-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212853,
+    "update_time": 1782212853,
+    "_id": "<Contracts Exempted by Agency Head or Designee<SEP>Uniform Contract Format"
+  },
+  "<Part 36<SEP>Uniform Contract Format": {
+    "chunk_ids": [
+      "doc-51dd4419f8420be899aa1a6af7826e32-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212853,
+    "update_time": 1782212853,
+    "_id": "<Part 36<SEP>Uniform Contract Format"
+  },
+  "<15.203 (e)<SEP>Uniform Contract Format": {
+    "chunk_ids": [
+      "doc-51dd4419f8420be899aa1a6af7826e32-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1782212853,
+    "update_time": 1782212853,
+    "_id": "<15.203 (e)<SEP>Uniform Contract Format"
+  }
+}

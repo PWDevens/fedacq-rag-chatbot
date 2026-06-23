@@ -1,0 +1,1026 @@
+{
+  "doc-4203a6dfab9722fa7f215d8b09e31d94": {
+    "relation_pairs": [
+      [
+        "Advisory multi-step process",
+        "Agency"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782210818,
+    "update_time": 1782210818,
+    "_id": "doc-4203a6dfab9722fa7f215d8b09e31d94"
+  },
+  "doc-bbf1cc688706dd430bfe505423cb9745": {
+    "relation_pairs": [
+      [
+        "Government",
+        "Tradeoff process"
+      ],
+      [
+        "Evaluation factors",
+        "Tradeoff process"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1782210819,
+    "update_time": 1782210819,
+    "_id": "doc-bbf1cc688706dd430bfe505423cb9745"
+  },
+  "doc-8307fa18b297b3e4ece0b76bb0b726f3": {
+    "relation_pairs": [
+      [
+        "Contracting officer",
+        "Offerors"
+      ],
+      [
+        "15.303",
+        "Responsibilities"
+      ],
+      [
+        "Agency heads",
+        "Contracting officer"
+      ],
+      [
+        "Advisory boards",
+        "Agency heads"
+      ],
+      [
+        "Contracting officer",
+        "Proposal exchanges"
+      ],
+      [
+        "Agency heads",
+        "Evaluation factors"
+      ],
+      [
+        "Contract award",
+        "Contracting officer"
+      ],
+      [
+        "15.303",
+        "Data"
+      ],
+      [
+        "Agency heads",
+        "Solicitation requirements"
+      ],
+      [
+        "Contracting officer",
+        "Solicitation"
+      ],
+      [
+        "Agency heads",
+        "Best value source"
+      ],
+      [
+        "Contract(s)",
+        "Contracting officer"
+      ],
+      [
+        "Agency heads",
+        "Evaluation team"
+      ],
+      [
+        "Agency heads",
+        "Source selection strategy"
+      ],
+      [
+        "Contracting officer",
+        "Inquiry focal point"
+      ]
+    ],
+    "count": 15,
+    "create_time": 1782210873,
+    "update_time": 1782210873,
+    "_id": "doc-8307fa18b297b3e4ece0b76bb0b726f3"
+  },
+  "doc-456bc0aa9d9c468eb1a793f3f4dea078": {
+    "relation_pairs": [
+      [
+        "Proposal",
+        "Source selection objective"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782210873,
+    "update_time": 1782210873,
+    "_id": "doc-456bc0aa9d9c468eb1a793f3f4dea078"
+  },
+  "doc-e909bee63b73d9c94ea656edf17704ac": {
+    "relation_pairs": [
+      [
+        "Government office",
+        "Submission, modification, revision, and withdrawal of proposals"
+      ],
+      [
+        "Offerors",
+        "Submission, modification, revision, and withdrawal of proposals"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1782211021,
+    "update_time": 1782211021,
+    "_id": "doc-e909bee63b73d9c94ea656edf17704ac"
+  },
+  "doc-bede8af7c1fa0fd5550eb6445c784a43": {
+    "relation_pairs": [
+      [
+        "Small Business Participation",
+        "Solicitations"
+      ],
+      [
+        "Contracting Officer",
+        "Price or Cost"
+      ],
+      [
+        "Past Performance",
+        "Small Business Participation"
+      ],
+      [
+        "Non-Cost Evaluation Factors",
+        "Quality of Product or Service"
+      ],
+      [
+        "Past Performance",
+        "Solicitations"
+      ],
+      [
+        "Past Performance",
+        "Source Selection"
+      ],
+      [
+        "Contracting Officer",
+        "Multiple-Award Contracts"
+      ],
+      [
+        "Contracting Officer",
+        "Small Business Participation"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1782211022,
+    "update_time": 1782211022,
+    "_id": "doc-bede8af7c1fa0fd5550eb6445c784a43"
+  },
+  "doc-a5bfbf0428323ec475b2cd479e56717f": {
+    "relation_pairs": [
+      [
+        "Contracting officers",
+        "RFPs"
+      ],
+      [
+        "Circumstances",
+        "Letter RFPs"
+      ],
+      [
+        "Contracting officers",
+        "Facsimile"
+      ],
+      [
+        "Compliance",
+        "Letter RFPs"
+      ],
+      [
+        "Letter RFPs",
+        "RFPs"
+      ],
+      [
+        "Content",
+        "Letter RFPs"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1782211075,
+    "update_time": 1782211075,
+    "_id": "doc-a5bfbf0428323ec475b2cd479e56717f"
+  },
+  "doc-4753a1aa202f5509eaf2de32e5e82f8c": {
+    "relation_pairs": [
+      [
+        "This subpart",
+        "prescribes policies and procedures"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782211106,
+    "update_time": 1782211106,
+    "_id": "doc-4753a1aa202f5509eaf2de32e5e82f8c"
+  },
+  "doc-f117e6360ccb012cb010224c7aa70f17": {
+    "relation_pairs": [
+      [
+        "joint venture",
+        "offeror"
+      ],
+      [
+        "proposals",
+        "source selection authority"
+      ],
+      [
+        "contracting officer",
+        "joint venture"
+      ],
+      [
+        "joint venture",
+        "small business concern"
+      ],
+      [
+        "source selection authority",
+        "support contractor personnel"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1782211106,
+    "update_time": 1782211106,
+    "_id": "doc-f117e6360ccb012cb010224c7aa70f17"
+  },
+  "doc-3c8658f6ff895cbdf8dd72df8a08f90f": {
+    "relation_pairs": [
+      [
+        "All offerors that have not been eliminated from the competition",
+        "Amending the solicitation"
+      ],
+      [
+        "Amending the solicitation",
+        "Issuing activity"
+      ],
+      [
+        "Amending the solicitation",
+        "Contracting officer"
+      ],
+      [
+        "All parties receiving the solicitation",
+        "Amending the solicitation"
+      ],
+      [
+        "Amending the solicitation",
+        "Government"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1782211250,
+    "update_time": 1782211250,
+    "_id": "doc-3c8658f6ff895cbdf8dd72df8a08f90f"
+  },
+  "doc-db49040870203ca440941cb0a7037ccf": {
+    "relation_pairs": [
+      [
+        "Government",
+        "Oral presentations"
+      ],
+      [
+        "Oral presentations",
+        "Solicitation"
+      ],
+      [
+        "Information",
+        "Oral presentations"
+      ],
+      [
+        "Contracting officers",
+        "Oral presentations"
+      ],
+      [
+        "Offerors",
+        "Oral presentations"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1782211350,
+    "update_time": 1782211350,
+    "_id": "doc-db49040870203ca440941cb0a7037ccf"
+  },
+  "doc-9ab76433eb7f55122847e849d623b22a": {
+    "relation_pairs": [
+      [
+        "Best value continuum",
+        "Source selection approaches"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782211400,
+    "update_time": 1782211400,
+    "_id": "doc-9ab76433eb7f55122847e849d623b22a"
+  },
+  "doc-d923f3cb85ebadc88214aedf9a6c0e77": {
+    "relation_pairs": [
+      [
+        "Incidental deliverables",
+        "Section F"
+      ],
+      [
+        "Incidental deliverables",
+        "Section E"
+      ],
+      [
+        "Other",
+        "Section C"
+      ],
+      [
+        "Incidental deliverables",
+        "Section G"
+      ],
+      [
+        "Incidental deliverables",
+        "Section C"
+      ],
+      [
+        "Incidental deliverables",
+        "Section H"
+      ],
+      [
+        "Incidental deliverables",
+        "Section D"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1782211450,
+    "update_time": 1782211450,
+    "_id": "doc-d923f3cb85ebadc88214aedf9a6c0e77"
+  },
+  "doc-6c6792d5281c991e2cc7c8ab64ba40e4": {
+    "relation_pairs": [
+      [
+        "Multiple-award contracts",
+        "Tiered evaluation of small business offers"
+      ],
+      [
+        "13 CFR 125.2",
+        "Tiered evaluation of small business offers"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1782211450,
+    "update_time": 1782211450,
+    "_id": "doc-6c6792d5281c991e2cc7c8ab64ba40e4"
+  },
+  "doc-2942be15ad724bce0a8100b9a92763a0": {
+    "relation_pairs": [
+      [
+        "15.306",
+        "Communications with offerors before establishment of the competitive range"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782211548,
+    "update_time": 1782211548,
+    "_id": "doc-2942be15ad724bce0a8100b9a92763a0"
+  },
+  "doc-97627481b1b459ea6a4e425cc66241ea": {
+    "relation_pairs": [
+      [
+        "41 U.S.C. 3306(b)(1)",
+        "Relationship"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782211548,
+    "update_time": 1782211548,
+    "_id": "doc-97627481b1b459ea6a4e425cc66241ea"
+  },
+  "doc-937a249dbf51cd8d0774543de6ad6bcb": {
+    "relation_pairs": [
+      [
+        "Agency acquisition officials",
+        "Evaluation factors and significant subfactors"
+      ],
+      [
+        "Award decision",
+        "Evaluation factors and significant subfactors"
+      ],
+      [
+        "Evaluation factors and significant subfactors",
+        "Price or cost to the Government"
+      ],
+      [
+        "Price or cost to the Government",
+        "Simplified acquisition threshold"
+      ],
+      [
+        "Price or cost to the Government",
+        "Qualifying offerors"
+      ],
+      [
+        "Multiple-award contracts",
+        "Price or cost to the Government"
+      ],
+      [
+        "Price or cost to the Government",
+        "Solicitation"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1782211549,
+    "update_time": 1782211549,
+    "_id": "doc-937a249dbf51cd8d0774543de6ad6bcb"
+  },
+  "doc-fdcfb8e97b2270006b5fc85a094b224c": {
+    "relation_pairs": [
+      [
+        "Sole source acquisitions",
+        "Types of negotiated acquisition"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782211695,
+    "update_time": 1782211695,
+    "_id": "doc-fdcfb8e97b2270006b5fc85a094b224c"
+  },
+  "doc-f02b760cf056bee52765add5ae1226d1": {
+    "relation_pairs": [
+      [
+        "Solicitations",
+        "Uniform contract format"
+      ],
+      [
+        "Contracting officers",
+        "Uniform contract format"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1782211719,
+    "update_time": 1782211719,
+    "_id": "doc-f02b760cf056bee52765add5ae1226d1"
+  },
+  "doc-1e580d532bb8459e87eef47da737bf4d": {
+    "relation_pairs": [
+      [
+        "15.301",
+        "Data"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782211796,
+    "update_time": 1782211796,
+    "_id": "doc-1e580d532bb8459e87eef47da737bf4d"
+  },
+  "doc-a9b24d8d9d1fbed4b3fcbf79bee08356": {
+    "relation_pairs": [
+      [
+        "Negotiated Contract",
+        "Part"
+      ],
+      [
+        "Part",
+        "Sealed Bidding"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1782211797,
+    "update_time": 1782211797,
+    "_id": "doc-a9b24d8d9d1fbed4b3fcbf79bee08356"
+  },
+  "doc-216ef3624588c4d8ba2f0a7d927a0c70": {
+    "relation_pairs": [
+      [
+        "Contracting officer",
+        "List of attachments"
+      ],
+      [
+        "List of attachments",
+        "Section J"
+      ],
+      [
+        "Contracting officer",
+        "Section J"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1782211797,
+    "update_time": 1782211797,
+    "_id": "doc-216ef3624588c4d8ba2f0a7d927a0c70"
+  },
+  "doc-6eca0bd458a329d90a798631371e391f": {
+    "relation_pairs": [
+      [
+        "Exchanges with industry before receipt of proposals",
+        "Interests"
+      ],
+      [
+        "Agencies",
+        "Program manager"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1782211946,
+    "update_time": 1782211946,
+    "_id": "doc-6eca0bd458a329d90a798631371e391f"
+  },
+  "doc-57fca498e8ef8f0c8e2675ed4ea878f1": {
+    "relation_pairs": [
+      [
+        "Adverse Past Performance Information",
+        "Offeror"
+      ],
+      [
+        "Competitive Range",
+        "Efficiency Purposes"
+      ],
+      [
+        "Agencies",
+        "Competitive Range"
+      ],
+      [
+        "Adverse Past Performance Information",
+        "Proposal Deficiencies, Material Omissions, Technical or Cost Elements"
+      ],
+      [
+        "Adverse Past Performance Information",
+        "Proposal Interpretation"
+      ],
+      [
+        "Competitive Range",
+        "Contracting Officer"
+      ],
+      [
+        "Adverse Past Performance Information",
+        "Competitive Range"
+      ],
+      [
+        "Adverse Past Performance Information",
+        "Proposal Revision"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1782211996,
+    "update_time": 1782211996,
+    "_id": "doc-57fca498e8ef8f0c8e2675ed4ea878f1"
+  },
+  "doc-ce6df67b501cc65b8bf112bed214d0a5": {
+    "relation_pairs": [
+      [
+        "Deficiency",
+        "Proposal modification"
+      ],
+      [
+        "Proposal modification",
+        "Weakness"
+      ],
+      [
+        "Proposal revision",
+        "Weakness"
+      ],
+      [
+        "Significant weakness",
+        "increases"
+      ],
+      [
+        "Weakness",
+        "increases"
+      ],
+      [
+        "Deficiency",
+        "Proposal revision"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1782212021,
+    "update_time": 1782212021,
+    "_id": "doc-ce6df67b501cc65b8bf112bed214d0a5"
+  },
+  "doc-a4fb44a50472ca98bb40f038cdaffc48": {
+    "relation_pairs": [
+      [
+        "Evaluation factors and significant subfactors",
+        "Lowest price technically acceptable source selection process"
+      ],
+      [
+        "Lowest price technically acceptable source selection process",
+        "Tradeoffs"
+      ],
+      [
+        "Lowest price technically acceptable source selection process",
+        "Small Business Administration"
+      ],
+      [
+        "Lowest price technically acceptable source selection process",
+        "Past performance"
+      ],
+      [
+        "Lowest price technically acceptable source selection process",
+        "Solicitation"
+      ],
+      [
+        "John S. McCain National Defense Authorization Act for Fiscal Year 2019",
+        "Lowest price technically acceptable source selection process"
+      ],
+      [
+        "Lowest price technically acceptable source selection process",
+        "Proposals"
+      ],
+      [
+        "Exchanges",
+        "Lowest price technically acceptable source selection process"
+      ],
+      [
+        "15.101-2",
+        "Lowest price technically acceptable source selection process"
+      ],
+      [
+        "Contracting officer",
+        "Lowest price technically acceptable source selection process"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1782212095,
+    "update_time": 1782212095,
+    "_id": "doc-a4fb44a50472ca98bb40f038cdaffc48"
+  },
+  "doc-f0d9484fb4b52204300a0ef443159763": {
+    "relation_pairs": [
+      [
+        "Department of Defense",
+        "lowest price technically acceptable source selection process"
+      ],
+      [
+        "41 U.S.C. 3701",
+        "John S. McCain National Defense Authorization Act for Fiscal Year 2019"
+      ],
+      [
+        "John S. McCain National Defense Authorization Act for Fiscal Year 2019",
+        "lowest price technically acceptable source selection process"
+      ],
+      [
+        "41 U.S.C. 3701",
+        "lowest price technically acceptable source selection process"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1782212103,
+    "update_time": 1782212103,
+    "_id": "doc-f0d9484fb4b52204300a0ef443159763"
+  },
+  "doc-88d20415515262cde147c085a56a9f19": {
+    "relation_pairs": [
+      [
+        "Contracting Office",
+        "Late Proposal"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782212103,
+    "update_time": 1782212103,
+    "_id": "doc-88d20415515262cde147c085a56a9f19"
+  },
+  "doc-06db059943ebc243f385e13bac5ffcda": {
+    "relation_pairs": [
+      [
+        "Handling proposals and information",
+        "Offeror"
+      ],
+      [
+        "Handling proposals and information",
+        "Request for information (RFI)"
+      ],
+      [
+        "Handling proposals and information",
+        "Solicitation"
+      ],
+      [
+        "Contracting officer",
+        "Handling proposals and information"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1782212103,
+    "update_time": 1782212103,
+    "_id": "doc-06db059943ebc243f385e13bac5ffcda"
+  },
+  "doc-076085acfc2a1f690986be1ddabd637e": {
+    "relation_pairs": [
+      [
+        "None",
+        "Subpart"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782212206,
+    "update_time": 1782212206,
+    "_id": "doc-076085acfc2a1f690986be1ddabd637e"
+  },
+  "doc-d0e81e14b1d5c58f5e884601742ee78e": {
+    "relation_pairs": [
+      [
+        "Government point of contact and phone number",
+        "Number of pages"
+      ],
+      [
+        "Description of the change being made",
+        "Number of pages"
+      ],
+      [
+        "Amendment number and date",
+        "Number of pages"
+      ],
+      [
+        "Amendment number and date",
+        "Government point of contact and phone number"
+      ],
+      [
+        "Amendment number and date",
+        "Revision to solicitation closing date, if applicable"
+      ],
+      [
+        "Number of pages",
+        "Revision to solicitation closing date, if applicable"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1782212307,
+    "update_time": 1782212307,
+    "_id": "doc-d0e81e14b1d5c58f5e884601742ee78e"
+  },
+  "doc-33d384a0ddf0919053c9ae9a9edbdbdb": {
+    "relation_pairs": [
+      [
+        "<Afghanistan",
+        "Procurement"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782212307,
+    "update_time": 1782212307,
+    "_id": "doc-33d384a0ddf0919053c9ae9a9edbdbdb"
+  },
+  "doc-d28d046bbb51ec4e991d5bf7955ef8e4": {
+    "relation_pairs": [
+      [
+        "potential offerors",
+        "presolicitation or preproposal conference"
+      ],
+      [
+        "materials distributed",
+        "presolicitation or preproposal conference"
+      ],
+      [
+        "potential offerors",
+        "specific information"
+      ],
+      [
+        "confidential business strategy",
+        "potential offerors"
+      ],
+      [
+        "confidential business strategy",
+        "potential offeror"
+      ],
+      [
+        "proposed acquisition",
+        "specific information"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1782212446,
+    "update_time": 1782212446,
+    "_id": "doc-d28d046bbb51ec4e991d5bf7955ef8e4"
+  },
+  "doc-ad72395f3b32d9bfb15e688edd27ebbe": {
+    "relation_pairs": [
+      [
+        "Anticipated Terms and Conditions",
+        "Requests for Proposals"
+      ],
+      [
+        "Electronic Commerce",
+        "Requests for Proposals"
+      ],
+      [
+        "OMB Circular A-76",
+        "Requests for Proposals"
+      ],
+      [
+        "Governments Requirement",
+        "Requests for Proposals"
+      ],
+      [
+        "Contracting Officers",
+        "Requests for Proposals"
+      ],
+      [
+        "Requests for Proposals",
+        "Terms and Conditions"
+      ],
+      [
+        "Government Requirements",
+        "Requests for Proposals"
+      ],
+      [
+        "Government",
+        "Requests for Proposals"
+      ],
+      [
+        "Facsimile",
+        "Requests for Proposals"
+      ],
+      [
+        "Proposals",
+        "Requests for Proposals"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1782212495,
+    "update_time": 1782212495,
+    "_id": "doc-ad72395f3b32d9bfb15e688edd27ebbe"
+  },
+  "doc-93a17c8eba2cbb981d3d10637009c3c6": {
+    "relation_pairs": [
+      [
+        "American Recovery and Reinvestment Act of 2009",
+        "facsimile proposals"
+      ],
+      [
+        "American Recovery and Reinvestment Act of 2009",
+        "solicitations"
+      ],
+      [
+        "American Recovery and Reinvestment Act of 2009",
+        "cost-reimbursement contracts"
+      ],
+      [
+        "American Recovery and Reinvestment Act of 2009",
+        "Comptroller General"
+      ],
+      [
+        "American Recovery and Reinvestment Act of 2009",
+        "bilateral contract modification"
+      ],
+      [
+        "American Recovery and Reinvestment Act of 2009",
+        "task- or delivery-order contract"
+      ],
+      [
+        "American Recovery and Reinvestment Act of 2009",
+        "solicitation"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1782212545,
+    "update_time": 1782212545,
+    "_id": "doc-93a17c8eba2cbb981d3d10637009c3c6"
+  },
+  "doc-8bde526d740647c3ddc8291d22a33f05": {
+    "relation_pairs": [
+      [
+        "Optional Form 17",
+        "Standard Form 308"
+      ],
+      [
+        "Standard Form 30",
+        "Standard Form 33"
+      ],
+      [
+        "Optional Form 308",
+        "Standard Form 30"
+      ],
+      [
+        "Optional Form 308",
+        "Standard Form 33"
+      ],
+      [
+        "Optional Form 17",
+        "Standard Form 30"
+      ],
+      [
+        "Optional Form 17",
+        "Standard Form 33"
+      ],
+      [
+        "Optional Form 17",
+        "Optional Form 308"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1782212570,
+    "update_time": 1782212570,
+    "_id": "doc-8bde526d740647c3ddc8291d22a33f05"
+  },
+  "doc-77b91b3d906011b7b7a6798e52071431": {
+    "relation_pairs": [
+      [
+        "Contracting Officer",
+        "Master Solicitation"
+      ],
+      [
+        "Master Solicitation",
+        "Policies and Procedures"
+      ],
+      [
+        "Contracting Officer",
+        "Policies and Procedures"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1782212596,
+    "update_time": 1782212596,
+    "_id": "doc-77b91b3d906011b7b7a6798e52071431"
+  },
+  "doc-2fa0e01f3c701431b77772650d4acebf": {
+    "relation_pairs": [
+      [
+        "Acceptable evidence to establish the time of receipt at the Government installation",
+        "Government installation"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782212698,
+    "update_time": 1782212698,
+    "_id": "doc-2fa0e01f3c701431b77772650d4acebf"
+  },
+  "doc-6ae6d47769fd34a62f4cf09ae269a220": {
+    "relation_pairs": [
+      [
+        "Contracting Officer",
+        "Section I"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782212749,
+    "update_time": 1782212749,
+    "_id": "doc-6ae6d47769fd34a62f4cf09ae269a220"
+  },
+  "doc-6ea357fd59c34d4f9c7984ccfcb4ad4c": {
+    "relation_pairs": [
+      [
+        "Cost or price evaluation",
+        "Past performance evaluation"
+      ],
+      [
+        "Cost or price evaluation",
+        "Proposal evaluation"
+      ],
+      [
+        "Past performance evaluation",
+        "Proposal evaluation"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1782212781,
+    "update_time": 1782212781,
+    "_id": "doc-6ea357fd59c34d4f9c7984ccfcb4ad4c"
+  },
+  "doc-859c00130231655660af8c75765a03af": {
+    "relation_pairs": [
+      [
+        "Exchanging information with industry prior to receipt of proposals",
+        "Preparing and issuing requests for proposals (RFPs) and requests for information (RFIs)"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1782212852,
+    "update_time": 1782212852,
+    "_id": "doc-859c00130231655660af8c75765a03af"
+  },
+  "doc-ac3dcb73a7193adcc4f4e72c97a201d8": {
+    "relation_pairs": [
+      [
+        "<Contracting Officer",
+        "Contract files supporting oral solicitations"
+      ],
+      [
+        "<Contracting Officer",
+        "Information furnished to potential offerors"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1782212852,
+    "update_time": 1782212852,
+    "_id": "doc-ac3dcb73a7193adcc4f4e72c97a201d8"
+  },
+  "doc-51dd4419f8420be899aa1a6af7826e32": {
+    "relation_pairs": [
+      [
+        "<Part 36",
+        "Uniform Contract Format"
+      ],
+      [
+        "<Construction and Architect-Engineer Contracts",
+        "Uniform Contract Format"
+      ],
+      [
+        "<Contracts Exempted by Agency Head or Designee",
+        "Uniform Contract Format"
+      ],
+      [
+        "<15.203 (e)",
+        "Uniform Contract Format"
+      ],
+      [
+        "<Subsistence Contracts",
+        "Uniform Contract Format"
+      ],
+      [
+        "<Letter Requests for Proposals",
+        "Uniform Contract Format"
+      ],
+      [
+        "<Supplies or Services Contracts",
+        "Uniform Contract Format"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1782212853,
+    "update_time": 1782212853,
+    "_id": "doc-51dd4419f8420be899aa1a6af7826e32"
+  }
+}

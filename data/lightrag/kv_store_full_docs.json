@@ -1,0 +1,852 @@
+{
+  "doc-4203a6dfab9722fa7f215d8b09e31d94": {
+    "content": "15.202  Advisory multi-step process. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            The agency may publish a presolicitation notice (see  5.204 ) that provides a general description of the scope or purpose of the acquisition and invites potential offerors to submit information that allows the Government to advise the offerors about their potential to be viable competitors. The presolicitation notice should identify the information that must be submitted and the criteria that will be used in making the initial evaluation. Information sought may be limited to a statement of qualifications and other appropriate information ( e.g.,  proposed technical concept, past performance, and limited pricing information). At a minimum, the notice shall contain sufficient information to permit a potential offeror to make an informed decision about whether to participate in the acquisition. This process should not be used for multi-step acquisitions where it would result in offerors being required to submit identical information in response to the notice and in response to the initial step of the acquisition. \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            The agency shall evaluate all responses in accordance with the criteria stated in the notice, and shall advise each respondent in writing either that it will be invited to participate in the resultant acquisition or, based on the information submitted, that it is unlikely to be a viable competitor. The agency shall advise respondents considered not to be viable competitors of the general basis for that opinion. The agency shall inform all respondents that, notwithstanding the advice provided by the Government in response to their submissions, they may participate in the resultant acquisition.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "4203a6dfab9722fa7f215d8b09e31d94",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-4203a6dfab9722fa7f215d8b09e31d94"
+  },
+  "doc-8307fa18b297b3e4ece0b76bb0b726f3": {
+    "content": "15.303  Responsibilities. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Agency heads are responsible for source selection. The contracting officer is designated as the source selection authority, unless the agency head appoints another individual for a particular acquisition or group of acquisitions. \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            The source selection authority shall- \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                Establish an evaluation team, tailored for the particular acquisition, that includes appropriate contracting, legal, logistics, technical, and other expertise to ensure a comprehensive evaluation of offers; \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                Approve the source selection strategy or acquisition plan, if applicable, before solicitation release; \n                   \n                   \n                      \n                         (3) \n                        \n\t\t\t\t\t\t\t\t                Ensure consistency among the solicitation requirements, notices to offerors, proposal preparation instructions, evaluation factors and subfactors, solicitation provisions or contract clauses, and data requirements; \n                   \n                   \n                      \n                         (4)  Ensure that proposals are evaluated based solely on the factors and subfactors contained in the solicitation ( 10 U.S.C. 3303(c) \n                           \n                         and  41 U.S.C. 3703(c) ); \n                   \n                   \n                      \n                         (5) \n                        \n\t\t\t\t\t\t\t\t                Consider the recommendations of advisory boards or panels (if any); and \n                   \n                   \n                      \n                         (6)  Select the source or sources whose proposal is the best value to the Government ( 10 U.S.C. 3303(c) \n                           \n                         and  41 U.S.C. 3703(c) ). \n                   \n                \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            The contracting officer shall- \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                After release of a solicitation, serve as the focal point for inquiries from actual or prospective offerors; \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                After receipt of proposals, control exchanges with offerors in accordance with  15.306 ; and \n                   \n                   \n                      \n                         (3) \n                        \n\t\t\t\t\t\t\t\t                Award the contract(s).",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "8307fa18b297b3e4ece0b76bb0b726f3",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-8307fa18b297b3e4ece0b76bb0b726f3"
+  },
+  "doc-bbf1cc688706dd430bfe505423cb9745": {
+    "content": "15.101-1  Tradeoff process. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            A tradeoff process is appropriate when it may be in the best interest of the Government to consider award to other than the lowest priced offeror or other than the highest technically rated offeror. \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            When using a tradeoff process, the following apply: \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                All evaluation factors and significant subfactors that will affect contract award and their relative importance shall be clearly stated in the solicitation; and \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                The solicitation shall state whether all evaluation factors other than cost or price, when combined, are significantly more important than, approximately equal to, or significantly less important than cost or price. \n                   \n                \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            This process permits tradeoffs among cost or price and non-cost factors and allows the Government to accept other than the lowest priced proposal. The perceived benefits of the higher priced proposal shall merit the additional cost, and the rationale for tradeoffs must be documented in the file in accordance with  15.406 .",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "bbf1cc688706dd430bfe505423cb9745",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-bbf1cc688706dd430bfe505423cb9745"
+  },
+  "doc-fa176fbf86c661d571c76c0a78e7229f": {
+    "content": "The currency and relevance of the information, source of the information, context of the data, and general trends in contractor’s performance shall be considered. This comparative assessment of past performance information is separate from the responsibility determination required under  subpart  9.1 . \n                         \n                         \n                            \n                               (ii) \n                              \n                              \n\t\t\t\t\t\t\t\t\t\t                    The solicitation shall describe the approach for evaluating past performance, including evaluating offerors with no relevant performance history, and shall provide offerors an opportunity to identify past or current contracts (including Federal, State, and local government and private) for efforts similar to the Government requirement. The solicitation shall also authorize offerors to provide information on problems encountered on the identified contracts and the offeror’s corrective actions. The Government shall consider this information, as well as information obtained from any other sources, when evaluating the offeror’s past performance. The source selection authority shall determine the relevance of similar past performance information. \n                         \n                         \n                            \n                               (iii) \n                              \n                              \n\t\t\t\t\t\t\t\t\t\t                    The evaluation should take into account past performance information regarding predecessor companies, key personnel who have relevant experience, or subcontractors that will perform major or critical aspects of the requirement when such information is relevant to the instant acquisition. \n                         \n                         \n                            \n                               (iv) \n                              \n                              \n\t\t\t\t\t\t\t\t\t\t                    In the case of an offeror without a record of relevant past performance or for whom information on past performance is not available, the offeror may not be evaluated favorably or unfavorably on past performance. \n                         \n                         \n                            \n                               (v) \n                              \n                              \n\t\t\t\t\t\t\t\t\t\t                    The evaluation should include the past performance of offerors in complying with subcontracting plan goals for small disadvantaged business (SDB) concerns (see  subpart  19.7 ). \n                         \n                         \n                            \n                               (vi) \n                              For offerors that are joint ventures, the evaluation shall take into account past performance of the joint venture. If the joint venture does not demonstrate past performance for award, the contracting officer shall consider the past performance of each party to the joint venture.\n                            \n                         \n                      \n                   \n                   \n                      \n                         (3) \n                         Technical evaluation .",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "fa176fbf86c661d571c76c0a78e7229f",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-fa176fbf86c661d571c76c0a78e7229f"
+  },
+  "doc-456bc0aa9d9c468eb1a793f3f4dea078": {
+    "content": "15.302  Source selection objective. \n       \n          The objective of source selection is to select the proposal that represents the best value.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "456bc0aa9d9c468eb1a793f3f4dea078",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-456bc0aa9d9c468eb1a793f3f4dea078"
+  },
+  "doc-bede8af7c1fa0fd5550eb6445c784a43": {
+    "content": "(B) \n                                    \n\t\t\t\t\t\t\t\t\t\t\t\t                        If the contracting officer chooses not to include price or cost as an evaluation factor for the contract award, in accordance with paragraph (c)(1)(ii)(A) of this section, the contracting officer shall consider price or cost as one of the factors in the selection decision for each order placed under the contract. \n                               \n                               \n                                  \n                                     (C) \n                                    \n\t\t\t\t\t\t\t\t\t\t\t\t                        The exception in paragraph (c)(1)(ii)(A) of this section shall not apply to solicitations for multiple-award contracts that provide for sole source orders pursuant to section 8(a) of the Small Business Act ( 15 U.S.C. 637 (a)). \n                               \n                            \n                         \n                      \n                   \n                   \n                      \n                         (2)  The quality of the product or service shall be addressed in every source selection through consideration of one or more non-cost evaluation factors such as past performance, compliance with solicitation requirements, technical excellence, management capability, personnel qualifications, and prior experience ( 10 U.S.C. 3206(c)(1)(A)  and  41 U.S.C. 3306(c)(1)(A) ); and \n                   \n                   \n                      \n                         (3) \n                      \n                      \n                         \n                            \n                               (i) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Past performance, except as set forth in paragraph (c)(3)(iii) of this section, shall be evaluated in all source selections for negotiated competitive acquisitions expected to exceed the simplified acquisition threshold. \n                         \n                         \n                            \n                               (ii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    For solicitations that are not set aside for small business concerns, involving consolidation or bundling, that offer a significant opportunity for subcontracting, the contracting officer shall include a factor to evaluate past performance indicating the extent to which the offeror attained applicable goals for small business participation under contracts that required subcontracting plans ( 15 U.S.C. 637(d)(4)(G)(ii) ). \n                         \n                         \n                            \n                               (iii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Past performance need not be evaluated if the contracting officer documents the reason past performance is not an appropriate evaluation factor for the acquisition.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "bede8af7c1fa0fd5550eb6445c784a43",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-bede8af7c1fa0fd5550eb6445c784a43"
+  },
+  "doc-e909bee63b73d9c94ea656edf17704ac": {
+    "content": "15.208  Submission, modification, revision, and withdrawal of proposals. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Offerors are responsible for submitting proposals, and any revisions, and modifications, so as to reach the Government office designated in the solicitation by the time specified in the solicitation. Offerors may use any transmission method authorized by the solicitation ( i.e.,  regular mail, electronic commerce, or facsimile). If no time is specified in the solicitation, the time for receipt is 4:30 p.m., local time, for the designated Government office on the date that proposals are due. \n             \n             \n                \n                   (b) \n                \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                Any proposal, modification, or revision, that is received at the designated Government office after the exact time specified for receipt of proposals is \"late\" and will not be considered unless it is received before award is made, the contracting officer determines that accepting the late proposal would not unduly delay the acquisition; and- \n                      \n                         \n                            \n                               (i) \n                              \n\t\t\t\t\t\t\t\t\t\t                    If it was transmitted through an electronic commerce method authorized by the solicitation, it was received at the initial point of entry to the Government infrastructure not later than 5:00 p.m. one working day prior to the date specified for receipt of proposals; or \n                         \n                         \n                            \n                               (ii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    There is acceptable evidence to establish that it was received at the Government installation designated for receipt of proposals and was under the Government’s control prior to the time set for receipt of proposals; or \n                         \n                         \n                            \n                               (iii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    It was the only proposal received. \n                         \n                      \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                However, a late modification of an otherwise successful proposal, that makes its terms more favorable to the Government, will be considered at any time it is received and may be accepted. \n                   \n                \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            Acceptable evidence to establish the time of receipt at the Government installation includes the time/date stamp of that installation on the proposal wrapper, other documentary evidence of receipt maintained by the installation, or oral testimony or statements of Government personnel.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "e909bee63b73d9c94ea656edf17704ac",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-e909bee63b73d9c94ea656edf17704ac"
+  },
+  "doc-a5bfbf0428323ec475b2cd479e56717f": {
+    "content": "(d) \n                  \n\t\t\t\t\t\t            Contracting officers may issue RFPs and/or authorize receipt of proposals, modifications, or revisions by facsimile. \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                In deciding whether or not to use facsimiles, the contracting officer should consider factors such as- \n                      \n                         \n                            \n                               (i) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Anticipated proposal size and volume; \n                         \n                         \n                            \n                               (ii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Urgency of the requirement; \n                         \n                         \n                            \n                               (iii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Availability and suitability of electronic commerce methods; and \n                         \n                         \n                            \n                               (iv) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Adequacy of administrative procedures and controls for receiving, identifying, recording, and safeguarding facsimile proposals, and ensuring their timely delivery to the designated proposal delivery location. \n                         \n                      \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                If facsimile proposals are authorized, contracting officers may request offeror(s) to provide the complete, original signed proposal at a later date. \n                   \n                \n             \n             \n                \n                   (e) \n                  \n\t\t\t\t\t\t            Letter RFPs may be used in sole source acquisitions and other appropriate circumstances. Use of a letter RFP does not relieve the contracting officer from complying with other FAR requirements.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "a5bfbf0428323ec475b2cd479e56717f",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-a5bfbf0428323ec475b2cd479e56717f"
+  },
+  "doc-f117e6360ccb012cb010224c7aa70f17": {
+    "content": "If the joint venture does not demonstrate past performance for award, the contracting officer shall consider the past performance of each party to the joint venture.\n                            \n                         \n                      \n                   \n                   \n                      \n                         (3) \n                         Technical evaluation . When tradeoffs are performed (see  15.101-1 ), the source selection records shall include- \n                      \n                         \n                            \n                               (i) \n                              \n                              \n\t\t\t\t\t\t\t\t\t\t                    An assessment of each offeror’s ability to accomplish the technical requirements; and \n                         \n                         \n                            \n                               (ii) \n                              \n                              \n\t\t\t\t\t\t\t\t\t\t                    A summary, matrix, or quantitative ranking, along with appropriate supporting narrative, of each technical proposal using the evaluation factors. \n                         \n                      \n                   \n                   \n                      \n                         (4) \n                         Cost information.  Cost information may be provided to members of the technical evaluation team in accordance with agency procedures. \n                   \n                   \n                      \n                         (5) \n                        \n                        \n\t\t\t\t\t\t\t\t                S mall business subcontracting evaluation.  Solicitations must be structured to give offers from small business concerns the highest rating for the evaluation factors in  15.304 (c)(3)(ii) and (c)(4). \n                   \n                \n             \n             \n                \n                   (b) \n                  \n                  \n\t\t\t\t\t\t            The source selection authority may reject all proposals received in response to a solicitation, if doing so is in the best interest of the Government. \n             \n             \n                \n                   (c) \n                  \n                  \n\t\t\t\t\t\t            For restrictions on the use of support contractor personnel in proposal evaluation, see  37.203 (d).",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "f117e6360ccb012cb010224c7aa70f17",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-f117e6360ccb012cb010224c7aa70f17"
+  },
+  "doc-4753a1aa202f5509eaf2de32e5e82f8c": {
+    "content": "15.300  Scope of subpart. \n       \n          This subpart prescribes policies and procedures for selection of a source or sources in competitive negotiated acquisitions.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "4753a1aa202f5509eaf2de32e5e82f8c",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-4753a1aa202f5509eaf2de32e5e82f8c"
+  },
+  "doc-3c8658f6ff895cbdf8dd72df8a08f90f": {
+    "content": "15.206  Amending the solicitation. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            When, either before or after receipt of proposals, the Government changes its requirements or terms and conditions, the contracting officer shall amend the solicitation. \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            Amendments issued before the established time and date for receipt of proposals shall be issued to all parties receiving the solicitation. \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            Amendments issued after the established time and date for receipt of proposals shall be issued to all offerors that have not been eliminated from the competition. \n             \n             \n                \n                   (d) \n                  \n\t\t\t\t\t\t            If a proposal of interest to the Government involves a departure from the stated requirements, the contracting officer shall amend the solicitation, provided this can be done without revealing to the other offerors the alternate solution proposed or any other information that is entitled to protection (see  15.207 (b) and  15.306 (e)). \n             \n             \n                \n                   (e) \n                  \n\t\t\t\t\t\t            If, in the judgment of the contracting officer, based on market research or otherwise, an amendment proposed for issuance after offers have been received is so substantial as to exceed what prospective offerors reasonably could have anticipated, so that additional sources likely would have submitted offers had the substance of the amendment been known to them, the contracting officer shall cancel the original solicitation and issue a new one, regardless of the stage of the acquisition. \n             \n             \n                \n                   (f) \n                  \n\t\t\t\t\t\t            Oral notices may be used when time is of the essence. The contracting officer shall document the contract file and formalize the notice with an amendment (see  subpart  4.5 , Electronic Commerce in Contracting). \n             \n             \n                \n                   (g) \n                  \n\t\t\t\t\t\t            At a minimum, the following information should be included in each amendment: \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                Name and address of issuing activity. \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                Solicitation number and date. \n                   \n                   \n                      \n                         (3) \n                        \n\t\t\t\t\t\t\t\t                Amendment number and date. \n                   \n                   \n                      \n                         (4) \n                        \n\t\t\t\t\t\t\t\t                Number of pages. \n                   \n                   \n                      \n                         (5) \n                        \n\t\t\t\t\t\t\t\t                Description of the change being made.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "3c8658f6ff895cbdf8dd72df8a08f90f",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-3c8658f6ff895cbdf8dd72df8a08f90f"
+  },
+  "doc-7fdb7d26d3fe2133b42da0e45161f159": {
+    "content": "15.204-2  Part I-The Schedule. \n       \n          The contracting officer shall prepare the contract Schedule as follows: \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Section A, Solicitation/contract form. \n                \n                   \n                      \n                         (1) \n                         Optional Form (OF) 308 , Solicitation and Offer-Negotiated Acquisition, or  Standard Form (SF) 33 , Solicitation, Offer and Award, may be used to prepare RFPs. \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                When other than  OF 308  or  SF 33  is used, include the following information on the first page of the solicitation: \n                      \n                         \n                            \n                               (i) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Name, address, and location of issuing activity, including room and building where proposals or information must be submitted. \n                         \n                         \n                            \n                               (ii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Solicitation number. \n                         \n                         \n                            \n                               (iii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Date of issuance. \n                         \n                         \n                            \n                               (iv) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Closing date and time. \n                         \n                         \n                            \n                               (v) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Number of pages. \n                         \n                         \n                            \n                               (vi) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Requisition or other purchase authority. \n                         \n                         \n                            \n                               (vii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Brief description of item or service. \n                         \n                         \n                            \n                               (viii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Requirement for the offeror to provide its name and complete address, including street, city, county, state, and ZIP code, and electronic address (including facsimile address), if appropriate. \n                         \n                         \n                            \n                               (ix) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Offer expiration date. \n                         \n                      \n                   \n                \n             \n             \n                \n                   (b) \n                   Section B, Supplies or services and prices/costs . Include a brief description of the supplies or services;  e.g.,  item number, national stock number/part number if applicable, nouns, nomenclature, and quantities. (This includes incidental deliverables such as manuals and reports.) \n             \n             \n                \n                   (c) \n                   Section C, Description/specifications/statement of work . Include any description or specifications needed in addition to Section B (see  part  11 , Describing Agency Needs).",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "7fdb7d26d3fe2133b42da0e45161f159",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-7fdb7d26d3fe2133b42da0e45161f159"
+  },
+  "doc-db49040870203ca440941cb0a7037ccf": {
+    "content": "15.102  Oral presentations. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Oral presentations by offerors as requested by the Government may substitute for, or augment, written information. Use of oral presentations as a substitute for portions of a proposal can be effective in streamlining the source selection process. Oral presentations may occur at any time in the acquisition process, and are subject to the same restrictions as written information, regarding timing (see  15.208 ) and content (see  15.306 ). Oral presentations provide an opportunity for dialogue among the parties. Pre-recorded videotaped presentations that lack real-time interactive dialogue are not considered oral presentations for the purposes of this section, although they may be included in offeror submissions, when appropriate. \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            The solicitation may require each offeror to submit part of its proposal through oral presentations. However, representations and certifications shall be submitted as required in the FAR provisions at  52.204-8 (d) or  52.212-3 (b), and a signed offer sheet (including any exceptions to the Government’s terms and conditions) shall be submitted in writing. \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            Information pertaining to areas such as an offeror’s capability, past performance, work plans or approaches, staffing resources, transition plans, or sample tasks (or other types of tests) may be suitable for oral presentations. In deciding what information to obtain through an oral presentation, consider the following: \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                The Government’s ability to adequately evaluate the information; \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                The need to incorporate any information into the resultant contract; \n                   \n                   \n                      \n                         (3) \n                        \n\t\t\t\t\t\t\t\t                The impact on the efficiency of the acquisition; and \n                   \n                   \n                      \n                         (4) \n                        \n\t\t\t\t\t\t\t\t                The impact (including cost) on small businesses. In considering the costs of oral presentations, contracting officers should also consider alternatives to on-site oral presentations ( e.g.,  teleconferencing, video teleconferencing). \n                   \n                \n             \n             \n                \n                   (d) \n                  \n\t\t\t\t\t\t            When oral presentations are required, the solicitation shall provide offerors with sufficient information to prepare them.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "db49040870203ca440941cb0a7037ccf",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-db49040870203ca440941cb0a7037ccf"
+  },
+  "doc-cfcf172eeeeba354449b6cf11d6acc94": {
+    "content": "Some techniques to promote early exchanges of information are- \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                Industry or small business conferences; \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                Public hearings; \n                   \n                   \n                      \n                         (3) \n                        \n\t\t\t\t\t\t\t\t                Market research, as described in  part  10 ; \n                   \n                   \n                      \n                         (4) \n                        \n\t\t\t\t\t\t\t\t                One-on-one meetings with potential offerors (any that are substantially involved with potential contract terms and conditions should include the contracting officer; also see paragraph (f) of this section regarding restrictions on disclosure of information); \n                   \n                   \n                      \n                         (5) \n                        \n\t\t\t\t\t\t\t\t                Presolicitation notices; \n                   \n                   \n                      \n                         (6) \n                        \n\t\t\t\t\t\t\t\t                Draft RFPs; \n                   \n                   \n                      \n                         (7) \n                        \n\t\t\t\t\t\t\t\t                RFIs; \n                   \n                   \n                      \n                         (8) \n                        \n\t\t\t\t\t\t\t\t                Presolicitation or preproposal conferences; and \n                   \n                   \n                      \n                         (9) \n                        \n\t\t\t\t\t\t\t\t                Site visits. \n                   \n                \n             \n             \n                \n                   (d) \n                  \n\t\t\t\t\t\t            The special notices of procurement matters at  5.205 (c), or electronic notices, may be used to publicize the Government’s requirement or solicit information from industry. \n             \n             \n                \n                   (e) \n                  \n\t\t\t\t\t\t            RFIs may be used when the Government does not presently intend to award a contract, but wants to obtain price, delivery, other market information, or capabilities for planning purposes. Responses to these notices are not offers and cannot be accepted by the Government to form a binding contract. There is no required format for RFIs. \n             \n             \n                \n                   (f) \n                  \n\t\t\t\t\t\t            General information about agency mission needs and future requirements may be disclosed at any time. After release of the solicitation, the contracting officer must be the focal point of any exchange with potential offerors. When specific information about a proposed acquisition that would be necessary for the preparation of proposals is disclosed to one or more potential offerors, that information must be made available to the public as soon as practicable, but no later than the next general release of information, in order to avoid creating an unfair competitive advantage.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "cfcf172eeeeba354449b6cf11d6acc94",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-cfcf172eeeeba354449b6cf11d6acc94"
+  },
+  "doc-d923f3cb85ebadc88214aedf9a6c0e77": {
+    "content": "(This includes incidental deliverables such as manuals and reports.) \n             \n             \n                \n                   (c) \n                   Section C, Description/specifications/statement of work . Include any description or specifications needed in addition to Section B (see  part  11 , Describing Agency Needs). \n             \n             \n                \n                   (d) \n                   Section D, Packaging and marking . Provide packaging, packing, preservation, and marking requirements, if any. \n             \n             \n                \n                   (e) \n                   Section E, Inspection and acceptance . Include inspection, acceptance, quality assurance, and reliability requirements (see  part  46 , Quality Assurance). \n             \n             \n                \n                   (f) \n                   Section F, Deliveries or performance . Specify the requirements for time, place, and method of delivery or performance (see  subpart  11.4 , Delivery or Performance Schedules, and  47.301-1 ). \n             \n             \n                \n                   (g) \n                   Section G, Contract administration data . Include any required accounting and appropriation data and any required contract administration information or instructions other than those on the solicitation form. Include a statement that the offeror should include the payment address in the proposal, if it is different from that shown for the offeror. \n             \n             \n                \n                   (h) \n                   Section H, Special contract requirements . Include a clear statement of any special contract requirements that are not included in Section I, Contract clauses, or in other sections of the uniform contract format.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "d923f3cb85ebadc88214aedf9a6c0e77",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-d923f3cb85ebadc88214aedf9a6c0e77"
+  },
+  "doc-9ab76433eb7f55122847e849d623b22a": {
+    "content": "15.101  Best value continuum. \n       \n          An agency can obtain best value in negotiated acquisitions by using any one or a combination of source selection approaches. In different types of acquisitions, the relative importance of cost or price may vary. For example, in acquisitions where the requirement is clearly definable and the risk of unsuccessful contract performance is minimal, cost or price may play a dominant role in source selection. The less definitive the requirement, the more development work required, or the greater the performance risk, the more technical or past performance considerations may play a dominant role in source selection.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "9ab76433eb7f55122847e849d623b22a",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-9ab76433eb7f55122847e849d623b22a"
+  },
+  "doc-6c6792d5281c991e2cc7c8ab64ba40e4": {
+    "content": "15.101-3  \tTiered evaluation of small business offers. \n       \n          An agency shall not create a tiered (or \"cascading\") evaluation of offers, as described in  13 CFR 125.2 , for multiple-award contracts unless an agency has statutory authority.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "6c6792d5281c991e2cc7c8ab64ba40e4",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-6c6792d5281c991e2cc7c8ab64ba40e4"
+  },
+  "doc-937a249dbf51cd8d0774543de6ad6bcb": {
+    "content": "15.304  Evaluation factors and significant subfactors. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            The award decision is based on evaluation factors and significant subfactors that are tailored to the acquisition. \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            Evaluation factors and significant subfactors must- \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                Represent the key areas of importance and emphasis to be considered in the source selection decision; and \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                Support meaningful comparison and discrimination between and among competing proposals. \n                   \n                \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            The evaluation factors and significant subfactors that apply to an acquisition and their relative importance, are within the broad discretion of agency acquisition officials, subject to the following requirements: \n                \n                   \n                      \n                         (1) \n                      \n                      \n                         \n                            \n                               (i)  Price or cost to the Government shall be evaluated in every source selection ( 10 U.S.C. 3206(c)(1)(B) \n                                 \n                               and  41 U.S.C.3306 (c)(1)(B)(also see part  36 for architect-engineer contracts), subject to the exception listed in paragraph (c)(1)(ii)(A) of this section for use by DoD, NASA, and the Coast Guard. \n                         \n                         \n                            \n                               (ii)  In accordance with \n                                  10 U.S.C. 3206(c) , for DoD, NASA, and the Coast Guard— \n                            \n                               \n                                  \n                                     (A) \n                                    \n\t\t\t\t\t\t\t\t\t\t\t\t                        The contracting officer may choose not to include price or cost as an evaluation factor for award when a solicitation— \n                                  \n                                     \n                                        \n                                           (1) \n                                          \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            Has an estimated value above the simplified acquisition threshold; \n                                     \n                                     \n                                        \n                                           (2) \n                                          \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            Will result in multiple-award contracts (see subpart   16.5 ) that are for the same or similar services; and \n                                     \n                                     \n                                        \n                                           (3) \n                                          \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            States that the Government intends to make an award to each and all qualifying offerors (see 2.101).",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "937a249dbf51cd8d0774543de6ad6bcb",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-937a249dbf51cd8d0774543de6ad6bcb"
+  },
+  "doc-2942be15ad724bce0a8100b9a92763a0": {
+    "content": "15.306  Exchanges with offerors\nafter receipt of proposals. \n       \n          \n             \n                \n                   (a)  Clarifications and award without\ndiscussions. \n                \n                   \n                      \n                         (1)  Clarifications are limited exchanges,\nbetween the Government and offerors, that may occur when award without\ndiscussions is contemplated. \n                   \n                   \n                      \n                         (2)  If award\nwill be made without conducting discussions, offerors may be given\nthe opportunity to clarify certain aspects of proposals ( e.g.,  the\nrelevance of an offeror’s past performance information and adverse\npast performance information to which the offeror has not previously\nhad an opportunity to respond) or to resolve minor or clerical errors. \n                   \n                   \n                      \n                         (3)  Award may be made without discussions if the solicitation states that the Government intends to evaluate proposals and make award without discussions. If the solicitation contains such a notice and the Government determines it is necessary to conduct discussions, the rationale for doing so shall be documented in the contract file (see the provision at  52.215-1 ) ( 10 U.S.C. 3303(a)(2) \n                           \n                         and  41 U.S.C. 3703(a)(2) ). \n                   \n                \n             \n             \n                \n                   (b) \n                   Communications\nwith offerors before establishment of the competitive range .\nCommunications are exchanges, between the Government and offerors,\nafter receipt of proposals, leading to establishment of the competitive\nrange. If a competitive range is to be established, these communications- \n                \n                   \n                      \n                         (1)  Shall\nbe limited to the offerors described in paragraphs (b)(1)(i) and\n(b)(1)(ii) of this section and- \n                      \n                         \n                            \n                               (i)  Shall be held\nwith offerors whose past performance information is the determining\nfactor preventing them from being placed within the competitive\nrange.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "2942be15ad724bce0a8100b9a92763a0",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-2942be15ad724bce0a8100b9a92763a0"
+  },
+  "doc-97627481b1b459ea6a4e425cc66241ea": {
+    "content": "637(d)(4)(G)(ii) ). \n                         \n                         \n                            \n                               (iii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Past performance need not be evaluated if the contracting officer documents the reason past performance is not an appropriate evaluation factor for the acquisition. \n                         \n                      \n                   \n                   \n                      \n                         (4) \n                        \n\t\t\t\t\t\t\t\t                For solicitations, that are not set aside for small business concerns, involving consolidation or bundling, that offer a significant opportunity for subcontracting, the contracting officer shall include proposed small business subcontracting participation in the subcontracting plan as an evaluation factor ( 15 U.S.C. 637(d)(4)(G)(i) ). \n                   \n                   \n                      \n                         (5) \n                        \n\t\t\t\t\t\t\t\t                If telecommuting is not prohibited, agencies shall not unfavorably evaluate an offer that includes telecommuting unless the contracting officer executes a written determination in accordance with FAR  7.108 (b). \n                   \n                \n             \n             \n                \n                   (d)  All factors and significant subfactors that will affect contract award and their relative importance shall be stated clearly in the solicitation ( 10 U.S.C. 3206(b)(1)  and  41 U.S.C. 3306(b)(1) ) (see  15.204-5 (c)). The rating method need not be disclosed in the solicitation. The general approach for evaluating past performance information shall be described. \n             \n             \n                \n                   (e) \n                  \n\t\t\t\t\t\t            Unless the exception at paragraph (c)(1)(ii)(A) of this section applies, the solicitation shall also state, at a minimum, whether all evaluation factors other than cost or price, when combined, are— \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                Significantly more important than cost or price; \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                Approximately equal to cost or price; or \n                   \n                   \n                      \n                         (3)  Significantly less important than cost or price ( 10 U.S.C. 3206(c)(1)(C) \n                           \n                         and  41 U.S.C. 3306(c)(1)(C) ).",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "97627481b1b459ea6a4e425cc66241ea",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-97627481b1b459ea6a4e425cc66241ea"
+  },
+  "doc-f02b760cf056bee52765add5ae1226d1": {
+    "content": "15.204-1  Uniform contract format. \n       \n          \n             \n                \n                   (a)  Contracting officers shall prepare\nsolicitations and resulting contracts using the uniform contract\nformat outlined in Table 15-1 of this subsection. \n             \n             \n                \n                   (b)  Solicitations\nusing the uniform contract format shall include Parts I, II, III,\nand IV (see  15.204-2  through  15.204-5 ). Upon award,\ncontracting officers shall not physically include Part IV in the\nresulting contract, but shall retain it in the contract file. (See  4.1201 (c).) The representations\nand certifications are incorporated by reference in the contract\nby using  52.204-19  (see  4.1202 (b)) or for acquisitions\nof commercial products\nand commercial services see  52.212-4 (v). \n             \n          \n          \n             Table\n15-1 - Uniform Contract Format \n             \n                \n                \n                \n                   \n                      Section \n                      Title \n                   \n                \n                \n                   \n                      Part\nI-The Schedule \n                   \n                   \n                      \n                         A \n                      \n                      Solicitation/contract\nform \n                   \n                   \n                      \n                         B \n                      \n                      Supplies\nor services and prices/costs \n                   \n                   \n                      \n                         C \n                      \n                      Description/specifications/statement\nof work \n                   \n                   \n                      \n                         D \n                      \n                      Packaging\nand marking \n                   \n                   \n                      \n                         E \n                      \n                      Inspection\nand acceptance \n                   \n                   \n                      \n                         F \n                      \n                      Deliveries\nor performance \n                   \n                   \n                      \n                         G \n                      \n                      Contract\nadministration data \n                   \n                   \n                      \n                         H \n                      \n                      Special\ncontract requirements \n                   \n                   \n                      Part\nII-Contract Clauses \n                   \n                   \n                      \n                         I \n                      \n                      Contract\nclauses \n                   \n                   \n                      Part\nIII-List of Documents, Exhibits, and Other Attachments \n                   \n                   \n                      \n                         J \n                      \n                      List\nof attachments \n                   \n                   \n                      Part\nIV-Representations and Instructions \n                   \n                   \n                      \n                         K \n                      \n                      Representations,\ncertifications, and other statements of offerors or respondents \n                   \n                   \n                      \n                         L \n                      \n                      Instructions,\nconditions, and notices to offerors or respondents \n                   \n                   \n                      \n                         M \n                      \n                      Evaluation\nfactors for award",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "f02b760cf056bee52765add5ae1226d1",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-f02b760cf056bee52765add5ae1226d1"
+  },
+  "doc-fdcfb8e97b2270006b5fc85a094b224c": {
+    "content": "15.002  Types of negotiated acquisition. \n       \n          \n             \n                \n                   (a) \n                   Sole source acquisitions.  When contracting in a sole source environment, the request for proposals (RFP) should be tailored to remove unnecessary information and requirements;  e.g.,  evaluation criteria and voluminous proposal preparation instructions. \n             \n             \n                \n                   (b) \n                   Competitive acquisitions . When contracting in a competitive environment, the procedures of this part are intended to minimize the complexity of the solicitation, the evaluation, and the source selection decision, while maintaining a process designed to foster an impartial and comprehensive evaluation of offerors’ proposals, leading to selection of the proposal representing the best value to the Government (see  2.101 ).",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "fdcfb8e97b2270006b5fc85a094b224c",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-fdcfb8e97b2270006b5fc85a094b224c"
+  },
+  "doc-b1ecc7f5982b9a56a22954d37209b4cc": {
+    "content": "(e) \n                  \n\t\t\t\t\t\t            Letter RFPs may be used in sole source acquisitions and other appropriate circumstances. Use of a letter RFP does not relieve the contracting officer from complying with other FAR requirements. Letter RFPs should be as complete as possible and, at a minimum, should contain the following: \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                RFP number and date; \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                Name, address (including electronic address and facsimile address, if appropriate), and telephone number of the contracting officer; \n                   \n                   \n                      \n                         (3) \n                        \n\t\t\t\t\t\t\t\t                Type of contract contemplated; \n                   \n                   \n                      \n                         (4) \n                        \n\t\t\t\t\t\t\t\t                Quantity, description, and required delivery dates for the item; \n                   \n                   \n                      \n                         (5) \n                        \n\t\t\t\t\t\t\t\t                Applicable certifications and representations; \n                   \n                   \n                      \n                         (6) \n                        \n\t\t\t\t\t\t\t\t                Anticipated contract terms and conditions; \n                   \n                   \n                      \n                         (7) \n                        \n\t\t\t\t\t\t\t\t                Instructions to offerors and evaluation criteria for other than sole source actions; \n                   \n                   \n                      \n                         (8) \n                        \n\t\t\t\t\t\t\t\t                Proposal due date and time; and \n                   \n                   \n                      \n                         (9) \n                        \n\t\t\t\t\t\t\t\t                Other relevant information;  e.g.,  incentives, variations in delivery schedule, cost proposal support, and data requirements. \n                   \n                \n             \n             \n                \n                   (f) \n                  \n\t\t\t\t\t\t            Oral RFPs are authorized when processing a written solicitation would delay the acquisition of supplies or services to the detriment of the Government and a notice is not required under  5.202 ( e.g.,  perishable items and support of contingency operations or other emergency situations). Use of an oral RFP does not relieve the contracting officer from complying with other FAR requirements.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "b1ecc7f5982b9a56a22954d37209b4cc",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-b1ecc7f5982b9a56a22954d37209b4cc"
+  },
+  "doc-216ef3624588c4d8ba2f0a7d927a0c70": {
+    "content": "15.204-4  Part III-List of Documents, Exhibits, and Other Attachments. \n       \n          \n             Section J, List of attachments . The contracting officer shall list the title, date, and number of pages for each attached document, exhibit, and other attachment. Cross-references to material in other sections may be inserted, as appropriate.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "216ef3624588c4d8ba2f0a7d927a0c70",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-216ef3624588c4d8ba2f0a7d927a0c70"
+  },
+  "doc-a9b24d8d9d1fbed4b3fcbf79bee08356": {
+    "content": "15.000  Scope of part. \n       \n          This part prescribes policies and procedures governing competitive and noncompetitive negotiated acquisitions. A contract awarded using other than sealed bidding procedures is a negotiated contract (see  14.101 ).",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "a9b24d8d9d1fbed4b3fcbf79bee08356",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-a9b24d8d9d1fbed4b3fcbf79bee08356"
+  },
+  "doc-1e580d532bb8459e87eef47da737bf4d": {
+    "content": "15.301  [Reserved]",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "1e580d532bb8459e87eef47da737bf4d",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-1e580d532bb8459e87eef47da737bf4d"
+  },
+  "doc-6eca0bd458a329d90a798631371e391f": {
+    "content": "15.201  Exchanges with industry before receipt of proposals. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Exchanges of information among all interested parties, from the earliest identification of a requirement through receipt of proposals, are encouraged. Any exchange of information must be consistent with procurement integrity requirements (see  3.104 ). Interested parties include potential offerors, end users, Government acquisition and supporting personnel, and others involved in the conduct or outcome of the acquisition. \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            The purpose of exchanging information is to improve the understanding of Government requirements and industry capabilities, thereby allowing potential offerors to judge whether or how they can satisfy the Government’s requirements, and enhancing the Government’s ability to obtain quality supplies and services, including construction, at reasonable prices, and increase efficiency in proposal preparation, proposal evaluation, negotiation, and contract award. \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            Agencies are encouraged to promote early exchanges of information about future acquisitions. An early exchange of information among industry and the program manager, contracting officer, and other participants in the acquisition process can identify and resolve concerns regarding the acquisition strategy, including proposed contract type, terms and conditions, and acquisition planning schedules; the feasibility of the requirement, including performance requirements, statements of work, and data requirements; the suitability of the proposal instructions and evaluation criteria, including the approach for assessing past performance information; the availability of reference documents; and any other industry concerns or questions.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "6eca0bd458a329d90a798631371e391f",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-6eca0bd458a329d90a798631371e391f"
+  },
+  "doc-a4fb44a50472ca98bb40f038cdaffc48": {
+    "content": "15.101-2  Lowest price technically\nacceptable source selection process. \n       \n          \n             \n                \n                   (a)  The lowest price technically acceptable\nsource selection process is appropriate when best value is expected\nto result from selection of the technically acceptable proposal\nwith the lowest evaluated price. \n             \n             \n                \n                   (b)  When using\nthe lowest price technically acceptable process, the following apply: \n                \n                   \n                      \n                         (1)  The\nevaluation factors and significant subfactors that establish the\nrequirements of acceptability shall be set forth in the solicitation.\nSolicitations shall specify that award will be made on the basis\nof the lowest evaluated price of proposals meeting or exceeding\nthe acceptability standards for non-cost factors. If the contracting\nofficer documents the file pursuant to  15.304 (c)(3)(iii), past\nperformance need not be an evaluation factor in lowest price technically\nacceptable source selections. If the contracting officer elects\nto consider past performance as an evaluation factor, it shall be evaluated\nin accordance with  15.305 .\nHowever, the comparative assessment in  15.305 (a)(2)(i) does not\napply. If the contracting officer determines that a small business’\npast performance is not acceptable, the matter shall be referred\nto the Small Business Administration for a Certificate of Competency\ndetermination, in accordance with the procedures contained in  subpart  19.6  and  15 U.S.C. 637(b)(7) ). \n                   \n                   \n                      \n                         (2)  Tradeoffs\nare not permitted. \n                   \n                   \n                      \n                         (3)  Proposals\nare evaluated for acceptability but not ranked using the non-cost/price\nfactors. \n                   \n                   \n                      \n                         (4)  Exchanges\nmay occur (see  15.306 ). \n                   \n                \n             \n             \n                \n                   (c) \n                  Except for DoD, in accordance\nwith section 880 of the John S. McCain National Defense Authorization\nAct for Fiscal Year 2019 (Pub. L. 115-232,  41 U.S.C.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "a4fb44a50472ca98bb40f038cdaffc48",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-a4fb44a50472ca98bb40f038cdaffc48"
+  },
+  "doc-57fca498e8ef8f0c8e2675ed4ea878f1": {
+    "content": "Such communications shall address adverse past performance\ninformation to which an offeror has not had a prior opportunity\nto respond; and \n                         \n                         \n                            \n                               (ii)  May only\nbe held with those offerors (other than offerors under paragraph\n(b)(1)(i) of this section) whose exclusion from, or inclusion in,\nthe competitive range is uncertain; \n                         \n                      \n                   \n                   \n                      \n                         (2)  May be conducted\nto enhance Government understanding of proposals; allow reasonable\ninterpretation of the proposal; or facilitate the Government’s evaluation\nprocess. Such communications shall not be used to cure proposal\ndeficiencies or material omissions, materially alter the technical\nor cost elements of the proposal, and/or otherwise revise the proposal.\nSuch communications may be considered in rating proposals for the\npurpose of establishing the competitive range; \n                   \n                   \n                      \n                         (3)  Are for\nthe purpose of addressing issues that must be explored to determine\nwhether a proposal should be placed in the competitive range. Such\ncommunications shall not provide an opportunity for the offeror\nto revise its proposal, but may address- \n                      \n                         \n                            \n                               (i)  Ambiguities\nin the proposal or other concerns ( e.g.,  perceived deficiencies,\nweaknesses, errors, omissions, or mistakes (see  14.407 )); and \n                         \n                         \n                            \n                               (ii)  Information\nrelating to relevant past performance; and \n                         \n                      \n                   \n                   \n                      \n                         (4)  Shall address\nadverse past performance information to which the offeror has not\npreviously had an opportunity to comment. \n                   \n                \n             \n             \n                \n                   (c)  Competitive\nrange. \n                \n                   \n                      \n                         (1)  Agencies shall evaluate all proposals\nin accordance with  15.305 (a),\nand, if discussions are to be conducted, establish the competitive\nrange. Based on the ratings of each proposal against all evaluation\ncriteria, the contracting officer shall establish a competitive\nrange comprised of all of the most highly rated proposals, unless the\nrange is further reduced for purposes of efficiency pursuant to\nparagraph (c)(2) of this section.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "57fca498e8ef8f0c8e2675ed4ea878f1",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-57fca498e8ef8f0c8e2675ed4ea878f1"
+  },
+  "doc-ce6df67b501cc65b8bf112bed214d0a5": {
+    "content": "15.001  Definitions. \n       \n          As used in this part- \n          \n             Deficiency  is a material failure of a proposal to meet a Government requirement or a combination of significant weaknesses in a proposal that increases the risk of unsuccessful contract performance to an unacceptable level. \n          \n             Proposal modification  is a change made to a proposal before the solicitation closing date and time, or made in response to an amendment, or made to correct a mistake at any time before award. \n          \n             Proposal revision  is a change to a proposal made after the solicitation closing date, at the request of or as allowed by a contracting officer, as the result of negotiations. \n          \n             Weakness  means a flaw in the proposal that increases the risk of unsuccessful contract performance. A \"significant weakness\" in the proposal is a flaw that appreciably increases the risk of unsuccessful contract performance.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "ce6df67b501cc65b8bf112bed214d0a5",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-ce6df67b501cc65b8bf112bed214d0a5"
+  },
+  "doc-f0d9484fb4b52204300a0ef443159763": {
+    "content": "(c) \n                  Except for DoD, in accordance\nwith section 880 of the John S. McCain National Defense Authorization\nAct for Fiscal Year 2019 (Pub. L. 115-232,  41 U.S.C. 3701  Note),\nthe lowest price technically acceptable source selection process\nshall only be used when—\n                \n                \n                   \n                      \n                         (1) \n                        The agency can comprehensively\nand clearly describe the minimum requirements in terms of performance\nobjectives, measures, and standards that will be used to determine\nthe acceptability of offers;\n                      \n                   \n                   \n                      \n                         (2) \n                        The agency would realize\nno, or minimal, value from a proposal that exceeds the minimum technical\nor performance requirements;\n                      \n                   \n                   \n                      \n                         (3) \n                        The agency believes the\ntechnical proposals will require no, or minimal, subjective judgment\nby the source selection authority as to the desirability of one\nofferor's proposal versus a competing proposal;\n                      \n                   \n                   \n                      \n                         (4) \n                        The agency has a high\ndegree of confidence that reviewing the technical proposals of all\nofferors would not result in the identification of characteristics\nthat could provide value or benefit to the agency;\n                      \n                   \n                   \n                      \n                         (5) \n                        The agency determined\nthat the lowest price reflects the total cost, including operation\nand support, of the product(s) or service(s) being acquired; and\n                      \n                   \n                   \n                      \n                         (6) \n                        The contracting officer\ndocuments the contract file describing the circumstances that justify\nthe use of the lowest price technically acceptable source selection\nprocess.\n                      \n                   \n                \n             \n             \n                \n                   (d) \n                  Except for DoD, in accordance\nwith section 880 of the John S. McCain National Defense Authorization\nAct for Fiscal Year 2019 (Pub. L. 115-232,  41 U.S.C.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "f0d9484fb4b52204300a0ef443159763",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-f0d9484fb4b52204300a0ef443159763"
+  },
+  "doc-06db059943ebc243f385e13bac5ffcda": {
+    "content": "15.207  Handling proposals and information. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Upon receipt at the location specified in the solicitation, proposals and information received in response to a request for information (RFI) shall be marked with the date and time of receipt and shall be transmitted to the designated officials. \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            Proposals shall be safeguarded from unauthorized disclosure throughout the source selection process. (See  3.104  regarding the disclosure of source selection information ( 41 U.S.C. chapter 21 , Restrictions on Obtaining and Disclosing Certain Information). Information received in response to an RFI shall be safeguarded adequately from unauthorized disclosure. \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            If any portion of a proposal received by the contracting officer electronically or by facsimile is unreadable, the contracting officer immediately shall notify the offeror and permit the offeror to resubmit the unreadable portion of the proposal. The method and time for resubmission shall be prescribed by the contracting officer after consultation with the offeror, and documented in the file. The resubmission shall be considered as if it were received at the date and time of the original unreadable submission for the purpose of determining timeliness under  15.208 (a), provided the offeror complies with the time and format requirements for resubmission prescribed by the contracting officer.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "06db059943ebc243f385e13bac5ffcda",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-06db059943ebc243f385e13bac5ffcda"
+  },
+  "doc-88d20415515262cde147c085a56a9f19": {
+    "content": "(h) \n                  \n\t\t\t\t\t\t            If available, the following must be included in the contracting office files for each late proposal, modification, revision, or withdrawal: \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                The date and hour of receipt. \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                A statement regarding whether the proposal was considered for award, with supporting rationale. \n                   \n                   \n                      \n                         (3) \n                        \n\t\t\t\t\t\t\t\t                The envelope, wrapper, or other evidence of date of receipt.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "88d20415515262cde147c085a56a9f19",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-88d20415515262cde147c085a56a9f19"
+  },
+  "doc-d0e81e14b1d5c58f5e884601742ee78e": {
+    "content": "(3) \n                        \n\t\t\t\t\t\t\t\t                Amendment number and date. \n                   \n                   \n                      \n                         (4) \n                        \n\t\t\t\t\t\t\t\t                Number of pages. \n                   \n                   \n                      \n                         (5) \n                        \n\t\t\t\t\t\t\t\t                Description of the change being made. \n                   \n                   \n                      \n                         (6) \n                        \n\t\t\t\t\t\t\t\t                Government point of contact and phone number (and electronic or facsimile address, if appropriate). \n                   \n                   \n                      \n                         (7) \n                        \n\t\t\t\t\t\t\t\t                Revision to solicitation closing date, if applicable.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "d0e81e14b1d5c58f5e884601742ee78e",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-d0e81e14b1d5c58f5e884601742ee78e"
+  },
+  "doc-076085acfc2a1f690986be1ddabd637e": {
+    "content": "15.100  Scope of subpart. \n       \n          This subpart describes some of the acquisition processes and techniques that may be used to design competitive acquisition strategies suitable for the specific circumstances of the acquisition.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "076085acfc2a1f690986be1ddabd637e",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-076085acfc2a1f690986be1ddabd637e"
+  },
+  "doc-8d0d7e22b7e4569d562e86ab0038c0aa": {
+    "content": "(d) \n                  \n\t\t\t\t\t\t            When oral presentations are required, the solicitation shall provide offerors with sufficient information to prepare them. Accordingly, the solicitation may describe- \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                The types of information to be presented orally and the associated evaluation factors that will be used; \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                The qualifications for personnel that will be required to provide the oral presentation(s); \n                   \n                   \n                      \n                         (3) \n                        \n\t\t\t\t\t\t\t\t                The requirements for, and any limitations and/or prohibitions on, the use of written material or other media to supplement the oral presentations; \n                   \n                   \n                      \n                         (4) \n                        \n\t\t\t\t\t\t\t\t                The location, date, and time for the oral presentations; \n                   \n                   \n                      \n                         (5) \n                        \n\t\t\t\t\t\t\t\t                The restrictions governing the time permitted for each oral presentation; and \n                   \n                   \n                      \n                         (6) \n                        \n\t\t\t\t\t\t\t\t                The scope and content of exchanges that may occur between the Government’s participants and the offeror’s representatives as part of the oral presentations, including whether or not discussions (see  15.306 (d)) will be permitted during oral presentations. \n                   \n                \n             \n             \n                \n                   (e) \n                  \n\t\t\t\t\t\t            The contracting officer shall maintain a record of oral presentations to document what the Government relied upon in making the source selection decision. The method and level of detail of the record ( e.g.,  videotaping, audio tape recording, written record, Government notes, copies of offeror briefing slides or presentation notes) shall be at the discretion of the source selection authority. A copy of the record placed in the file may be provided to the offeror. \n             \n             \n                \n                   (f) \n                  \n\t\t\t\t\t\t            When an oral presentation includes information that the parties intend to include in the contract as material terms or conditions, the information shall be put in writing. Incorporation by reference of oral statements is not permitted. \n             \n             \n                \n                   (g) \n                  \n\t\t\t\t\t\t            If, during an oral presentation, the Government conducts discussions (see  15.306 (d)), the Government must comply with  15.306  and  15.307 .",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "8d0d7e22b7e4569d562e86ab0038c0aa",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-8d0d7e22b7e4569d562e86ab0038c0aa"
+  },
+  "doc-ad72395f3b32d9bfb15e688edd27ebbe": {
+    "content": "15.203  Requests for proposals. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Requests for proposals (RFPs) are used in negotiated acquisitions to communicate Government requirements to prospective contractors and to solicit proposals. RFPs for competitive acquisitions shall, at a minimum, describe the- \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                Government’s requirement; \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                Anticipated terms and conditions that will apply to the contract. The solicitation may authorize offerors to propose alternative terms and conditions. If the solicitation permits offerors to submit one or more additional proposals with alternative line items (see  52.204-22  or  52.212-1 (e)), the evaluation approach should consider the potential impact of the alternative line items on other terms and conditions or the requirement ( e.g. , place of performance or payment and funding requirements) (see  15.206 ); \n                   \n                   \n                      \n                         (3) \n                        \n\t\t\t\t\t\t\t\t                Information required to be in the offeror’s proposal; and \n                   \n                   \n                      \n                         (4) \n                        \n\t\t\t\t\t\t\t\t                Factors and significant subfactors that will be used to evaluate the proposal and their relative importance. \n                   \n                \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            An RFP may be issued for OMB CircularA-76 studies. See  subpart  7.3  for additional information regarding cost comparisons between Government and contractor performance. \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            Electronic commerce may be used to issue RFPs and to receive proposals, modifications, and revisions. In this case, the RFP shall specify the electronic commerce method(s) that offerors may use (see  subpart  4.5 ). \n             \n             \n                \n                   (d) \n                  \n\t\t\t\t\t\t            Contracting officers may issue RFPs and/or authorize receipt of proposals, modifications, or revisions by facsimile.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "ad72395f3b32d9bfb15e688edd27ebbe",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-ad72395f3b32d9bfb15e688edd27ebbe"
+  },
+  "doc-33d384a0ddf0919053c9ae9a9edbdbdb": {
+    "content": "(d) \n                  Except for DoD, in accordance\nwith section 880 of the John S. McCain National Defense Authorization\nAct for Fiscal Year 2019 (Pub. L. 115-232,  41 U.S.C. 3701  Note),\ncontracting officers shall avoid, to the maximum extent practicable, using\nthe lowest price technically acceptable source selection process\nin the case of a procurement that is predominantly for the acquisition\nof—\n                \n                \n                   \n                      \n                         (1) \n                        Information technology\nservices, cybersecurity services, systems engineering and technical\nassistance services, advanced electronic testing, audit or audit\nreadiness services, health care services and records, telecommunications devices\nand services, or other knowledge-based professional services;\n                      \n                   \n                   \n                      \n                         (2) \n                        Personal protective equipment;\nor\n                      \n                   \n                   \n                      \n                         (3) \n                        Knowledge-based training\nor logistics services in contingency operations or other operations\noutside the United States, including in Afghanistan or Iraq.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "33d384a0ddf0919053c9ae9a9edbdbdb",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-33d384a0ddf0919053c9ae9a9edbdbdb"
+  },
+  "doc-d28d046bbb51ec4e991d5bf7955ef8e4": {
+    "content": "When specific information about a proposed acquisition that would be necessary for the preparation of proposals is disclosed to one or more potential offerors, that information must be made available to the public as soon as practicable, but no later than the next general release of information, in order to avoid creating an unfair competitive advantage. Information provided to a potential offeror in response to its request must not be disclosed if doing so would reveal the potential offeror’s confidential business strategy, and is protected under  3.104  or  subpart  24.2 . When conducting a presolicitation or preproposal conference, materials distributed at the conference should be made available to all potential offerors, upon request.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "d28d046bbb51ec4e991d5bf7955ef8e4",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-d28d046bbb51ec4e991d5bf7955ef8e4"
+  },
+  "doc-bfaf5fa963d7b4ec9ddc0f6cfb58b5f3": {
+    "content": "15.204-5  Part IV-Representations\tand Instructions. \n       \n          The contracting officer shall prepare the representations\tand instructions as follows: \n          \n             \n                \n                   (a) \n                   Section\tK, Representations, certifications, and other statements of offerors.  Include\tin this section those solicitation provisions that require representations,\tcertifications, or the submission of other information by offerors. \n             \n             \n                \n                   (b) \n                   Section\tL, Instructions, conditions, and notices to offerors or respondents.  Insert\tin this section solicitation provisions and other information and\tinstructions not required elsewhere to guide offerors or respondents\tin preparing proposals or responses to requests for information.\tProspective offerors or respondents may be instructed to submit\tproposals or information in a specific format or severable parts\tto facilitate evaluation. The instructions may specify further organization of\tproposal or response parts, such as- \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                Administrative; \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                Management; \n                   \n                   \n                      \n                         (3) \n                        \n\t\t\t\t\t\t\t\t                Technical; \n                   \n                   \n                      \n                         (4) \n                        \n\t\t\t\t\t\t\t\t                Past performance;\tand \n                   \n                   \n                      \n                         (5)  Certified cost or pricing data (see  15.408 Solicitation provisions and contract clauses.  of  15.408 ) or data other than certified cost or pricing data. \n                   \n                \n             \n             \n                \n                   (c) \n                   Section\tM, Evaluation factors for award . Identify all significant factors\tand any significant subfactors that will be considered in awarding\tthe contract and their relative importance (see  15.304 (d)). The contracting\tofficer shall insert one of the phrases in  15.304 (e).",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "bfaf5fa963d7b4ec9ddc0f6cfb58b5f3",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-bfaf5fa963d7b4ec9ddc0f6cfb58b5f3"
+  },
+  "doc-93a17c8eba2cbb981d3d10637009c3c6": {
+    "content": "(ii) \n                            \n                            \n                               \n                                  \n                                     (A)  In\nthe case of a bilateral contract modification that will use funds\nappropriated or otherwise made available by the American Recovery\nand Reinvestment Act of 2009, the contracting officer shall specify\napplicability of Alternate I to that modification. \n                               \n                               \n                                  \n                                     (B)  In the\ncase of a task- or delivery-order contract in which not all orders\nwill use funds appropriated or otherwise made available by the American\nRecovery and Reinvestment Act of 2009, the contracting officer shall specify\nthe task or delivery orders to which Alternate I applies. \n                               \n                            \n                         \n                      \n                   \n                   \n                      \n                         (3)  For cost-reimbursement\ncontracts with State and local Governments, educational institutions,\nand other nonprofit organizations, the contracting officer shall\nuse the clause with its Alternate II. \n                   \n                   \n                      \n                         (4)  When the\nhead of the agency has waived the examination of records by the\nComptroller General in accordance with  25.1001 , use the clause\nwith its Alternate III. \n                   \n                \n             \n             \n                \n                   (c)  When issuing\na solicitation for information or planning purposes, the contracting\nofficer shall insert the provision at  52.215-3 , Request for\nInformation or Solicitation for Planning Purposes, and clearly mark\non the face of the solicitation that it is for information or planning\npurposes. \n             \n             \n                \n                   (d)  [Reserved] \n             \n             \n                \n                   (e)  The contracting\nofficer shall insert the provision at  52.215-5 , Facsimile Proposals,\nin solicitations if facsimile proposals are authorized (see  15.203 (d)). \n             \n             \n                \n                   (f)  The contracting\nofficer shall insert the provision at  52.215-6 , Place of Performance,\nin solicitations unless the place of performance is specified by\nthe Government. \n             \n             \n                \n                   (g)  [Reserved] \n             \n             \n                \n                   (h)  The contracting\nofficer shall insert the clause at  52.215-8 , Order of Precedence-Uniform\nContract Format, in solicitations and contracts using the format\nat  15.204 .",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "93a17c8eba2cbb981d3d10637009c3c6",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-93a17c8eba2cbb981d3d10637009c3c6"
+  },
+  "doc-8bde526d740647c3ddc8291d22a33f05": {
+    "content": "15.210  Forms. \n       \n          Prescribed forms are not required to prepare solicitations described in this part. The following forms may be used at the discretion of the contracting officer: \n          \n             \n                \n                   (a) \n                   Standard Form 33 , Solicitation, Offer and Award, and  Optional Form 308 , Solicitation and Offer-Negotiated Acquisition, may be used to issue RFPs and RFIs. \n             \n             \n                \n                   (b) \n                   Standard Form 30 , Amendment of Solicitation/ Modification of Contract, and  Optional Form 309 , Amendment of Solicitation, may be used to amend solicitations of negotiated contracts. \n             \n             \n                \n                   (c) \n                   Optional Form 17 , Offer Label, may be furnished with each request for proposal.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "8bde526d740647c3ddc8291d22a33f05",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-8bde526d740647c3ddc8291d22a33f05"
+  },
+  "doc-77b91b3d906011b7b7a6798e52071431": {
+    "content": "15.205  Issuing solicitations. \n       \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            The contracting officer shall issue solicitations to potential sources in accordance with the policies and procedures in  5.102 ,  19.202-4 , and  part  6 . \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            A master solicitation, as described in  14.203-3 , may also be used for negotiated acquisitions.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "77b91b3d906011b7b7a6798e52071431",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-77b91b3d906011b7b7a6798e52071431"
+  },
+  "doc-2fa0e01f3c701431b77772650d4acebf": {
+    "content": "(c) \n                  \n\t\t\t\t\t\t            Acceptable evidence to establish the time of receipt at the Government installation includes the time/date stamp of that installation on the proposal wrapper, other documentary evidence of receipt maintained by the installation, or oral testimony or statements of Government personnel. \n             \n             \n                \n                   (d) \n                  \n\t\t\t\t\t\t            If an emergency or unanticipated event interrupts normal Government processes so that proposals cannot be received at the Government office designated for receipt of proposals by the exact time specified in the solicitation, and urgent Government requirements preclude amendment of the solicitation closing date, the time specified for receipt of proposals will be deemed to be extended to the same time of day specified in the solicitation on the first work day on which normal Government processes resume. \n             \n             \n                \n                   (e) \n                  \n\t\t\t\t\t\t            Proposals may be withdrawn by written notice at any time before award. Oral proposals in response to oral solicitations may be withdrawn orally. The contracting officer must document the contract file when oral withdrawals are made. One copy of withdrawn proposals should be retained in the contract file (see  4.803 (a)(10)). Extra copies of the withdrawn proposals may be destroyed or returned to the offeror at the offeror’s request. Where practicable, electronically transmitted proposals that are withdrawn must be purged from primary and backup data storage systems after a copy is made for the file. Extremely bulky proposals must only be returned at the offeror’s request and expense. \n             \n             \n                \n                   (f) \n                  \n\t\t\t\t\t\t            The contracting officer must promptly notify any offeror if its proposal, modification, or revision was received late, and must inform the offeror whether its proposal will be considered, unless contract award is imminent and the notice prescribed in  15.503 (b) would suffice. \n             \n             \n                \n                   (g) \n                  \n\t\t\t\t\t\t            Late proposals and modifications that are not considered must be held unopened, unless opened for identification, until after award and then retained with other unsuccessful proposals. \n             \n             \n                \n                   (h) \n                  \n\t\t\t\t\t\t            If available, the following must be included in the contracting office files for each late proposal, modification, revision, or withdrawal: \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                The date and hour of receipt.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "2fa0e01f3c701431b77772650d4acebf",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-2fa0e01f3c701431b77772650d4acebf"
+  },
+  "doc-6ea357fd59c34d4f9c7984ccfcb4ad4c": {
+    "content": "15.305  Proposal evaluation. \n       \n          \n             \n                \n                   (a) \n                  \n                  \n\t\t\t\t\t\t            Proposal evaluation is an assessment of the proposal and the offeror’s ability to perform the prospective contract successfully. An agency shall evaluate competitive proposals and then assess their relative qualities solely on the factors and subfactors specified in the solicitation. Evaluations may be conducted using any rating method or combination of methods, including color or adjectival ratings, numerical weights, and ordinal rankings. The relative strengths, deficiencies, significant weaknesses, and risks supporting proposal evaluation shall be documented in the contract file. \n                \n                   \n                      \n                         (1) \n                         Cost or price evaluation . Normally, competition establishes price reasonableness. Therefore, when contracting on a firm-fixed-price or fixed-price with economic price adjustment basis, comparison of the proposed prices will usually satisfy the requirement to perform a price analysis, and a cost analysis need not be performed. In limited situations, a cost analysis may be appropriate to establish reasonableness of the otherwise successful offeror's price (see  15.403-1 (c)(1)(i)(C)). When contracting on a cost-reimbursement basis, evaluations shall include a cost realism analysis to determine what the Government should realistically expect to pay for the proposed effort, the offeror's understanding of the work, and the offeror's ability to perform the contract. Cost realism analyses may also be used on fixed-price incentive contracts or, in exceptional cases, on other competitive fixed-price-type contracts (see  15.404-1 (d)(3)). (See  37.115  for uncompensated overtime evaluation.) The contracting officer shall document the cost or price evaluation. \n                   \n                   \n                      \n                         (2) \n                        \n                        \n\t\t\t\t\t\t\t\t                Past performance evaluation. \n                      \n                         \n                            \n                               (i) \n                              \n                              \n\t\t\t\t\t\t\t\t\t\t                    Past performance information is one indicator of an offeror’s ability to perform the contract successfully. The currency and relevance of the information, source of the information, context of the data, and general trends in contractor’s performance shall be considered. This comparative assessment of past performance information is separate from the responsibility determination required under  subpart  9.1 .",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "6ea357fd59c34d4f9c7984ccfcb4ad4c",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-6ea357fd59c34d4f9c7984ccfcb4ad4c"
+  },
+  "doc-6ae6d47769fd34a62f4cf09ae269a220": {
+    "content": "15.204-3  Part II-Contract Clauses. \n       \n          \n             Section I, Contract clauses.  The contracting officer shall include in this section the clauses required by law or by this regulation and any additional clauses expected to be included in any resulting contract, if these clauses are not required in any other section of the uniform contract format. An index may be inserted if this section’s format is particularly complex.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "6ae6d47769fd34a62f4cf09ae269a220",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-6ae6d47769fd34a62f4cf09ae269a220"
+  },
+  "doc-193503af41167f76de9849b9ca392342": {
+    "content": "15.209  Solicitation provisions\nand contract clauses. \n       \n          When contracting by negotiation- \n          \n             \n                \n                   (a)  The\ncontracting officer shall insert the provision at  52.215-1 , Instructions\nto Offerors-Competitive Acquisition, in all competitive solicitations\nwhere the Government intends to award a contract without discussions. \n                \n                   \n                      \n                         (1)  If\nthe Government intends to make award after discussions with offerors\nwithin the competitive range, the contracting officer shall use\nthe basic provision with its Alternate I. \n                   \n                   \n                      \n                         (2)  If the Government\nwould be willing to accept alternate proposals, the contracting\nofficer shall alter the basic clause to add a new paragraph (c)(9)\nsubstantially the same as Alternate II. \n                   \n                \n             \n             \n                \n                   (b) \n                \n                \n                   \n                      \n                         (1)  Except as provided in paragraph (b)(2) of this section, the contracting officer shall insert the clause at  52.215-2 , Audit and Records-Negotiation ( 10 U.S.C. 3841 ,\n                         41 U.S.C. 4706 , and Audit Requirements in the OMB Uniform Guidance at  2 CFR part 200 , subpart F), in solicitations and contracts except those for- \n                      \n                         \n                            \n                               (i)  Acquisitions\nnot exceeding the simplified acquisition threshold; \n                         \n                         \n                            \n                               (ii)  The acquisition\nof utility services at rates not exceeding those established to\napply uniformly to the general public, plus any applicable reasonable\nconnection charge; or \n                         \n                         \n                            \n                               (iii)  The acquisition\nof commercial products\nor commercial services exempted under  15.403-1 . \n                         \n                      \n                   \n                   \n                      \n                         (2) \n                      \n                      \n                         \n                            \n                               (i)  When\nusing funds appropriated or otherwise made available by the American\nRecovery and Reinvestment Act of 2009 (Pub. L. 111-5)- \n                            \n                               \n                                  \n                                     (A)  The\nexceptions in paragraphs (b)(1)(i) through (b)(1)(iii) are not applicable;\nand \n                               \n                               \n                                  \n                                     (B)  Use the\nclause with its Alternate I.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "193503af41167f76de9849b9ca392342",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-193503af41167f76de9849b9ca392342"
+  },
+  "doc-51dd4419f8420be899aa1a6af7826e32": {
+    "content": "15.204  Contract format. \n       \n          The use of a uniform contract format facilitates preparation of the solicitation and contract as well as reference to, and use of, those documents by offerors, contractors, and contract administrators. The uniform contract format need not be used for the following: \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Construction and architect-engineer contracts (see  part  36 ). \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            Subsistence contracts. \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            Supplies or services contracts requiring special contract formats prescribed elsewhere in this regulation that are inconsistent with the uniform format. \n             \n             \n                \n                   (d) \n                  \n\t\t\t\t\t\t            Letter requests for proposals (see  15.203 (e)). \n             \n             \n                \n                   (e) \n                  \n\t\t\t\t\t\t            Contracts exempted by the agency head or designee.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "51dd4419f8420be899aa1a6af7826e32",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-51dd4419f8420be899aa1a6af7826e32"
+  },
+  "doc-ac3dcb73a7193adcc4f4e72c97a201d8": {
+    "content": "Use of an oral RFP does not relieve the contracting officer from complying with other FAR requirements. \n                \n                   \n                      \n                         (1) \n                        \n\t\t\t\t\t\t\t\t                The contract files supporting oral solicitations should include- \n                      \n                         \n                            \n                               (i) \n                              \n\t\t\t\t\t\t\t\t\t\t                    A description of the requirement; \n                         \n                         \n                            \n                               (ii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Rationale for use of an oral solicitation; \n                         \n                         \n                            \n                               (iii) \n                              \n\t\t\t\t\t\t\t\t\t\t                    Sources solicited, including the date, time, name of individuals contacted, and prices offered; and \n                         \n                         \n                            \n                               (iv) \n                              \n\t\t\t\t\t\t\t\t\t\t                    The solicitation number provided to the prospective offerors. \n                         \n                      \n                   \n                   \n                      \n                         (2) \n                        \n\t\t\t\t\t\t\t\t                The information furnished to potential offerors under oral solicitations should include appropriate items from paragraph (e) of this section.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "ac3dcb73a7193adcc4f4e72c97a201d8",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-ac3dcb73a7193adcc4f4e72c97a201d8"
+  },
+  "doc-859c00130231655660af8c75765a03af": {
+    "content": "15.200  Scope of subpart. \n       \n          This subpart prescribes policies and procedures for- \n          \n             \n                \n                   (a) \n                  \n\t\t\t\t\t\t            Exchanging information with industry prior to receipt of proposals; \n             \n             \n                \n                   (b) \n                  \n\t\t\t\t\t\t            Preparing and issuing requests for proposals (RFPs) and requests for information (RFIs); and \n             \n             \n                \n                   (c) \n                  \n\t\t\t\t\t\t            Receiving proposals and information.",
+    "file_path": "unknown_source",
+    "parse_format": "raw",
+    "content_hash": "859c00130231655660af8c75765a03af",
+    "chunk_options": {
+      "chunk_token_size": 1200,
+      "fixed_token": {
+        "split_by_character": null,
+        "split_by_character_only": false,
+        "chunk_overlap_token_size": 100
+      }
+    },
+    "create_time": 1782210703,
+    "update_time": 1782210703,
+    "_id": "doc-859c00130231655660af8c75765a03af"
+  }
+}

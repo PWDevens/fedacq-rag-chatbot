@@ -41,6 +41,7 @@ docker-compose.override.yml
 .env.*
 secret_*.txt
 secrets/
+.secrets/
 .claude/
 
 # Build artifacts
@@ -77,9 +78,9 @@ data/cache.db
 data/cache.db-wal
 data/cache.db-shm
 
-# GraphRAG (LightRAG) artifacts — built offline per-machine via
-# `python -m scripts.build_graph` (needs the local Phi-4 model). Not committed.
-data/lightrag/
+# GraphRAG (LightRAG) artifacts: a prebuilt FAR Part 15 graph IS committed so
+# `RAG_MODE=graph` works out of the box. Ignore only transient build logs.
+data/lightrag/*.log
 
 # Reports and Test Results
 .coverage
